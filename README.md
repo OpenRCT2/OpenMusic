@@ -2,12 +2,14 @@
 This project aims to create an alternative to the music from RollerCoaster Tycoon 2 for use in [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2).
 
 ## Progress
-### Fairground Organ style
+### Fairground organ style
 Although most/all of the [pieces from the fairground organ style](http://rct.wikia.com/wiki/Music) are so old that they fall under public domain, just creating an alternative arrangement is currently not a priority for this project. Instead some other songs/pieces of classical music are arranged to fit the style of the fairground organ.
 
 #### Theoretical background
 A fairground organ is a musical instrument that usually plays by itself. It usually contains a small/medium sized pipe organ with a few different stops, lots of percussion (xylophone, tambourine, triangle, cymbals, multiple kinds of drums) and sometimes a Glockenspiel and/or Bells.
-The scores exists as [music rolls](https://en.wikipedia.org/wiki/Music_roll) or [book music](https://en.wikipedia.org/wiki/Book_music).
+The score exists as [music rolls](https://en.wikipedia.org/wiki/Music_roll) or [book music](https://en.wikipedia.org/wiki/Book_music).
+
+The fairground organ is limited by its instruments. As all pieces should be in the same style and sound as if they are played by the same fairground organ, all arrangements are limited to the same instruments and the same set of organ registrations (yet to be determined).
 
 #### Porting a piece of music to the fairground organ
 First we need to find a suitable piece of music. Not all pieces are appropriate, can be converted, or are available under public domain. A march usually works pretty good. Then we need some free sheet music. [IMSLP is your friend](http://imslp.org/). Even if it's just for piano, that can be enough. Then we make an arrangement of that score in [LilyPond](http://lilypond.org/) using the provided Template (TODO). [TODO... Ardour... exporting... stuff]
@@ -21,6 +23,7 @@ First we need to find a suitable piece of music. Not all pieces are appropriate,
 | In the Hall of the Mountain King | Idea |
 | Der treue Husar | Idea |
 | Lefébure-Wély - Sortie in Eb | Idea |
+| Helenenmarsch | Idea |
 
 Some piecees that might work:
 
