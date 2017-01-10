@@ -20,6 +20,7 @@ First we need to find a suitable piece of music. Not all pieces are appropriate,
 | I've Been Working on the Railroad | Idea |
 | In the Hall of the Mountain King | Idea |
 | Der treue Husar | Idea |
+| Lefébure-Wély - Sortie in Eb | Idea |
 
 Some piecees that might work:
 
