@@ -28,17 +28,17 @@ right = \relative c'' {
   c4 g8 g c4 g
   c1 ~
   c
-  
+
   \tuplet 3/2 { e,4 g c } e2 ~
   e4 c8 c e4 c
   e1 ~
   e
-  
+
   <c e>4 e8 g <c, a' c>4 <c g' b>8 <c f a>
   <c e g>2 \tuplet 3/2 { f4 g a }
-  e8 c g g' e4 d
-  c g8 g g r e'4
-  
+  g8 e g c e4 d
+  c g,8 g g r e'4
+
   \repeat volta 2 {
     dis e b c
     <c e a> r8 <c e a> <c e a>4 e
@@ -90,6 +90,88 @@ right = \relative c'' {
       <c e c'>4 <c e c'>8 <c e c'> <c e c'>4 r
     }
   }
+
+  % Trio
+  \key f \major
+  f,4 f8 f f4 a
+  c c8 c c4 r
+  f c8\( f\) a4 f8 a
+  <c, e c'>4 <c e g>8 <c e g> <c e g>4 r
+  g4 g8 g g4 bes
+  d d8 d d4 r
+  f4 e8 d c bes a g
+  f4 r r2
+
+  \repeat volta 2 {
+    f4 f8 f f4 a
+    c c8 c c4 a8\( c
+    f4\) c8\( f a4\) f8\( a
+    c2.\) c8\( cis
+    d4\) g,8\( a bes4\) e,8\( f
+    g4\) c, e d8\( e\)
+    f\( a f e\) d4 des
+    c1
+    f,4 f8 f f4 a
+    c c8 c c4 a8\( c
+    f4\) c8\( f a4\) f8\( a
+    c2.\) c8\( d e4\)
+    a,8\( b c4\) e,8\( gis
+    a4\) c,4 e c8 d
+    e d c b e4 gis,
+  }
+  \alternative {
+    {
+      a4 r <e bes' c>2
+    }
+    {
+      a4 c8 c <c c'>4 <bes bes'>
+    }
+  }
+
+  \repeat volta 2 {
+    <a f' a>2 <a f' a>
+    <a f' a> <bes g' bes>4 <a f' a>
+    <c a' c>2 <a f' a>
+    r4 <a f' a> <c a' c> <a f' a>
+    <c a' c>2 <a f' a>
+    <c a' c> <d bes' d>
+    <c a' c>4 <b gis' b> <bes g' bes>2
+    r4 c e f
+    <c e g>2 <c e g>
+    <c e g> <c e g>4 <c f a>
+    <c g' bes>2 <c e g>
+    r4 <c e g> <c g' bes> <c e g>
+    <c g' bes>2 <c e g>
+    <c a' c> <c g' bes>
+    <c g' bes>4 <c f a> <c f a>2
+    r4 c8 c <c a' c>4 <bes g' bes>
+    <a f' a>2 <a f' a>
+    <a f' a> <bes g' bes>4 <a f' a>
+    <c a' c>2 <a f' a>
+    r4 <a f' a> <c a' c> <a f' a>
+    <c a' c>2 <a f' a>
+    <c a' c> <cis a' cis>
+    <e c' e>4. <d bes' d>8 <d bes' d>2
+    r4 <d bes' d> <cis bes' cis> <d bes' d>
+    <g g'>2 <f f'>
+    <e e'> <d d'>4. <b b'>8
+    <d d'>2 <c c'>
+    r4 <a f' a> <c a' c> <a f' a>
+  }
+  \alternative {
+    {
+      <c a' c>2 <a f' a>
+      <a c a'> <g bes g'>
+      <f a f'>4 c'8 c c4 c
+      c8 r c4\fermata <c a' c>\fermata <bes g' bes>\fermata
+    }
+    {
+      <e c' e>2 <d bes' d>
+      <c bes' c> c'8 bes a g
+      f4 r c'8 cis d e
+      f4 <f a, f>8 <f a, f><f a, f>4 r
+    }
+  }
 }
 
 left = \relative c' {
@@ -98,17 +180,17 @@ left = \relative c' {
   c4 g8 g c4 g
   c1 ~
   c
-  
+
   \tuplet 3/2 { e,4 g c } e2 ~
   e4 c8 c e4 c
   e1 ~
   e
-  
+
   <c, e g>2 <c f a>
   <c e g> <c f a>
   <c e g> r4 <g b f'>4
   <c e> g8 g g r r4
-  
+
   \repeat volta 2 {
     c <e g c> g, <e' g c>
     c <e g c> g, <e' g c>
@@ -159,11 +241,93 @@ left = \relative c' {
       <c, g' c>4 <c g' c>8 <c g' c> <c g' c>4 r
     }
   }
+
+  % Trio
+  \key f \major
+  f4 f8 f f4 a
+  c c8 c c4 r
+  <c a f>2 <c a f>
+  <c g c,>4 <c g c,>8 <c g c,> <c g c,>4 r
+  g g8 g g4 bes
+  d d8 d d4 r
+  <gis, f b,>2 <bes g c,>
+  <f a>4 <f a c> c <f a c>
+  
+  \repeat volta 2 {
+    f4 <a c> c, <f a c>
+    f <a c> c, <f a c>
+    f <a c> c, <f a c>
+    f <f a c>8 <f a c> <f a c>4 r
+    bes <bes c> g <bes c>
+    e, <g bes c> c, <g' bes c>
+    f <a c> c, <a' c>
+    f <f a c>8 <f a c> <f a c>4 <f a c>
+    
+    f4 <a c> c, <f a c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <f a c>8 <f a c> <f a c>4 <f a c>
+    c' <c e> a <c e>
+    e, <a c> c, <a' c>
+    e <gis d'> e <e b' d>
+  }
+  \alternative {
+    {
+      <a c>4 r <c, g' c>2
+    }
+    {
+      <a' c>4 r r2
+    }
+  }
+
+  \repeat volta 2 {
+    f4 <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    e <g bes c> c, <g' bes c>
+    e <g bes c> c, <g' bes c>
+    e <g bes c> c, <g' bes c>
+    e <g bes c> c, <g' bes c>
+    e <g bes c> c, <g' bes c>
+    e <g bes c> c, <g' bes c>
+    e <g bes c> c, <g' bes c>
+    e <g bes c> c, <g' bes c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c> c, <a' c>
+    f <a c es> f <a c es>
+    bes, <f' bes d> bes, <f' bes d>
+    bes, <f' bes d> bes, <f' bes d>
+    g, <g' b f'> g, <g' b f'>
+    g, <g' b f'> b, <g' b f'>
+    c, <f a c>8 <f a c> <f a c>4 <f a c>
+    c <f a c> c <f a c>
+  }
+  \alternative {
+    {
+      c <f a c> c <f a c>
+      c <g' bes c> c, <g' bes c>
+      <f a c> c'8 c c4 c
+      c8 r r4\fermata r\fermata r\fermata
+    }
+    {
+      c, <g' bes c> c, <g' bes c>
+      c, <g' bes c> c, <g' bes c>
+      <f a c> r <c g' bes>2
+      <f a>4 <f a c>8 <f a c> <f a c>4 r
+    }
+  }
 }
 
 pedal = \relative c {
   \global
-  
 }
 
 \score {
@@ -172,16 +336,10 @@ pedal = \relative c {
       instrumentName = "Organ"
       shortInstrumentName = "Org."
     } <<
-      \new Staff = "right" \with {
-        midiInstrument = "church organ"
-      } \right
-      \new Staff = "left" \with {
-        midiInstrument = "church organ"
-      } { \clef bass \left }
+      \new Staff = "right" \right
+      \new Staff = "left" { \clef bass \left }
     >>
-    \new Staff = "pedal" \with {
-      midiInstrument = "church organ"
-    } { \clef bass \pedal }
+    \new Staff = "pedal" { \clef bass \pedal }
   >>
   \layout { }
 }
