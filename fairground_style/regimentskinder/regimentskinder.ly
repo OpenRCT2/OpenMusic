@@ -296,8 +296,8 @@ left = \relative c' {
     e <g bes c> c, <g' bes c>
     e <g bes c> c, <g' bes c>
     f <a c> c, <a' c>
-    f <a c> c, <a' c>
-    f <a c> c, <a' c>
+    f r r2
+    f4 <a c> c, <a' c>
     f <a c> c, <a' c>
     f <a c> c, <a' c>
     f <a c> c, <a' c>
