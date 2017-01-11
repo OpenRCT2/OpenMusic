@@ -1,4 +1,6 @@
 \version "2.18.2"
+\include "articulate.ly"
+#(define ac:normalFactor '(7 . 8))
 
 % Based on http://imslp.org/wiki/File:PMLP278251-FUCIK_Regimentskinder_Marsch.pdf
 
@@ -345,7 +347,7 @@ pedal = \relative c {
 }
 
 \score {
-  \unfoldRepeats <<
+  \unfoldRepeats \articulate <<
     \new PianoStaff \with {
       instrumentName = "Organ"
       shortInstrumentName = "Org."
