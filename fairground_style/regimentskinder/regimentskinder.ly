@@ -89,7 +89,7 @@ right = \relative c'' {
       <c, e g>4 <e g c>8 <e g c> <e g c>4 <g c e>8 <g c e>
       <g c e>4 <c e g>8 <c e g> <c e g>4 <c e gis>
       <b d a'> r <b d b'>2
-      <c e c'>4 <c e c'>8 <c e c'> <c e c'>4 r
+      <c e g c>4 <c e g c>8 <c e g c> <c e g c>4 r
     }
   }
 
@@ -332,38 +332,135 @@ pedal = \relative c {
   \global
 }
 
+glockenspiel = \relative c'' {
+  R1*12
+  \repeat volta 2 {
+    R1*7
+    r2. e4
+    dis e b c
+    a'4 r8 a a4 e
+    dis e b c
+    g'4 r8 g g4 g
+    fis g dis e
+    b' r8 b b4 c
+    b a g fis
+  }
+  \alternative {
+    {
+      e4 r r2
+    }
+    {
+      e4 r r2
+    }
+  }
+}
+
+drum = \drummode {
+  \global
+  r1 r r
+  \repeat tremolo 16 sna16
+  r1 r r
+  \repeat tremolo 16 sna16
+  \repeat tremolo 4 sna16 r4 sna4 sna8 sna
+  sna2 sna4 r4
+  sna4 r2 \repeat tremolo 4 sna16
+  r1
+  
+  \repeat volta 2 {
+    r1
+    <bd sna>4 r r2
+    r1
+    <bd sna>4 r r2
+    r1
+    <bd sna>4 r r <bd sna>
+    <bd sna>4 r r <bd sna>
+    <bd sna>4 r r2
+    r1
+    <bd sna>4 r r2
+    r1
+    <bd sna>4 r r2
+    r1
+    \repeat tremolo 8 sna8
+    \repeat tremolo 8 sna8
+  }
+  \alternative {
+    {
+      sna4 r r2
+    }
+    {
+      sna4 r r2
+    }
+  }
+  
+  \repeat volta 2 {
+    R1*8
+    <bd sna>4 sna8 sna sna4 sna
+    <bd sna>4 sna8 sna sna4 sna
+    <bd sna>4 sna r sna
+    \repeat tremolo 16 sna16
+  }
+  \alternative {
+    {
+      sna4 r8. sna16 \repeat tremolo 8 sna16
+      r4 sna r sna
+      sna r r2
+      r1
+    }
+    {
+      \repeat tremolo 4 sna16 r4 \repeat tremolo 4 sna16 r4
+      \repeat tremolo 4 sna16 r4 \repeat tremolo 4 sna16 r4
+      \repeat tremolo 4 sna16 r4 \repeat tremolo 8 sna16
+      <bd sna>4 <bd sna>8 <bd sna> <bd sna>4 r
+    }
+  }
+}
+
+organPart = <<
+  \new PianoStaff \with {
+    instrumentName = "Organ"
+    shortInstrumentName = "Org."
+  } <<
+    \new Staff = "right" \with {
+      midiInstrument = "acoustic grand"
+    } \right
+    \new Staff = "left" \with {
+      midiInstrument = "acoustic grand"
+    } { \clef bass \left }
+  >>
+  \new Staff = "pedal" \with {
+    midiInstrument = "church organ"
+  } { \clef bass \pedal }
+>>
+
+glockenspielPart = \new Staff \with {
+  instrumentName = "Glockenspiel"
+  shortInstrumentName = "Gls."
+  midiInstrument = "glockenspiel"
+} \glockenspiel
+
+drumPart = \new DrumStaff \with {
+  \consists "Instrument_name_engraver"
+  instrumentName = "Drums"
+  shortInstrumentName = "Dr."
+} \drum
+
 \score {
   <<
-    \new PianoStaff \with {
-      instrumentName = "Organ"
-      shortInstrumentName = "Org."
-    } <<
-      \new Staff = "right" \right
-      \new Staff = "left" { \clef bass \left }
-    >>
-    \new Staff = "pedal" { \clef bass \pedal }
+    \organPart
+    \glockenspielPart
+    \drumPart
   >>
+  
   \layout { }
 }
 
 \score {
   \unfoldRepeats \articulate <<
-    \new PianoStaff \with {
-      instrumentName = "Organ"
-      shortInstrumentName = "Org."
-    } <<
-      \new Staff = "right" \with {
-        midiInstrument = "church organ"
-      } \right
-      \new Staff = "left" \with {
-        midiInstrument = "church organ"
-      } { \clef bass \left }
-    >>
-    \new Staff = "pedal" \with {
-      midiInstrument = "church organ"
-    } { \clef bass \pedal }
+    \organPart
+    \glockenspielPart
+    \drumPart
   >>
   \midi {
-    \tempo 4=220
+    \tempo 4=230
   }
 }
