@@ -1,6 +1,9 @@
 # OpenRCT2-OpenMusic
 This project aims to create an alternative, higher quality version of the music from RollerCoaster Tycoon 2 for use in [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2).
 
+## Chat
+[![Gitter](https://img.shields.io/badge/gitter-Lobby-red.svg?style=flat-square)](https://gitter.im/OpenRCT2-OpenMusic/Lobby)
+
 ## Progress
 ### Fairground organ style
 All of the pieces from the fairground organ style are so old that they fall under public domain.
