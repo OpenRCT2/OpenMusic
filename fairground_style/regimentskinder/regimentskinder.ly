@@ -363,7 +363,7 @@ pedal = \relative c, {
   }
   \alternative {
     {
-      e4 b, e r
+      e4 b, e2
     }
     {
       e4 r r2
