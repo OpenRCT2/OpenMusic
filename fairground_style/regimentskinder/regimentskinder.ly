@@ -24,9 +24,67 @@ global = {
   \time 4/4
 }
 
-right = \relative c'' {
+second_melody = \relative c'' {
   \global
-  \tuplet 3/2 { c, e g } c2~
+  R1*12
+  \repeat volta 2 {
+    R1*15
+  }
+  \alternative {
+    {
+      r1
+    }
+    {
+      r4 <g g'> <a a'> <c c'>
+    }
+  }
+  
+  \repeat volta 2 {
+    <e c' e>2.\( <b gis' b>4\)
+    <c a' c>2.\( <gis e' gis>4\)
+    <b g' b>4 r8 <f d' f> <f d' f>2~
+    <f d' f>4 <g e' g>\( <c a' c> <a f' a>\)
+    <b g' b>4 r8 <f d' f> <f d' f>2~
+    <f d' f>4 <g e' g>\( <b g' b> <a f' a>\)
+    <a f' a> r8 <fis dis' fis> <g e' g>2~
+    <g e' g>4 r r r
+    R1*4
+  }
+  \alternative {
+    {
+      R1*3
+      r4 <g g'> <a a'> <c c'>
+    }
+    {
+      R1*4
+    }
+  }
+  
+  R1*8
+  \repeat volta 2 {
+    r1
+    r2 r4 a8\( c
+    f4\) c8\( f a4\) f8\( a
+    c2.\) c8\( cis
+    d4\) g,8\( a bes4\) e,8\( f
+    g4\) c, e d8\( e\)
+    f\( a f e\) d4 des
+    c1
+    R1*7
+  }
+  \alternative {
+    {
+      r1
+    }
+    {
+      r1
+    }
+  }
+}
+
+melody = \relative c'' {
+  \global
+  \tuplet 3/2 { c,4 e g } c2~
   c4 g8 g c4 g
   c1 ~
   c
@@ -61,18 +119,12 @@ right = \relative c'' {
   }
   \alternative {
     { <g e'> r r e' }
-    { <g, e'> <g g'> <a a'> <c c'> }
+    { <g, e'> r r2 }
   }
 
   \repeat volta 2 {
-    <e c' e>2.\( <b gis' b>4\)
-    <c a' c>2.\( <gis e' gis>4\)
-    <b g' b>4 r8 <f d' f> <f d' f>2~
-    <f d' f>4 <g e' g>\( <c a' c> <a f' a>\)
-    <b g' b>4 r8 <f d' f> <f d' f>2~
-    <f d' f>4 <g e' g>\( <b g' b> <a f' a>\)
-    <a f' a> r8 <fis dis' fis> <g e' g>2~
-    <g e' g>4 <g g'> <a a'> <c c'>
+    R1*7
+    r4 <g g'> <a a'> <c c'>
     <e c' e>2. <e c' e>4
     <f f'>2.\( <e e'>4\)
     <e e'> r8 <d d'> <d d'>2~
@@ -83,7 +135,7 @@ right = \relative c'' {
       <a a'>4 r8 <g g'> <g g'>2~
       <g g'>4 <a f'>\( <g b> <g e'>\)
       <e c'> g8 g g4 g
-      g <g g'> <a a'> <c c'>
+      g r r2
     }
     {
       <c, e g>4 <e g c>8 <e g c> <e g c>4 <g c e>8 <g c e>
@@ -106,13 +158,8 @@ right = \relative c'' {
 
   \repeat volta 2 {
     f4 f8 f f4 a
-    c c8 c c4 a8\( c
-    f4\) c8\( f a4\) f8\( a
-    c2.\) c8\( cis
-    d4\) g,8\( a bes4\) e,8\( f
-    g4\) c, e d8\( e\)
-    f\( a f e\) d4 des
-    c1
+    c c8 c c4 r4
+    R1*6
     f,4 f8 f f4 a
     c c8 c c4 a8\( c
     f4\) c8\( f a4\) f8\( a
@@ -260,7 +307,7 @@ left = \relative c' {
     f <a c> c, <f a c>
     f <a c> c, <f a c>
     f <f a c>8 <f a c> <f a c>4 r
-    bes <bes c> g <bes c>
+    r <bes c> g <bes c>
     e, <g bes c> c, <g' bes c>
     f <a c> c, <a' c>
     f <f a c>8 <f a c> <f a c>4 <f a c>
@@ -269,9 +316,9 @@ left = \relative c' {
     f <a c> c, <a' c>
     f <a c> c, <a' c>
     f <f a c>8 <f a c> <f a c>4 <f a c>
-    c' <c e> a <c e>
-    e, <a c> c, <a' c>
-    e <gis d'> e <e b' d>
+    <a c e>1~
+    <a c e>
+    <gis d'>2 <gis d'>4 <e b' d>
   }
   \alternative {
     {
@@ -369,6 +416,69 @@ pedal = \relative c, {
       e4 r r2
     }
   }
+  
+  \repeat volta 2 {
+    c'2 r
+    c r
+    d g,
+    d' g,
+    d' g,
+    d' g,
+    c g
+    c4 r r2
+    c1
+    a
+    d2 a
+    fis1
+  }
+  \alternative {
+    {
+      g1
+      g
+      c4 r r2
+      r1
+    }
+    {
+      g'1
+      e2 c2
+      g4 r g2
+      c2. r4
+    }
+  }
+  
+  R1*2
+  f2 f
+  c4 c8 c c4 r4
+  R1*2
+  b2 c
+  f4 r c r
+  
+  \repeat volta 2 {
+    f4 r c r
+    f r c r
+    f r c r
+    f2 r
+    d'2 g,
+    e c
+    f c
+    f1
+    
+    f4 r c r
+    f r c r
+    f r c r
+    f2 r
+    c' a
+    e c
+    e4 r e r
+  }
+  \alternative {
+    {
+      a4 r c2
+    }
+    {
+      a4 r r2
+    }
+  }
 }
 
 glockenspiel = \relative c'' {
@@ -416,6 +526,27 @@ glockenspiel = \relative c'' {
     }
     {
       R1*4
+    }
+  }
+  R1*8
+  
+  \repeat volta 2 {
+    r1
+    r2. a,8 c
+    f4 c8 f a4 f8 a
+    c2. c8 cis
+    d4 g,8 a bes4 e,8 f
+    g4 c, e d8 e
+    f a f e d4 des
+    c1
+    R1*7
+  }
+  \alternative {
+    {
+      r1
+    }
+    {
+      r1
     }
   }
 }
@@ -487,6 +618,18 @@ drum = \drummode {
   r
   sna4 r \repeat tremolo 8 sna16
   r1
+  
+  \repeat volta 2 {
+    R1*15
+  }
+  \alternative {
+    {
+      r1
+    }
+    {
+      r1
+    }
+  }
 }
 
 organPart = <<
@@ -494,15 +637,18 @@ organPart = <<
     instrumentName = "Organ"
     shortInstrumentName = "Org."
   } <<
-    \new Staff = "right" \with {
+    \new Staff = "second melody" \with {
+      midiInstrument = "drawbar organ"
+    } \second_melody
+    \new Staff = "melody" \with {
       midiInstrument = "acoustic grand"
-    } \right
-    \new Staff = "left" \with {
-      midiInstrument = "acoustic grand"
+    } \melody
+    \new Staff = "accompaniment" \with {
+      midiInstrument = "reed organ"
     } { \clef bass \left }
   >>
   \new Staff = "pedal" \with {
-    midiInstrument = "acoustic grand"
+    midiInstrument = "church organ"
   } { \clef bass \pedal }
 >>
 

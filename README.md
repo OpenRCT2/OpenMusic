@@ -10,7 +10,7 @@ All of the pieces from the fairground organ style are so old that they fall unde
 
 #### Theoretical background
 A fairground organ is a musical instrument that usually plays by itself. It usually contains a small/medium sized pipe organ with a few different stops, lots of percussion (xylophone, tambourine, triangle, cymbals, multiple kinds of drums) and sometimes a Glockenspiel and/or Bells.
-The score exists as [music rolls](https://en.wikipedia.org/wiki/Music_roll) or [book music](https://en.wikipedia.org/wiki/Book_music).
+The score is provided in form of [music rolls](https://en.wikipedia.org/wiki/Music_roll) or [book music](https://en.wikipedia.org/wiki/Book_music).
 
 The fairground organ is limited by its instruments. As all pieces should be in the same style and sound as if they are played by the same fairground organ, all arrangements are limited to the same instruments and the same set of organ registrations (yet to be determined).
 
@@ -21,7 +21,7 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 
 | File | Piece of music | Status |
 | ---- | -------------- | ------ |
-| css4.dat | Die Regimentskinder by Julius Fučík | Work in progress ([sneak peek](https://cuervo.phoenix.uberspace.de/music/cotr2.ogg)) |
+| css4.dat | Die Regimentskinder by Julius Fučík | Work in progress ([sneak peek](https://cuervo.phoenix.uberspace.de/music/cotr3.ogg)) |
 | css5.dat | Serenade by Jonny Heykens | TODO |
 | css6.dat | La Belle Espagnole, Op.103 by Robert Vollstedt | TODO |
 | css7.dat | Dornröschens Brautfahrt by Max Rhode | TODO |
