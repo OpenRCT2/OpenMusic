@@ -211,12 +211,12 @@ left = \relative c' {
     cis <fis a b> b, <fis' a b>
   }
   \alternative {
-    { <e g b> <b, b'> <e e'>2 }
-    { <e g b>4 r r2 }
+    { <e g b> b' e2 }
+    { <e, g b>4 r r2 }
   }
 
   \repeat volta 2 {
-    <c c'>4 <g'' c e>8 <g c e> <g c e>4 r
+    c4 <g' c e>8 <g c e> <g c e>4 r
     c, <g' c e>8 <g c e> <g c e>4 r
     d <g b f'> g, <g' b f'>
     d <g b f'> g, <g' b f'>
@@ -328,8 +328,47 @@ left = \relative c' {
   }
 }
 
-pedal = \relative c {
+pedal = \relative c, {
   \global
+  
+  \tuplet 3/2 { c4 e g } c2~
+  c4 g c g
+  c1~
+  c
+  \tuplet 3/2 { e,4 g c } e2~
+  e4 c e c
+  e1~
+  e
+  c2 f
+  c f
+  c r4 f
+  c r r2
+  
+  \repeat volta 2 {
+    c2 g
+    c g
+    c g
+    d' g,
+    d' g,
+    d' g,
+    d' g,
+    c g
+    c g
+    c g
+    c g
+    b b
+    e b
+    fis' b,
+    fis' b,
+  }
+  \alternative {
+    {
+      e4 b, e r
+    }
+    {
+      e4 r r2
+    }
+  }
 }
 
 glockenspiel = \relative c'' {
@@ -350,7 +389,33 @@ glockenspiel = \relative c'' {
       e4 r r2
     }
     {
-      e4 r r2
+      e4 g a c
+    }
+  }
+  
+  \repeat volta 2 {
+    e2.\( b4\)
+    c2.\( g4\)
+    b r8 f f2~
+    f4 g\( c a\)
+    b r8 f f2~
+    f4 g b a
+    a r8 fis g2~
+    g4 g a c
+    e2. e4
+    f2.\( e4\)
+    e r8 d d2~
+    d4 c a fis
+  }
+  \alternative {
+    {
+      a4 r8 g g2~
+      g4 f\( b, e\)
+      c r r2
+      r4 g' a c
+    }
+    {
+      R1*4
     }
   }
 }
@@ -413,6 +478,15 @@ drum = \drummode {
       <bd sna>4 <bd sna>8 <bd sna> <bd sna>4 r
     }
   }
+  
+  r1
+  r
+  \repeat tremolo 4 sna16 r4 \repeat tremolo 4 sna16 r4
+  sna4 sna8 sna sna4 r
+  r1
+  r
+  sna4 r \repeat tremolo 8 sna16
+  r1
 }
 
 organPart = <<
@@ -428,7 +502,7 @@ organPart = <<
     } { \clef bass \left }
   >>
   \new Staff = "pedal" \with {
-    midiInstrument = "church organ"
+    midiInstrument = "acoustic grand"
   } { \clef bass \pedal }
 >>
 
