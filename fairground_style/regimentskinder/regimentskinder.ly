@@ -26,6 +26,7 @@ global = {
 
 second_melody = \relative c'' {
   \global
+  
   R1*12
   \repeat volta 2 {
     R1*15
@@ -133,6 +134,7 @@ second_melody = \relative c'' {
 
 melody = \relative c'' {
   \global
+  
   \tuplet 3/2 { c,4 e g } c2~
   c4 g8 g c4 g
   c1 ~
@@ -274,6 +276,7 @@ melody = \relative c'' {
 
 left = \relative c' {
   \global
+  
   \tuplet 3/2 { c,4 e g } c2~
   c4 g8 g c4 g
   c1 ~
@@ -578,6 +581,8 @@ pedal = \relative c, {
 }
 
 glockenspiel = \relative c'' {
+  \global
+  
   R1*12
   \repeat volta 2 {
     R1*7
@@ -698,29 +703,30 @@ glockenspiel = \relative c'' {
 
 drum = \drummode {
   \global
-  r1 r r
+  
+  R1*3
   \repeat tremolo 16 sna16
-  r1 r r
+  R1*3
   \repeat tremolo 16 sna16
   \repeat tremolo 4 sna16 r4 sna4 sna8 sna
   sna2 sna4 r4
   sna4 r2 \repeat tremolo 4 sna16
-  r1
+  R1
   
   \repeat volta 2 {
-    r1
+    R1
     <bd sna>4 r r2
-    r1
+    R1
     <bd sna>4 r r2
-    r1
+    R1
     <bd sna>4 r r <bd sna>
     <bd sna>4 r r <bd sna>
     <bd sna>4 r r2
-    r1
+    R1
     <bd sna>4 r r2
-    r1
+    R1
     <bd sna>4 r r2
-    r1
+    R1
     \repeat tremolo 8 sna8
     \repeat tremolo 8 sna8
   }
@@ -745,7 +751,7 @@ drum = \drummode {
       sna4 r8. sna16 \repeat tremolo 8 sna16
       r4 sna r sna
       sna r r2
-      r1
+      R1
     }
     {
       \repeat tremolo 4 sna16 r4 \repeat tremolo 4 sna16 r4
@@ -755,24 +761,22 @@ drum = \drummode {
     }
   }
   
-  r1
-  r
+  R1*2
   \repeat tremolo 4 sna16 r4 \repeat tremolo 4 sna16 r4
   sna4 sna8 sna sna4 r
-  r1
-  r
+  R1*2
   sna4 r \repeat tremolo 8 sna16
-  r1
+  R1
   
   \repeat volta 2 {
     R1*15
   }
   \alternative {
     {
-      r1
+      R1
     }
     {
-      r1
+      R1
     }
   }
   
@@ -796,7 +800,7 @@ drum = \drummode {
       r4 sna r sna
       r sna r sna
       <bd sna> r r2
-      r1
+      R1
     }
     {
       r4 sna r sna
