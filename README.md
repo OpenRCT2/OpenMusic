@@ -21,7 +21,7 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 
 | File | Piece of music | Status |
 | ---- | -------------- | ------ |
-| css4.dat | Die Regimentskinder by Julius Fučík | Work in progress ([sneak peek](https://cuervo.phoenix.uberspace.de/music/cotr3.ogg)) |
+| css4.dat | Die Regimentskinder by Julius Fučík | Work in progress ([current state](https://cuervo.phoenix.uberspace.de/music/cotr4.ogg)) |
 | css5.dat | Serenade by Jonny Heykens | TODO |
 | css6.dat | La Belle Espagnole, Op.103 by Robert Vollstedt | TODO |
 | css7.dat | Dornröschens Brautfahrt by Max Rhode | TODO |
