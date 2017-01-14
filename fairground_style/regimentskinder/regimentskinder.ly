@@ -60,6 +60,8 @@ second_melody = \relative c'' {
     }
   }
   
+  % Trio
+  \key f \major
   R1*8
   \repeat volta 2 {
     r1
@@ -78,6 +80,53 @@ second_melody = \relative c'' {
     }
     {
       r1
+    }
+  }
+  
+  \repeat volta 2 {
+    c4 c8 c c4 c8 c
+    c2 f,8 g a bes
+    <c f,>4 f,8 f f4 a
+    c1
+    c4 c8 c c4 c8 c
+    c4 c8 c d4 c8 c
+    c4 bes8 a bes2~
+    bes4 r r2
+    
+    g4 g8 g g4 g8 g
+    g2 c,8 d e f
+    <g c,>4 c,8 c c4 e
+    g1
+    g4 g8 g g4 g8 g
+    g4 g8 g c2
+    c4 bes a2~
+    a4 r r2
+    
+    f'2 f
+    f a4 f
+    c2 f
+    r4 f a f
+    a2 f
+    a f
+    bes4 bes8 bes bes4 bes8 bes
+    bes4 bes a bes
+    bes2 a
+    g f4. c8
+    f2 c
+    r4 c f c
+  }
+  \alternative {
+    {
+      c2 c
+      c c
+      f4 r r2
+      r1
+    }
+    {
+      c2 c
+      c c
+      f4 r e2
+      f4 f8 f f4 r
     }
   }
 }
@@ -106,8 +155,8 @@ melody = \relative c'' {
     <b f' a> r8 <b f' a> <b f' a>4 a'
     gis a e f
     
-    <b, g' b> r8 <b g' b> <b g' b>4 <d b' d>
-    <a f' a> r8 <a f' a> <a f' a>4 <c a' c>
+    <b, g' b> r8 <b g' b> <b g' b>4 <d b d,>
+    <a f' a> r8 <a f' a> <a f' a>4 <c a c,>
     <g e' g> r8 <g e' g> <g e' g>4 e'
     dis e b c
     <c e a> r8 <c e a> <c e a>4 e
@@ -285,8 +334,8 @@ left = \relative c' {
     }
     {
       g,4 r <g g'>2
-      <e e'> <c c'>
-      <g g'>4 r <g'' b f'>2
+      e' c
+      g4 r <g' b f'>2
       <c, g' c>4 <c g' c>8 <c g' c> <c g' c>4 r
     }
   }
@@ -446,6 +495,8 @@ pedal = \relative c, {
     }
   }
   
+  % Trio
+  \key f \major
   R1*2
   f2 f
   c4 c8 c c4 r4
@@ -477,6 +528,51 @@ pedal = \relative c, {
     }
     {
       a4 r r2
+    }
+  }
+  
+  \repeat volta 2 {
+    f4 r c r
+    f r c r
+    f r c r
+    f r c r
+    f r c r
+    f r c r
+    e r c r
+    e r c r
+    e r c r
+    e r c r
+    e r c r
+    e r c r
+    e r c r
+    e r c r
+    f r c r
+    f r r2
+    f4 r c r
+    f r c r
+    f r c r
+    f r c r
+    f r c r
+    f r f r
+    bes, r bes r
+    bes r bes r
+    g r g r
+    g r b r
+    c r c r
+    c r c r
+  }
+  \alternative {
+    {
+      c4 r c r
+      c4 r c r
+      f r r2
+      r1
+    }
+    {
+      c4 r c r
+      c4 r c r
+      f r c2
+      f4 r f r
     }
   }
 }
@@ -528,8 +624,10 @@ glockenspiel = \relative c'' {
       R1*4
     }
   }
-  R1*8
   
+  % Trio
+  \key f \major
+  R1*8
   \repeat volta 2 {
     r1
     r2. a,8 c
@@ -547,6 +645,53 @@ glockenspiel = \relative c'' {
     }
     {
       r1
+    }
+  }
+  
+  \repeat volta 2 {
+    c'4 c8 c c4 c8 c
+    c2 f,8 g a bes
+    <c f,>4 f,8 f f4 a
+    c1
+    c4 c8 c c4 c8 c
+    c4 c8 c d4 c8 c
+    c4 bes8 a bes2~
+    bes4 r r2
+    
+    g4 g8 g g4 g8 g
+    g2 c,8 d e f
+    <g c,>4 c,8 c c4 e
+    g1
+    g4 g8 g g4 g8 g
+    g4 g8 g c2
+    c4 bes a2~
+    a4 r r2
+    
+    f4 f8 f f4 f8 f
+    f4 f8 f a4 f
+    c2 f
+    r4 f a f
+    a2 f
+    a f
+    bes4 bes8 bes bes4 bes8 bes
+    bes4 bes a bes
+    bes2 a
+    g f4. c8
+    f2 c
+    r4 c f c
+  }
+  \alternative {
+    {
+      c2 c
+      c c
+      f4 r r2
+      r1
+    }
+    {
+      c2 c
+      c c
+      f4 r e2
+      f4 f8 f f4 r
     }
   }
 }
@@ -630,6 +775,36 @@ drum = \drummode {
       r1
     }
   }
+  
+  \repeat volta 2 {
+    R1*16
+    bd4 sna bd sna
+    bd sna bd sna
+    bd sna bd sna
+    bd sna bd sna
+    bd sna bd sna
+    \repeat tremolo 16 sna16
+    <sna bd>4. sna8 \repeat tremolo 8 sna16
+    sna4 sna sna sna
+    \repeat tremolo 16 sna16
+    \repeat tremolo 16 sna16
+    sna4. sna8 \repeat tremolo 8 sna16
+    sna4 sna sna sna
+  }
+  \alternative {
+    {
+      r4 sna r sna
+      r sna r sna
+      <bd sna> r r2
+      r1
+    }
+    {
+      r4 sna r sna
+      r sna r sna
+      sna r \repeat tremolo 8 sna16
+      sna4 sna8 sna <sna bd>4 r
+    }
+  }
 }
 
 organPart = <<
@@ -655,7 +830,7 @@ organPart = <<
 glockenspielPart = \new Staff \with {
   instrumentName = "Glockenspiel"
   shortInstrumentName = "Gls."
-  midiInstrument = "glockenspiel"
+  midiInstrument = "vibraphone"
 } \glockenspiel
 
 drumPart = \new DrumStaff \with {
@@ -681,6 +856,6 @@ drumPart = \new DrumStaff \with {
     \drumPart
   >>
   \midi {
-    \tempo 4=230
+    \tempo 4=235
   }
 }
