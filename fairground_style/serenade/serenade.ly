@@ -30,17 +30,33 @@ second_melody = \relative c'' {
   g4 f
   e2
   r2
+  
   e'8 g, e'4
   f8 e d4
   c8 g e' c
   g4 g
+  
+  f'8 g, f'4
+  e8 g, e'4
+  d b8 a
+  g4 g
+    
+  e'8 g, e'4
+  f8 e d4
+  c8 g e' c
+  g4 g
+  
+  a8 c4 a8
+  g e c4
+  e8 c d g,
+  c2
 }
 
 melody = \relative c'' {
   \global
   e8 g, e' g,
-  f' e d g,
-  c4 c8 a
+  f' e d4
+  c c8 a
   a4 g
   f'8 g, d' e
   c4 g8 f
@@ -48,6 +64,16 @@ melody = \relative c'' {
   c2
   r
   g'2~
+  g~
+  g
+  b
+  
+  d,
+  c'
+  d4 d8 c
+  b2
+  
+  g~
   g~
   g
   b
@@ -59,11 +85,22 @@ left = \relative c' {
   r <g b> <g b d> <g b d g>
   r <c e> <c e g> <c e g c>
   r <g b> <g b d> <g b d g>
-  r <b d> <b d f> <b d f g>
+  <b d f g>2
   <c e g>4 <b d g>
-  r8 <c e g> r <b d g>
+  <c e g> <b d g>
+  c8 <e g c> g, <e' g c>
   c <e g c> g, <e' g c>
+  
   c <e g c> g, <e' g c>
+  b <d g b> g, <d' g b>
+  c <e g c> g, <e' g c>
+  b <d g b> g, <d' g b>
+  
+  b <d g b> g, <d' g b>
+  c <e g c> g, <e' g c>
+  d <fis a d> a, <fis' a d>
+  b, <d g b> g, <d' g b>
+  
   c <e g c> g, <e' g c>
   b <d g b> g, <d' g b>
   c <e g c> g, <e' g c>
@@ -82,10 +119,16 @@ pedal = \relative c, {
   c g
   c8 r g r
   c r g r
+  
   c r g r
   g' r d r
   c r g r
   g' r d r
+  
+  g r d r
+  c r g r
+  d' r b r
+  g2
 }
 
 glockenspiel = \relative c'' {
@@ -153,6 +196,6 @@ drumPart = \new DrumStaff \with {
     \drumPart
   >>
   \midi {
-    \tempo 4=95
+    \tempo 4=90
   }
 }
