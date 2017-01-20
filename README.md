@@ -14,7 +14,9 @@ The score is provided in form of [music rolls](https://en.wikipedia.org/wiki/Mus
 
 The fairground organ is limited by its instruments. As all pieces should be in the same style and sound as if they are played by the same fairground organ, all arrangements are limited to the same instruments and the same set of organ registrations (yet to be determined).
 
-Another limitation is the lack of dynamics. Fairground organs don't have a swell box, so dynamics are achieved by different registrations. Therefore the LilyPond files do not contain dynamic symbols.
+Another limitation is the lack of dynamics. Fairground organs don't have a swell box, so dynamics are achieved by different registrations. Therefore the LilyPond files do not contain dynamic symbols for the organ parts.
+
+Fairground organs are used mostly outside, and although they are somewhat protected inside their enclosure, they still experience massive changes in temperature and humidity. This causes the pipe organ to go out of tune. While this is really bad for classical pipe organs, when not too extreme this effect enriches the sound of fairground organs and is therefore desirable. In my experiments, I found a tone instability of about 2-3 percent to be rather pleasant.
 
 #### Status
 The lists of the pieces of music in the game credits and [here](http://rct.wikia.com/wiki/Music) are unfortunately not 100% correct. If you know the name of the missing pieces, please let me know!
