@@ -49,7 +49,23 @@ second_melody = \relative c'' {
   a8 c4 a8
   g e c4
   e8 c d g,
-  c2
+  c4 c
+  
+  \repeat unfold 2 {
+    d'8 c16 b f'8 e16 d
+    e8 g, g c
+    b b a f' g, e' c16 b c a
+    d8 c16 b f'8 e16 d
+    e8 g, g c
+  }
+  \alternative {
+    {
+      d b a d, g a g g
+    }
+    {
+      d' b a d, g a g4
+    }
+  }
 }
 
 melody = \relative c'' {
@@ -77,6 +93,17 @@ melody = \relative c'' {
   g~
   g
   b
+  f'
+  e
+  e4 d
+  c c
+  
+  \repeat unfold 4 {
+    d4 g,
+    g'2
+    b,4 a
+    g2
+  }
 }
 
 left = \relative c' {
@@ -85,9 +112,9 @@ left = \relative c' {
   r <g b> <g b d> <g b d g>
   r <c e> <c e g> <c e g c>
   r <g b> <g b d> <g b d g>
-  <b d f g>2
+  <b d f g>2\(
   <c e g>4 <b d g>
-  <c e g> <b d g>
+  <c e g> <b d g>\)
   c8 <e g c> g, <e' g c>
   c <e g c> g, <e' g c>
   
@@ -105,6 +132,21 @@ left = \relative c' {
   b <d g b> g, <d' g b>
   c <e g c> g, <e' g c>
   b <d g b> g, <d' g b>
+  a <c f a> f, <c' f a>
+  e, <c' e g> g <c e g>
+  c <e g c> g, <b d g>
+  <c e g c>4 <c e g c>
+  
+  \repeat unfold 2 {
+    <b d g>2
+    <c e g>
+    <b d g>
+    <c e g>
+    <b d g>
+    <c e g>
+    <d fis a d>
+    <b d g>
+  }
 }
 
 pedal = \relative c, {
@@ -129,6 +171,26 @@ pedal = \relative c, {
   c r g r
   d' r b r
   g2
+  
+  c8 r g r
+  g' r d r
+  c r g r
+  g' r d r
+  f r c r
+  c r g r
+  c r g' r
+  c,4 c
+  
+  \repeat unfold 2 {
+    g'4 d
+    c g
+    g' d
+    c g
+    g' d
+    c g
+    d' a
+    g g
+  }
 }
 
 glockenspiel = \relative c'' {
@@ -145,6 +207,20 @@ drum = \drummode {
   <bd sna> r4.
   r8 <bd sna> r <bd sna>
   <bd sna> r r4
+  
+  R2*17
+  
+  \repeat unfold 2 {
+    r8 sna r sna
+    r sna sna sna
+    r sna sna sna
+    r sna sna sna
+    r sna r sna
+    r sna sna sna
+    r sna r sna
+    sna r r4
+  }
+  
 }
 
 organPart = <<
@@ -196,6 +272,6 @@ drumPart = \new DrumStaff \with {
     \drumPart
   >>
   \midi {
-    \tempo 4=90
+    \tempo 4=95
   }
 }
