@@ -29,11 +29,11 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 | css7.dat | Dornröschens Brautfahrt by Max Rhode | TODO |
 | css8.dat | Tales from the Vienna Woods Waltz by Johann Strauss II | TODO |
 | css9.dat | ? | TODO |
-| css11.dat | ?Called "Das Alpenhorn", sound a bit like the "Schnacklwalzer"? | TODO |
+| css11.dat | Der Haushamer Plattler (Traditional) 00:00 - 00:52 / ? | TODO |
 | css12.dat | Bella Bella Bimba | TODO |
 | css13.dat | The Blond Sailor by The Andrews Sisters | TODO |
 | css14.dat | Overture from Poet and Peasant by Franz von Suppé | TODO |
-| css15.dat | Multiple waltzes by Johann Strauß II: 00:00 Morgenblätter/01:10 Die Fledermaus - Overture/01:35 Rosen aus dem Süden/02:20 Wiener Blut/03:05 The Blue Danube | TODO |
+| css15.dat | Multiple waltzes by Johann Strauß II: 00:00 Morgenblätter / 01:10 Die Fledermaus - Overture / 01:35 Rosen aus dem Süden / 02:20 Wiener Blut / 03:05 The Blue Danube | TODO |
 
 ### Other music styles
 A few of the other music styles are original compositions for the game, so the can't be recreated. The others could. TODO.
