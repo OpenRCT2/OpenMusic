@@ -22,15 +22,11 @@ global = {
   \time 2/4
 }
 
-second_melody = \relative c'' {
-  \global
-  R2*4
-  b4 g
-  e b'8 a
-  g4 f
-  e2
-  r2
-  
+second_melody_intro = \relative c'' {
+  R2*9
+}
+
+second_melody_part_one = \relative c' {
   e'8 g, e'4
   f8 e d4
   c8 g e' c
@@ -50,7 +46,9 @@ second_melody = \relative c'' {
   g e c4
   e8 c d g,
   c4 c
-  
+}
+
+second_melody_alt_one = \relative c' {
   \repeat unfold 2 {
     d'8 c16 b f'8 e16 d
     e8 g, g c
@@ -68,8 +66,66 @@ second_melody = \relative c'' {
   }
 }
 
-melody = \relative c'' {
+second_melody_part_two = \relative c' {
+  f4 a
+  c8 bes g4
+  f a
+  f'8 d c4
+  bes8 d c bes
+  a c f4
+  e4 d
+  c8 c c4
+  
+  f,4 a
+  c8 bes g4
+  f a
+  f'8 d c4
+  bes8 d c bes
+  a c f4
+  g,8 bes a g
+  g f f4
+}
+
+second_melody_alt_two = \relative c'' {
+  a8 e' f e
+  d f, g a
+  a, g' f e
+  d2
+  
+  a'8 e' f e
+  d a' g f
+  e d f gis,
+  a4 bes8\mordent a8
+  
+  a8 e' f e
+  d f, g a
+  a, g' f e
+  d2
+  
+  a'8 e' f e
+  d a c bes
+  a g fis g
+  c2
+}
+
+second_melody = \relative c'' {
   \global
+  \second_melody_intro
+  
+  \second_melody_part_one
+  \second_melody_alt_one
+  \second_melody_part_one
+  
+  \second_melody_part_two
+  \second_melody_alt_two
+  \second_melody_part_two
+  
+  \second_melody_intro
+  
+  \second_melody_part_one
+}
+
+melody_intro = \relative c'' {
   e8 g, e' g,
   f' e d4
   c c8 a
@@ -79,6 +135,9 @@ melody = \relative c'' {
   e4 d
   c2
   r
+}
+
+melody_part_one = \relative c' {
   g'2~
   g~
   g
@@ -97,7 +156,9 @@ melody = \relative c'' {
   e
   e4 d
   c c
-  
+}
+
+melody_alt_one = \relative c'' {
   \repeat unfold 4 {
     d4 g,
     g'2
@@ -106,19 +167,35 @@ melody = \relative c'' {
   }
 }
 
-left = \relative c' {
+melody_part_two = {
+  R2*16
+}
+
+melody = \relative c'' {
   \global
+  \melody_intro
+  
+  \melody_part_one
+  \melody_alt_one
+  \melody_part_one
+  
+  \melody_part_two
+}
+
+left_part_intro = \relative c' {
   r8 <c, e> <c e g> <c e g c>
   r <g b> <g b d> <g b d g>
   r <c e> <c e g> <c e g c>
   r <g b> <g b d> <g b d g>
   <b d f g>2\(
-  <c e g>4 <b d g>
+  <a c e>4 <b d g>
   <c e g> <b d g>\)
   c8 <e g c> g, <e' g c>
   c <e g c> g, <e' g c>
-  
-  c <e g c> g, <e' g c>
+}
+
+left_part_one = \relative c {
+  c8 <e g c> g, <e' g c>
   b <d g b> g, <d' g b>
   c <e g c> g, <e' g c>
   b <d g b> g, <d' g b>
@@ -126,7 +203,7 @@ left = \relative c' {
   b <d g b> g, <d' g b>
   c <e g c> g, <e' g c>
   d <fis a d> a, <fis' a d>
-  b, <d g b> g, <d' g b>
+  b, <d g b> <d g b> <d g b>
   
   c <e g c> g, <e' g c>
   b <d g b> g, <d' g b>
@@ -136,32 +213,65 @@ left = \relative c' {
   e, <c' e g> g <c e g>
   c <e g c> g, <b d g>
   <c e g c>4 <c e g c>
-  
+}
+
+left_alt_one = \relative c {
   \repeat unfold 2 {
-    <b d g>2
+    <b d g>2\(
     <c e g>
     <b d g>
     <c e g>
     <b d g>
     <c e g>
-    <d fis a d>
-    <b d g>
+    <d fis a>
+    <b d g>\)
   }
 }
 
-pedal = \relative c, {
-  \global
+left_part_two = \relative c {
+  \repeat unfold 8 { <f a c>16 }
+  \repeat unfold 8 { <e g c>16 }
+  \repeat unfold 8 { <f a c>16 }
+  \repeat unfold 4 { <f bes d>16 } \repeat unfold 4 { <f a c>16 }
+  \repeat unfold 8 { <e g c>16 }
+  \repeat unfold 8 { <f a c>16 }
+  \repeat unfold 8 { <g b d>16 }
+  \repeat unfold 8 { <e g c>16 }
   
+  \repeat unfold 8 { <f a c>16 }
+  \repeat unfold 8 { <e g c>16 }
+  \repeat unfold 8 { <f a c>16 }
+  \repeat unfold 4 { <f bes d>16 } \repeat unfold 4 { <f a c>16 }
+  \repeat unfold 8 { <e g c>16 }
+  \repeat unfold 8 { <f a c>16 }
+  \repeat unfold 8 { <e g c>16 }
+  <f a c>8 <f a c> <f a c>4
+}
+
+left = \relative c' {
+  \global
+  \left_part_intro
+  
+  \left_part_one
+  \left_alt_one
+  \left_part_one
+  
+  \left_part_two
+}
+
+pedal_part_intro = \relative c, {
   c'8 r4 c8
   g r4 g8
   c r4 c8
   g r4 g8
   g2
-  c4 g
+  a4 g
   c g
   c8 r g r
   c r g r
-  
+}
+
+pedal_part_one = \relative c {
   c r g r
   g' r d r
   c r g r
@@ -180,7 +290,9 @@ pedal = \relative c, {
   c r g r
   c r g' r
   c,4 c
-  
+}
+
+pedal_alt_one = \relative c {
   \repeat unfold 2 {
     g'4 d
     c g
@@ -193,12 +305,43 @@ pedal = \relative c, {
   }
 }
 
+pedal_part_two = \relative c {
+  f8 r f r
+  c r c r
+  f r f r
+  bes, d f r
+  c r c r
+  f r f r
+  g r g r
+  c, c c4
+  
+  f8 r f r
+  c r c r
+  f r f r
+  bes, d f r
+  c r c r
+  f r f r
+  c r c r
+  f f f4
+}
+
+pedal = \relative c, {
+  \global
+  \pedal_part_intro
+  
+  \pedal_part_one
+  \pedal_alt_one
+  \pedal_part_one
+  
+  \pedal_part_two
+}
+
 glockenspiel = \relative c'' {
   \global
   
 }
 
-drum = \drummode {
+drum_part_intro = \drummode {
   <bd sna>8 r4 <bd sna>8
   <bd sna> r4.
   <bd sna>8 r4 <bd sna>8
@@ -207,9 +350,10 @@ drum = \drummode {
   <bd sna> r4.
   r8 <bd sna> r <bd sna>
   <bd sna> r r4
-  
-  R2*17
-  
+  r2
+}
+
+drum_alt_one = \drummode {
   \repeat unfold 2 {
     r8 sna r sna
     r sna sna sna
@@ -220,7 +364,16 @@ drum = \drummode {
     r sna r sna
     sna r r4
   }
+}
+
+drum = \drummode {
+  \drum_part_intro
   
+  R2*16 
+  \drum_alt_one
+  R2*16
+  
+  R2*16
 }
 
 organPart = <<
