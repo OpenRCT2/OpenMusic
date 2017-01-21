@@ -26,7 +26,7 @@ second_melody_intro = \relative c'' {
   R2*9
 }
 
-second_melody_part_one = \relative c' {
+second_melody_part_one_s = \relative c' {
   e'8 g, e'4
   f8 e d4
   c8 g e' c
@@ -45,7 +45,16 @@ second_melody_part_one = \relative c' {
   a8 c4 a8
   g e c4
   e8 c d g,
+}
+
+second_melody_part_one = \relative c' {
+  \second_melody_part_one_s
   c4 c
+}
+
+second_melody_part_one_end = \relative c' {
+  \second_melody_part_one_s
+  c4 c16 a c a
 }
 
 second_melody_alt_one = \relative c' {
@@ -121,8 +130,16 @@ second_melody = \relative c'' {
   \second_melody_part_two
   
   \second_melody_intro
-  
-  \second_melody_part_one
+  \second_melody_part_one_end
+  g,4 e'16 d g e
+  c4 e16 c g c
+  a8 a e' e
+  c8 d e g
+  a g c d
+  e2~
+  e2
+  <e, g c>~
+  <e g c>
 }
 
 melody_intro = \relative c'' {
@@ -137,7 +154,7 @@ melody_intro = \relative c'' {
   r
 }
 
-melody_part_one = \relative c' {
+melody_part_one_s = \relative c' {
   g'2~
   g~
   g
@@ -154,8 +171,17 @@ melody_part_one = \relative c' {
   b
   f'
   e
+}
+
+melody_part_one = \relative c'' {
+  \melody_part_one_s
   e4 d
   c c
+}
+
+melody_part_one_end = \relative c'' {
+  \melody_part_one_s
+  R2*2
 }
 
 melody_alt_one = \relative c'' {
@@ -167,10 +193,6 @@ melody_alt_one = \relative c'' {
   }
 }
 
-melody_part_two = {
-  R2*16
-}
-
 melody = \relative c'' {
   \global
   \melody_intro
@@ -179,7 +201,12 @@ melody = \relative c'' {
   \melody_alt_one
   \melody_part_one
   
-  \melody_part_two
+  R2*16
+  R2*16
+  R2*16
+  
+  \melody_intro
+  \melody_part_one_end
 }
 
 left_part_intro = \relative c' {
@@ -194,7 +221,7 @@ left_part_intro = \relative c' {
   c <e g c> g, <e' g c>
 }
 
-left_part_one = \relative c {
+left_part_one_s = \relative c {
   c8 <e g c> g, <e' g c>
   b <d g b> g, <d' g b>
   c <e g c> g, <e' g c>
@@ -212,7 +239,16 @@ left_part_one = \relative c {
   a <c f a> f, <c' f a>
   e, <c' e g> g <c e g>
   c <e g c> g, <b d g>
+}
+
+left_part_one = \relative c {
+  \left_part_one_s
   <c e g c>4 <c e g c>
+}
+
+left_part_one_end = \relative c {
+  \left_part_one_s
+  c8 <e g> c <e g>
 }
 
 left_alt_one = \relative c {
@@ -236,7 +272,7 @@ left_part_two = \relative c {
   \repeat unfold 8 { <e g c>16 }
   \repeat unfold 8 { <f a c>16 }
   \repeat unfold 8 { <g b d>16 }
-  \repeat unfold 8 { <e g c>16 }
+  \repeat unfold 4 { <e g c>16 } c' bes a g
   
   \repeat unfold 8 { <f a c>16 }
   \repeat unfold 8 { <e g c>16 }
@@ -248,6 +284,28 @@ left_part_two = \relative c {
   <f a c>8 <f a c> <f a c>4
 }
 
+left_alt_two = \relative c {
+  <cis e a>2
+  <d f a>
+  <cis e a>
+  <d f a>
+  
+  <cis e a>
+  <d f a>
+  <e gis b>4\( <d gis b>\)
+  <cis e a>2
+  
+  <cis e a>
+  <d f a>
+  <cis e a>
+  <d f a>
+  
+  <cis e a>
+  <d f a>
+  <b d g>
+  <c e g>
+}
+
 left = \relative c' {
   \global
   \left_part_intro
@@ -257,6 +315,21 @@ left = \relative c' {
   \left_part_one
   
   \left_part_two
+  \left_alt_two
+  \left_part_two
+  
+  \left_part_intro
+  \left_part_one_end
+  <b, d g>2
+  <c e g>
+  <c f a>4
+  <b d g>
+  c8 d e g
+  a g c d
+  <c e g>2~
+  <c e g>
+  <c, c'>~
+  <c c'>
 }
 
 pedal_part_intro = \relative c, {
@@ -325,6 +398,28 @@ pedal_part_two = \relative c {
   f f f4
 }
 
+pedal_alt_two = \relative c {
+  a2
+  d
+  a
+  d8 d r d
+  
+  a2
+  d
+  e
+  a,
+  
+  a2
+  d
+  a
+  d8 d r d
+  
+  a2
+  d
+  g,2
+  c2
+}
+
 pedal = \relative c, {
   \global
   \pedal_part_intro
@@ -334,11 +429,23 @@ pedal = \relative c, {
   \pedal_part_one
   
   \pedal_part_two
+  \pedal_alt_two
+  \pedal_part_two
+  
+  \pedal_part_intro
+  \pedal_part_one
+  g'2
+  c
+  f,4 g
+  c r
+  R2*3
+  c2~
+  c
 }
 
 glockenspiel = \relative c'' {
   \global
-  
+  R2*139
 }
 
 drum_part_intro = \drummode {
@@ -366,6 +473,20 @@ drum_alt_one = \drummode {
   }
 }
 
+drum_alt_two = \drummode {
+  \repeat unfold 2 {
+    r8 sna sna sna
+    r sna sna sna
+    \repeat tremolo 16 sna32
+    r8 sna r sna
+    
+    r sna sna sna
+    r sna sna sna
+    \repeat tremolo 16 sna32
+    r2
+  }
+}
+
 drum = \drummode {
   \drum_part_intro
   
@@ -374,6 +495,12 @@ drum = \drummode {
   R2*16
   
   R2*16
+  \drum_alt_two
+  R2*16
+  
+  \drum_part_intro
+  R2*16
+  R2*9
 }
 
 organPart = <<
