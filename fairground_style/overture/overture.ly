@@ -47,6 +47,24 @@ second_melody = \relative c'' {
   fis2\( d4 fis\)
   g2\( d4 e\)
   fis2 r4 \tuplet 3/2 { fis8 a g }
+  fis2\( e4\) \tuplet 3/2 { e8 g fis }
+  e2\( d4\) fis8 f
+  e8.\( a16 \tuplet 3/2 { cis8 b a } \tuplet 3/2 { gis eis fis } \tuplet 3/2 { cis d b\) }
+  a4 b'2\( a8. g16\)
+  fis2\( d8. cis16 d8. e16\)
+  fis2\( d4\) fis
+  g2\( d4 e
+  fis2\) r4 \tuplet 3/2 { fis8 a g }
+  fis2\( e4\) \tuplet 3/2 { e8 g fis }
+  e8\( d\) fis4\( fis8 e fis g\)
+  g8. fis16 \acciaccatura a8 g8. fis16 fis e cis'4.
+  b8 ais16 b fis g gis, a fis'4. e8
+  
+  d4 \tuplet 3/2 { r8 <fis, a> <eis gis> } \tuplet 3/2 { <g b>8 <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <eis cis'> }
+  \tuplet 3/2 { <g e'>8 <fis d'>4 } \tuplet 3/2 { <fis d'>8 <a fis'> <g e'> } \tuplet 3/2 { <g e'> <fis d'> <a cis> } \tuplet 3/2 { <a cis> <g b> <fis a> }
+  \tuplet 3/2 { <fis a>8 <e g>4\( } g'4\)~ g8.\( fis16 e8. d16\)
+  d8.\( cis16 fis8. e16\) a8.\( g16~ \tuplet 3/2 { \acciaccatura a8 g8 fis e\) }
+  eis4\( \tuplet 3/2 { fis8\) <fis, a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <eis cis'> }
 }
 
 melody = \relative c'' {
