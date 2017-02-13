@@ -65,6 +65,17 @@ second_melody = \relative c'' {
   \tuplet 3/2 { <fis a>8 <e g>4\( } g'4\)~ g8.\( fis16 e8. d16\)
   d8.\( cis16 fis8. e16\) a8.\( g16~ \tuplet 3/2 { \acciaccatura a8 g8 fis e\) }
   eis4\( \tuplet 3/2 { fis8\) <fis, a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <eis cis'> }
+  \tuplet 3/2 { <g e'>8 <fis d'>4~ } \tuplet 3/2 { <fis d'>8 <g fis'> <g e'> } \tuplet 3/2 { <g e'> <fis d'> <a cis> } \tuplet 3/2 { <a cis> <g b> <fis a> }
+  \tuplet 3/2 { <fis a>8 <e g>4 } g'~ g8. fis16 e8. d16
+  d8. cis16 fis8. e16 cis'8. b16~ \tuplet 3/2 { \acciaccatura cis8 b8 a g  }
+  
+  f2\( e8 f \tuplet 3/2 { a g f\) }
+  g4\( f e8 f \tuplet 3/2 { a g f\) }
+  <f, bes d f>4 <fis bes d fis> <g bes d g> <gis bes d gis>
+  <a d fis a>2 \tuplet 3/2 { d'8 cis b } \tuplet 3/2 { a g fis }
+  <a, cis fis>4\( <a cis e>\) b'2
+  b~ b8 a g e
+  d4 \tuplet 3/2 { r8 <fis, a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <a cis> }
 }
 
 melody = \relative c'' {
@@ -114,10 +125,35 @@ left = \relative c' {
   <d fis a>2 <d fis a>4 <e a cis>
   
   \repeat unfold 2 {
-    \tuplet 3/2 { d8 fis a } \tuplet 3/2 { d a fis } \tuplet 3/2 { d fis a } \tuplet 3/2 { d a fis }
+    \tuplet 3/2 { d8( fis a } \tuplet 3/2 { d a fis) } \tuplet 3/2 { d( fis a } \tuplet 3/2 { d a fis) }
   }
-  \tuplet 3/2 { d8 g b } \tuplet 3/2 { d b g } \tuplet 3/2 { d g b } \tuplet 3/2 { d b g }
-  \tuplet 3/2 { d8 fis a } \tuplet 3/2 { d a fis } \tuplet 3/2 { d fis a } \tuplet 3/2 { d a fis }
+  \tuplet 3/2 { d8( g b } \tuplet 3/2 { d b g) } \tuplet 3/2 { d( g b } \tuplet 3/2 { d b g) }
+  \tuplet 3/2 { d8( fis a } \tuplet 3/2 { d a fis) } \tuplet 3/2 { d( fis a } \tuplet 3/2 { d a fis) }
+  \tuplet 3/2 { a( cis e } \tuplet 3/2 { a e cis) } \tuplet 3/2 { ais( cis e } \tuplet 3/2 { fis e cis) }
+  \tuplet 3/2 { b( d fis } \tuplet 3/2 { b fis d) } \tuplet 3/2 { gis,( d' e } \tuplet 3/2 { b' e, d) }
+  \tuplet 3/2 { a( cis e } \tuplet 3/2 { a e cis) } \tuplet 3/2 { e,( d' e } \tuplet 3/2 { gis e d) }
+  \tuplet 3/2 { a( cis e } \tuplet 3/2 { a e cis) } \tuplet 3/2 { cis( e, g } \tuplet 3/2 { a g e) }
+  \repeat unfold 2 { \tuplet 3/2 { d( fis a } \tuplet 3/2 { d a fis) } \tuplet 3/2 { d( fis a } \tuplet 3/2 { d a fis) } }
+  \tuplet 3/2 { d( g b } \tuplet 3/2 { d b g) } \tuplet 3/2 { d( g bes } \tuplet 3/2 { d bes g) }
+  \tuplet 3/2 { d( fis a } \tuplet 3/2 { d a fis) } \tuplet 3/2 { d( fis a } \tuplet 3/2 { d a fis) }
+  \tuplet 3/2 { a( cis e } \tuplet 3/2 { a e cis) } \tuplet 3/2 { ais( cis e } \tuplet 3/2 { fis e cis) }
+  \tuplet 3/2 { b( d fis } \tuplet 3/2 { b fis d) } \tuplet 3/2 { g,( e g } \tuplet 3/2 { b g e) }
+  \tuplet 3/2 { a( d, fis } \tuplet 3/2 { a fis d) } <e g a cis>2
+  R1
+  \repeat unfold 4 { \tuplet 3/2 { r8 <fis a d> <fis a d> } <fis a d> r }
+  \repeat unfold 2 { \tuplet 3/2 { r8 <e a cis> <e a cis> } <e a cis> r }
+  \repeat unfold 2 { \tuplet 3/2 { r8 <e g a cis> <e g a cis> } <e g a cis> r }
+  \repeat unfold 4 { \tuplet 3/2 { r8 <fis a d> <fis a d> } <fis a d> r }
+  \repeat unfold 2 { \tuplet 3/2 { r8 <e a cis> <e a cis> } <e a cis> r }
+  \repeat unfold 2 { \tuplet 3/2 { r8 <e g a cis> <e g a cis> } <e g a cis> r }
+  
+  \repeat unfold 2 { \repeat unfold 2 { \tuplet 3/2 { \repeat unfold 3 { <f bes d>8 } } } \repeat unfold 2 { \tuplet 3/2 { \repeat unfold 3 { <f a es'>8 } } } }
+  \tuplet 3/2 { \repeat unfold 3 { <f bes d>8 } } \tuplet 3/2 { \repeat unfold 3 { <fis bes d>8 } } \tuplet 3/2 { \repeat unfold 3 { <g bes d>8 } } \tuplet 3/2 { \repeat unfold 3 { <gis bes d>8 } }
+  <fis a d>1(
+  <g cis e>)~
+  <g cis e>(
+  
+  \tuplet 3/2 { r16) fis,( a } \tuplet 3/2 { d fis a } d8) r8 \tuplet 3/2 { r16 fis,,( a } \tuplet 3/2 { d fis a } d8) r8
 }
 
 pedal = \relative c {
@@ -127,8 +163,30 @@ pedal = \relative c {
   d1~
   \tuplet 3/2 { d8 a' g } \tuplet 3/2 { fis e d } \tuplet 3/2 { cis b a } \tuplet 3/2 { gis a d }
   a'2 a,
-  d4 r r2
-  R1*5
+  d,8 r r4 d8 r r4 
+  \repeat unfold 3 { d8 r r4 d8 r r4 }
+  a'8 r r4 ais8 r r4
+  b8 r r4 gis8 r r4
+  a8 r r4 e8 r r4
+  a8 r r4 cis,8 r r4
+  \repeat unfold 4 { d8 r r4 d8 r r4 }
+  a'8 r r4 ais8 r r4
+  b8 r r4 g8 r r4
+  a8 r r4 a2
+  R1
+  \repeat unfold 2 { d8 r r4 d8 r r4 }
+  \repeat unfold 2 { a8 r r4 a8 r r4 }
+  d,8 r r4 d'8 r r4
+  d8 r r4 d8 r r4
+  \repeat unfold 2 { a8 r r4 a8 r r4 }
+  bes1~
+  bes~
+  bes(
+  a~)
+  a~
+  a(
+  
+  d,16) r r8 r4 d16 r r8 r4
 }
 
 glockenspiel = \relative c'' {
