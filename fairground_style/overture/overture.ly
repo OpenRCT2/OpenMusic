@@ -17,13 +17,20 @@
   left-margin = 2\cm
 }
 
-global = {
+global_andante = {
   \key d \major
   \time 4/4
 }
 
+global_allegro = {
+  \key g \minor
+  \time 4/4
+  \set Score.tempoHideNote = ##t
+  \tempo 4 = 180
+}
+
 second_melody = \relative c'' {
-  \global
+  \global_andante
   
   fis4. fis16 fis fis8 fis16 fis fis8 fis16 fis
   fis2\( fis4\) r8 fis16 fis
@@ -76,10 +83,25 @@ second_melody = \relative c'' {
   <a, cis fis>4\( <a cis e>\) b'2
   b~ b8 a g e
   d4 \tuplet 3/2 { r8 <fis, a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <a cis> }
+  <g~ b>2( <g~ bes d>4 <g bes e>
+  <fis a fis'>4) \tuplet 3/2 { r8 <fis a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <a cis> }
+  <g~ b>2( <g~ bes d>4 <g bes e>
+  <fis a fis'>2) \tuplet 3/2 { d8 fis a } \tuplet 3/2 { d fis a }
+  d1(
+  
+  <fis,, a d'>2) r
+  
+  \global_allegro
+  R1*3
+  <d' f bes>1~
+  <d f bes>8 <d d'>4 <c c'> <bes bes'> <a a'>8~
+  <a a'> <g g'>4 <f f'> <es es'> d'8
+  <c f,>8 <bes f> r4 <f bes es>8 <f bes d> r4
+  <bes d g>8 <bes d f> r4 <d f c'>8 <d f bes>8 r4
 }
 
 melody = \relative c'' {
-  \global
+  \global_andante
   
   d,4. d16 d d8 a'16 a a8 d16 d
   d2\( a4\) r8 a16 a
@@ -103,7 +125,7 @@ melody = \relative c'' {
 }
 
 left = \relative c' {
-  \global
+  \global_andante
   
   <a d,>4. <a d,>16 <a d,> <a d,>8 <a d,>16 <a d,> <a d,>8 <a d,>16 <a d,>
   <a d,>2. r8 <a d,>16 <a d,>
@@ -154,10 +176,25 @@ left = \relative c' {
   <g cis e>(
   
   \tuplet 3/2 { r16) fis,( a } \tuplet 3/2 { d fis a } d8) r8 \tuplet 3/2 { r16 fis,,( a } \tuplet 3/2 { d fis a } d8) r8
+  \tuplet 3/2 { r16 g,,( b } \tuplet 3/2 { d g b } d8) r8 \tuplet 3/2 { r16 g,,( bes } \tuplet 3/2 { d g bes } d8) r8
+  \tuplet 3/2 { r16 fis,,( a } \tuplet 3/2 { d fis a } d8) r8 \tuplet 3/2 { r16 fis,,( a } \tuplet 3/2 { d fis a } d8) r8
+  \tuplet 3/2 { r16 g,,( b } \tuplet 3/2 { d g b } d8) r8 \tuplet 3/2 { r16 g,,( bes } \tuplet 3/2 { d g bes } d8) r8
+  \tuplet 3/2 { r16 fis,,( a } \tuplet 3/2 { d fis a } d8) r8 \tuplet 3/2 { r16 fis,,( a } \tuplet 3/2 { d fis a } d8) r8
+  \tuplet 3/2 { r16 fis,,( a } \tuplet 3/2 { d fis a } d8) r8 \tuplet 3/2 { r16 fis,,( a } \tuplet 3/2 { d fis a } d4
+  <fis, a d>2) r
+  
+  \global_allegro
+  \repeat unfold 3 { \repeat unfold 8 { bes,16 a } }
+  \repeat unfold 8 { <d f bes>8 }
+  <d f bes> r <d f bes>4 <d f bes> <d f bes>
+  \repeat unfold 4 { <d f bes> }
+  <d f bes>8 <d f bes> r4 <d f bes>8 <d f bes> r4
+  <d f bes>8 <d f bes> r4 <d f bes>8 <d f bes> r4
+  
 }
 
 pedal = \relative c {
-  \global
+  \global_andante
   
   R1*12
   d1~
@@ -186,11 +223,21 @@ pedal = \relative c {
   a~
   a(
   
-  d,16) r r8 r4 d16 r r8 r4
+  d,4) r d r
+  \repeat unfold 5 { d r d r }
+  d2 r
+  
+  \global_allegro
+  R1*3
+  bes'1~
+  bes8 r bes4 bes bes
+  bes bes bes bes
+  bes8 bes r4 bes8 bes r4
+  bes8 bes r4 bes8 bes r4
 }
 
 glockenspiel = \relative c'' {
-  \global
+  \global_andante
   
 }
 
