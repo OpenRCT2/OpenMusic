@@ -1,6 +1,6 @@
 \version "2.18.2"
 \include "articulate.ly"
-#(define ac:normalFactor '(7 . 8))
+#(define ac:normalFactor '(15 . 16))
 
 \header {
   dedication = "OpenRCT2-OpenMusic"
@@ -119,9 +119,34 @@ melody = \relative c'' {
   <fis, a d fis>2 <fis a d fis>4 <g a cis e>
   
   <fis a d>4 r r2
-  r1
-  b1\(
-  a2\) r
+  R1
+  b1(
+  a2) r
+  a( ais
+  b gis)
+  R1*4
+  b1(
+  a2) r
+  R1*14
+  
+  bes1(
+  d)
+  R1*3
+  \repeat unfold 2 {
+    <g, b>2( <g bes>
+    <fis a d>4.) r8 r2
+  }
+  r4
+  \tuplet 3/2 { d8 fis a } \tuplet 3/2 { d fis a( } d4
+  <d, fis a d>2) r
+  \global_allegro
+  
+  R1*3
+  <d f bes>1~
+  <d f bes>8 <d d'>4 <c c'> <bes bes'> <a a'>8~
+  <a a'> <g g'>4 <f f'> <es es'> d'8
+  <c f,>8 <bes f> r4 <f bes es>8 <f bes d> r4
+  <bes d g>8 <bes d f> r4 <d f c'>8 <d f bes>8 r4
 }
 
 left = \relative c' {
@@ -200,22 +225,22 @@ pedal = \relative c {
   d1~
   \tuplet 3/2 { d8 a' g } \tuplet 3/2 { fis e d } \tuplet 3/2 { cis b a } \tuplet 3/2 { gis a d }
   a'2 a,
-  d,8 r r4 d8 r r4 
-  \repeat unfold 3 { d8 r r4 d8 r r4 }
-  a'8 r r4 ais8 r r4
-  b8 r r4 gis8 r r4
-  a8 r r4 e8 r r4
-  a8 r r4 cis,8 r r4
-  \repeat unfold 4 { d8 r r4 d8 r r4 }
-  a'8 r r4 ais8 r r4
-  b8 r r4 g8 r r4
-  a8 r r4 a2
+  d,4 r d r 
+  \repeat unfold 3 { d r d r }
+  a' r ais4 r
+  b r gis r
+  a r e r
+  a r cis, r
+  \repeat unfold 4 { d r d r }
+  a' r ais r
+  b r g r
+  a r a2
   R1
-  \repeat unfold 2 { d8 r r4 d8 r r4 }
-  \repeat unfold 2 { a8 r r4 a8 r r4 }
-  d,8 r r4 d'8 r r4
-  d8 r r4 d8 r r4
-  \repeat unfold 2 { a8 r r4 a8 r r4 }
+  \repeat unfold 2 { d4 r d r }
+  \repeat unfold 2 { a r a r }
+  d, r d' r
+  d r d r
+  \repeat unfold 2 { a r a r }
   bes1~
   bes~
   bes(
