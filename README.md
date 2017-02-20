@@ -21,7 +21,7 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 
 | File | Piece of music | Status |
 | ---- | -------------- | ------ |
-| css4.dat | Die Regimentskinder by Julius Fučík | Work in progress ([current state](https://cuervo.phoenix.uberspace.de/music/cotr5.ogg)) |
+| css4.dat | Die Regimentskinder by Julius Fučík | Work in progress ([current state 1](https://cuervo.phoenix.uberspace.de/music/cotr5.ogg), [current state 2](https://cuervo.phoenix.uberspace.de/music/cotr6.ogg), [current state 3](https://cuervo.phoenix.uberspace.de/music/cotr7.ogg)) |
 | css5.dat | Serenade by Jonny Heykens | Work in progress ([current state](https://cuervo.phoenix.uberspace.de/music/serenade2.ogg)) |
 | css6.dat | La Belle Espagnole, Op.103 by Robert Vollstedt | TODO |
 | css7.dat | Dornröschens Brautfahrt by Max Rhode | TODO |
@@ -34,4 +34,9 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 | css15.dat | Multiple waltzes by Johann Strauß II: 00:00 Morgenblätter / 01:10 Die Fledermaus - Overture / 01:35 Rosen aus dem Süden / 02:20 Wiener Blut / 03:05 The Blue Danube | TODO |
 
 ### Other music styles
-A few of the other music styles are original compositions for the game, so the can't be recreated. The others could. TODO.
+
+| Style | Status |
+| ----- | ------ |
+| Ragtime style | Adapted the score from the Mutopia Project ([current state](https://cuervo.phoenix.uberspace.de/music/ragtime.ogg)) |
+
+Most of the other music styles are original compositions for the game, so the can't be recreated. The others can.
