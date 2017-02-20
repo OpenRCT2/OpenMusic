@@ -35,8 +35,8 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 
 ### Other music styles
 
-| Style | Status |
-| ----- | ------ |
-| Ragtime style | Adapted the score from the Mutopia Project ([current state](https://cuervo.phoenix.uberspace.de/music/ragtime.ogg)) |
+| File | Style | Status |
+| ---- | ----- | ------ |
+| css34.dat | Ragtime style | Adapted the score from the Mutopia Project ([current state](https://cuervo.phoenix.uberspace.de/music/ragtime.ogg)) |
 
 Most of the other music styles are original compositions for the game, so the can't be recreated. The others can.
