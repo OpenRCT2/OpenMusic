@@ -215,8 +215,8 @@ left_part_intro = \relative c' {
   r <c e> <c e g> <c e g c>
   r <g b> <g b d> <g b d g>
   <b d f g>2\(
-  <a c e>4 <b d g>
-  <c e g> <b d g>\)
+  <a c e>4 b'8 a
+  g4 f\)
   c8 <e g c> g, <e' g c>
   c <e g c> g, <e' g c>
 }
@@ -292,8 +292,8 @@ left_alt_two = \relative c {
   
   <cis e a>
   <d f a>
-  <e gis b>4\( <d gis b>\)
-  <cis e a>2
+  <d e gis>
+  <e a cis>
   
   <cis e a>
   <d f a>
