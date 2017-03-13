@@ -29,6 +29,12 @@ global_allegro = {
   \tempo 4 = 180
 }
 
+global_allegro_two = {
+  \time 2/4
+  \set Score.tempoHideNote = ##t
+  \tempo 4 = 160
+}
+
 second_melody = \relative c'' {
   \global_andante
   
@@ -98,6 +104,58 @@ second_melody = \relative c'' {
   <a a'> <g g'>4 <f f'> <es es'> d'8
   <c f,>8 <bes f> r4 <f bes es>8 <f bes d> r4
   <bes d g>8 <bes d f> r4 <d f c'>8 <d f bes>8 r4
+  
+  R1*4
+  <f a d>1~
+  <f a d>8 <d d'>4 <c c'> <bes bes'> <a a'>8~
+  <a a'> <g g'>4 <f f'> <e e'> d'8
+  <d f,> <a f> r4 <f' a,>8 <d a> r4
+  <a' d,>8 <f d> r4 <bes f d>8 <a f d> r4
+  
+  R1
+  \repeat unfold 3 { f2~ f8 d16( e f g f e) }
+  f2~ f8 e16( f g f e d)
+  cis8 r <a cis e a>4 r8 g f e
+  d cis d e f e d f
+  e r <a cis e a>4 r8 g f e
+  d cis d e f e d f
+  e r <a cis e a>4 r <a cis e a>
+  r \repeat unfold 3 { <a cis e a>8 r }
+  
+  \global_allegro_two
+  a'4.( g16 f)
+  f4.( es16 d)
+  d4.( c16 bes)
+  a4.( g16 f)
+  es4.( d16 es)
+  g4. bes8
+  bes4.( a16 gis)
+  a4.( gis16 a)
+  
+  a'4.( g16 f)
+  f4.( es16 d)
+  d4.( c16 bes)
+  a4.( a16 g)
+  f4.( e16 f)
+  g4.( a16 bes)
+  c4.( b16 c)
+  cis4.( bis16 cis)
+  d4.( cis16 d)
+  
+  g,4 g8 bes
+  es g, bes es
+  g r r4
+  
+  R2
+  f,4 f8 a
+  d f, a d
+  f r r4
+  R2
+  r8 e4.~
+  e8 r r4
+  r8 e4.~
+  e8 r r4
+  R2*4
 }
 
 melody = \relative c'' {
@@ -147,6 +205,77 @@ melody = \relative c'' {
   <a a'> <g g'>4 <f f'> <es es'> d'8
   <c f,>8 <bes f> r4 <f bes es>8 <f bes d> r4
   <bes d g>8 <bes d f> r4 <d f c'>8 <d f bes>8 r4
+  
+  R1*4
+  <f a d>1~
+  <f a d>8 <d d'>4 <c c'> <bes bes'> <a a'>8~
+  <a a'> <g g'>4 <f f'> <e e'> d'8
+  <d f,> <a f> r4 <f' a,>8 <d a> r4
+  <a' d,>8 <f d> r4 <bes f d>8 <a f d> r4
+  
+  R1
+  \repeat unfold 3 { f2~ f8 d16( e f g f e) }
+  f2~ f8 e16( f g f e d)
+  cis8 r <a cis e a>4 r8 g f e
+  d cis d e f e d f
+  e r <a cis e a>4 r8 g f e
+  d cis d e f e d f
+  e r <a cis e a>4 r <a cis e a>
+  r \repeat unfold 3 { <a cis e a>8 r }
+  
+  \global_allegro_two
+  a'4.( g16 f)
+  f4.( es16 d)
+  d4.( c16 bes)
+  a4.( g16 f)
+  es4.( d16 es)
+  g4. bes8
+  bes4.( a16 gis)
+  a4.( gis16 a)
+  
+  a'4.( g16 f)
+  f4.( es16 d)
+  d4.( c16 bes)
+  a4.( a16 g)
+  f4.( e16 f)
+  g4.( a16 bes)
+  c4.( b16 c)
+  cis4.( bis16 cis)
+  d4.( cis16 d)
+  <es, g bes es>2~
+  <es g bes es>~
+  <es g bes es>8 r <bes' bes,>8 <g g,>
+  <es es,> <g g,> <bes bes,> <es es,>
+  <d a f d>2~
+  <d a f d>~
+  <d a f d>8 r a f
+  d f a d
+  \repeat unfold 2 {
+    cis2~
+    \tuplet 3/2 { cis8 cis d } \tuplet 3/2 { e d cis }
+  }
+  cis8 <g bes e g>4 <g bes e g>8
+  r <g bes e g>4 <g bes e g >8
+  \repeat unfold 2 { r8 <g bes e g> r <g bes e g> }
+  f'8 a4 g8~
+  g f4 es8~
+  es d4 c8~
+  c bes4 ges8~
+  ges f4 a8
+  d4 c
+  c8 bes4 d8
+  g4 f
+  f8 a4 g8~
+  g f4 es8~
+  es d4 c8~
+  c bes4 ges8~
+  ges f4 a8
+  d4 c
+  bes8 g16 f e f g a
+  <bes f d>8 r <c a f> r
+  <f, bes d> <f a c> <f bes> r
+  <f as des> r <as c es> r
+  <as des f> <as c es> <as des> r
 }
 
 left = \relative c' {
@@ -213,9 +342,67 @@ left = \relative c' {
   \repeat unfold 8 { <d f bes>8 }
   <d f bes> r <d f bes>4 <d f bes> <d f bes>
   \repeat unfold 4 { <d f bes> }
-  <d f bes>8 <d f bes> r4 <d f bes>8 <d f bes> r4
-  <d f bes>8 <d f bes> r4 <d f bes>8 <d f bes> r4
+  \repeat unfold 4 { <d f bes>8 <d f bes> r4 }
   
+  R1
+  \repeat unfold 3 { \repeat unfold 8 { a16 gis } }
+  \repeat unfold 8 { <d' f a>8 }
+  <d f a> r <d f a>4 <d f a> <d f a>
+  \repeat unfold 4 { <d f a> }
+  \repeat unfold 4 { <d f a>8 <d f a> r4 }
+  
+  R1
+  \repeat unfold 4 { <gis b d f>8 } <gis b d f> r <gis b d f> r
+  \repeat unfold 4 { <a d f>8 } <a d f> r <a d f> r
+  \repeat unfold 4 { <bes d f>8 } <bes d f> r <bes d f> r
+  <gis b d f> <gis b d f> <b d f> <b d f> <b d f> r <b d f> r
+  <a cis e> r <e a cis e>4 r8 g f e
+  d cis d e f e d f
+  e r <e a cis e>4 r8 g f e
+  d cis d e f e d f
+  e r <e a cis e>4 r <e a cis e>
+  r \repeat unfold 3 { <a cis e>8 r }
+  
+  \global_allegro_two
+  \repeat unfold 4 { <f a d>8 <f a d>16 <f a d> <f a d>8 r }
+  \repeat unfold 2 { <g bes es>8 <g bes es>16 <g bes es> <g bes es>8 r }
+  \repeat unfold 2 { <e g bes cis>8 <e g bes cis>16 <e g bes cis> <e g bes cis>8 r }
+  \repeat unfold 4 { <f a d>8 <f a d>16 <f a d> <f a d>8 r }
+  \repeat unfold 4 { <f a c>8 }
+  \repeat unfold 4 { <e g bes c>8 }
+  \repeat unfold 4 { <f a c>8 }
+  \repeat unfold 4 { <e g a cis>8 }
+  \repeat unfold 4 { <d f a d>8 }
+  <bes es g bes>2~
+  <bes es g bes>~
+  <bes es g bes>8 r r4
+  R2
+  <a d f a>2~
+  <a d f a>~
+  <a d f a>8 r a'8 f
+  d f a d
+  \repeat unfold 2 {
+    r8 <e, g bes cis> <e g bes cis> <e g bes cis>
+    <e g bes cis> r r4
+  }
+  r8 <e g bes cis>4 <e g bes cis>8
+  r8 <e g bes cis>4 <e g bes cis>8
+  \repeat unfold 2 {
+    r8 <e g bes cis> r <e g bes cis>
+  }
+  \repeat unfold 2 { <f c' es>8 <f c' es> <f c' es> <f c' es> }
+  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
+  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
+  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
+  <f c' es>8 <f c' es> <f c' es> <f c' es>
+  <f a es'> <f a es'> <f a es'> <f a es'>
+  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
+  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
+  <f bes d> r r4
+  <d f bes>8 r <f a c> r
+  <f bes d> <f bes es> <f bes d> r
+  <f as des> r <es as c> r
+  <as des> <as c es> <as des f> r
 }
 
 pedal = \relative c {
@@ -257,8 +444,68 @@ pedal = \relative c {
   bes'1~
   bes8 r bes4 bes bes
   bes bes bes bes
-  bes8 bes r4 bes8 bes r4
-  bes8 bes r4 bes8 bes r4
+  \repeat unfold 4 { bes8 bes r4 }
+  
+  R1*4
+  a1~
+  a8 r a4 a a
+  a a a a
+  \repeat unfold 4 { a8 a r4 }
+  
+  R1
+  g2 g8 r g r
+  a2 a8 r a r
+  bes2 bes8 r bes r
+  gis2 gis8 r gis r
+  a8 r a4 r2
+  R1
+  r4 a r2
+  R1
+  r4 a r a
+  r a8 r a r a r
+  
+  \global_allegro_two
+  \repeat unfold 4 { d,8 r r4 }
+  g8 r r4
+  g8 r r4
+  cis,8 r r4
+  cis8 r r4
+  \repeat unfold 4 { d8 r r4 }
+  c2~
+  c2(
+  f
+  e
+  d
+  es2~)
+  es2~
+  es8 r r4
+  R2
+  d2~
+  d2~
+  d8 r r4
+  R2
+  \repeat unfold 2 {
+    r8 e4.~
+    e8 r r4
+  }
+  r8 e4 e8
+  r e4 e8
+  e8 r e r
+  e r e r
+
+  \repeat unfold 3 {
+    f8 r r4
+    f8 r r4
+    bes8 r r4
+    bes8 r r4
+  }
+  f8 r r4
+  f8 r r4
+  bes8 r r4
+  bes8 r f r
+  bes8 f bes r
+  des r as r
+  des as des r
 }
 
 glockenspiel = \relative c'' {
