@@ -41,6 +41,12 @@ global_allegretto = {
   \tempo 4 = 120
 }
 
+global_allegretto_two = {
+  \time 2/4
+  \set Score.tempoHideNote = ##t
+  \tempo 4 = 150
+}
+
 second_melody = \relative c'' {
   \global_andante
   
@@ -205,6 +211,34 @@ second_melody = \relative c'' {
   <es g>8( <d f> <c es>)
   <bes d>4.~
   <bes d>8 r r
+  
+  R4.*12
+  
+  <c es>4.~
+  <c es>8( <bes d> <a c>)
+  <d f> r <d f>
+  <d f>4 <d g>8
+  <fis a>4.~
+  <fis a>8( <eis gis> <fis a>)
+  <g bes>4.~
+  <g bes>
+  <g bes>~
+  <g bes>8( <f a> <es g>)
+  <f a> r <es g>
+  <d f>4 f,8
+  <g es'>4.~
+  <g es'>8 <f d'> <es c'>
+  
+  \global_allegretto_two
+  <d bes'>8 r r4
+  
+  R2*8
+  f8\trill e16 f bes8 d
+  g,\trill fis16 g c8 bes
+  a g'16 f f8 g16 f
+  f8 g16 f f8 g16 f
+  f8 g16 f f8 g16 f
+  f8 g16 f e f g a
 }
 
 melody = \relative c'' {
@@ -346,6 +380,23 @@ melody = \relative c'' {
   \repeat unfold 4 {
     d cis d
   }
+  
+  R4.*14
+  
+  \global_allegretto_two
+  <d, bes'>8 r r4
+  \repeat unfold 2 {
+    f8\trill e16 f bes8 d
+    g,\trill fis16 g c8 bes
+    a\trill gis16 a g'8 f
+    es( d16 c) bes8 a16 g
+  }
+  f8\trill e16 f bes8 d
+  g,\trill fis16 g c8 bes
+  a g'16 f f8 g16 f
+  f8 g16 f f8 g16 f
+  f8 g16 f f8 g16 f
+  f8 g16 f e f g a
 }
 
 left = \relative c' {
@@ -510,6 +561,42 @@ left = \relative c' {
   }
   <d fis> r r
   R4.*3
+  
+  r8 <a c es> <a c es>
+  r <a c es> <a c es>
+  r <f bes d> <f bes d>
+  r <f bes d> <f bes d>
+  r <fis a d> <fis a d>
+  r <fis a d> <fis a d>
+  r <g bes d> <g bes d>
+  r <g bes d> <g bes d>
+  r <g bes es> <g bes es>
+  r <g bes es> <g bes es>
+  r <f bes d> <f bes d>
+  r <f bes d> <f bes d>
+  r <a c es> <a c es>
+  r <f a c es> <f a c es>
+  
+  \global_allegretto_two
+  \repeat unfold 4 {
+    r8 <f bes d>
+  }
+  r <e g c> r <e g c>
+  r <f a c es> r <f a c es>
+  \repeat unfold 4 {
+    r <f bes d>
+  }
+  r <g c e> r <g c e>
+  r <f a c es> r <f a c es>
+  \repeat unfold 4 {
+    r <f bes d>
+  }
+  r <f c' e> r <f c' e>
+  
+  <f a c es> r <f a c es> r
+  <bes des f>4 <b d f>
+  <f a c es>8 r r4
+  R2
 }
 
 pedal = \relative c {
@@ -657,6 +744,30 @@ pedal = \relative c {
   a(
   d8) r r
   R4.*3
+  
+  f4 r8
+  f4 r8
+  bes,4 r8
+  bes4 r8
+  d,4 r8
+  d4 r8
+  g4 r8
+  g4 r8
+  es4 r8
+  es4 r8
+  f4 r8
+  f4 r8
+  f4 r8
+  f4 r8
+  
+  \global_allegretto_two
+  \repeat unfold 11 {
+    bes8. r16 bes8. r16
+  }
+  f8 r f r
+  f2
+  f8 r r4
+  R2
 }
 
 glockenspiel = \relative c'' {
