@@ -35,6 +35,12 @@ global_allegro_two = {
   \tempo 4 = 160
 }
 
+global_allegretto = {
+  \time 3/8
+  \set Score.tempoHideNote = ##t
+  \tempo 4 = 120
+}
+
 second_melody = \relative c'' {
   \global_andante
   
@@ -178,6 +184,27 @@ second_melody = \relative c'' {
   a a~
   a a
   a a
+  
+  \global_allegretto
+  <es a>4.~
+  <es a>8( <es g> <es f>)
+  <es g> r <es g>
+  <d f>4.
+  
+  <es g>~
+  <es g>8( <d f> <c es>)
+  <d f> r <d f >
+  <bes d>4.
+  
+  <es a>4.~
+  <es a>8( <es g> <es f>)
+  <es g> r <es g>
+  <d f>4.
+  
+  <es g>~
+  <es g>8( <d f> <c es>)
+  <bes d>4.~
+  <bes d>8 r r
 }
 
 melody = \relative c'' {
@@ -306,6 +333,19 @@ melody = \relative c'' {
   <es g bes> <d f as> <es g bes> r
   
   R2*12
+  
+  \global_allegretto
+  R4.*16
+  \repeat unfold 2 {
+    d'4.
+    e8 fis e
+    d fis b
+    a e fis
+  }
+  
+  \repeat unfold 4 {
+    d cis d
+  }
 }
 
 left = \relative c' {
@@ -455,6 +495,21 @@ left = \relative c' {
   }
   
   R2*4
+  
+  \global_allegretto
+  \repeat unfold 3 {
+    \repeat unfold 2 { r8 <a' c es> <a c es> }
+    \repeat unfold 2 { r8 <f bes d> <f bes d> }
+  }
+  \repeat unfold 2 { r8 <a c es> <a c es> }
+  \repeat unfold 2 { r8 <bes d f> <bes d f> }
+  
+  \repeat unfold 4 {
+    <a d fis> <a d fis> <a d fis>
+    <a cis g> <a cis g> <a cis g>
+  }
+  <d fis> r r
+  R4.*3
 }
 
 pedal = \relative c {
@@ -579,6 +634,29 @@ pedal = \relative c {
   }
   
   R2*4
+  
+  \global_allegretto
+  \repeat unfold 3 {
+    f4 r8
+    f4 r8
+    bes,4 r8
+    bes4 r8
+  }
+  f'4 r8
+  f4 r8
+  bes4 r8
+  bes4 r8
+  
+  a,4.~
+  a~
+  a~
+  a~
+  a~
+  a~
+  a~
+  a(
+  d8) r r
+  R4.*3
 }
 
 glockenspiel = \relative c'' {
