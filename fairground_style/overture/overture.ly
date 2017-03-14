@@ -123,14 +123,7 @@ second_melody = \relative c'' {
   r \repeat unfold 3 { <a cis e a>8 r }
   
   \global_allegro_two
-  a'4.( g16 f)
-  f4.( es16 d)
-  d4.( c16 bes)
-  a4.( g16 f)
-  es4.( d16 es)
-  g4. bes8
-  bes4.( a16 gis)
-  a4.( gis16 a)
+  R2*8
   
   a'4.( g16 f)
   f4.( es16 d)
@@ -156,6 +149,35 @@ second_melody = \relative c'' {
   r8 e4.~
   e8 r r4
   R2*4
+  
+  R2*15
+  bes8 r f r
+  bes f bes r
+  des r as r
+  des as des r
+  
+  \repeat unfold 2 {
+    f4. g16 f
+    f es d c bes4
+  }
+  
+  g8 r d r
+  g d g r
+  es' r bes r
+  es bes es r
+  
+  \repeat unfold 2 {
+    g4. as16 g
+    g f es d c4
+  }
+  \repeat unfold 2 {
+    a'4. bes16 a
+    a g f e d4
+  }
+  a'4 a~
+  a a~
+  a a
+  a a
 }
 
 melody = \relative c'' {
@@ -244,8 +266,8 @@ melody = \relative c'' {
   d4.( cis16 d)
   <es, g bes es>2~
   <es g bes es>~
-  <es g bes es>8 r <bes' bes,>8 <g g,>
-  <es es,> <g g,> <bes bes,> <es es,>
+  <es g bes es>8 r bes'8 g
+  es g bes es
   <d a f d>2~
   <d a f d>~
   <d a f d>8 r a f
@@ -276,6 +298,14 @@ melody = \relative c'' {
   <f, bes d> <f a c> <f bes> r
   <f as des> r <as c es> r
   <as des f> <as c es> <as des> r
+  
+  R2*4
+  <d, g>8 r <d fis a> r
+  <d g bes> <d fis c'> <d g bes> r
+  <es g bes> r <d f bes> r
+  <es g bes> <d f as> <es g bes> r
+  
+  R2*12
 }
 
 left = \relative c' {
@@ -403,6 +433,28 @@ left = \relative c' {
   <f bes d> <f bes es> <f bes d> r
   <f as des> r <es as c> r
   <as des> <as c es> <as des f> r
+  
+  \repeat unfold 2 {
+    \repeat unfold 4 { <f a es' f>16 } <g es' f> <g es' f> <a es' f> <a es' f>
+    \repeat unfold 8 { <bes d f>16 }
+  }
+  
+  <d, g bes>8 r <d f a> r
+  <d g bes> <d fis c'> <d g bes> r
+  <es g bes> r <d f bes> r
+  <es g bes> <d f as> <es g bes> r
+  
+  \repeat unfold 2 {
+    \repeat unfold 4 { <b f' g>16 } <a f' g> <a f' g> <b f' g> <b f' g>
+    \repeat unfold 8 { <c es g>16 }
+  }
+  
+  \repeat unfold 2 {
+    \repeat unfold 8 { <a cis a'>16 }
+    \repeat unfold 8 { <d f a>16 }
+  }
+  
+  R2*4
 }
 
 pedal = \relative c {
@@ -494,18 +546,39 @@ pedal = \relative c {
   e r e r
 
   \repeat unfold 3 {
-    f8 r r4
-    f8 r r4
-    bes8 r r4
-    bes8 r r4
+    f4 r
+    f r
+    bes r
+    bes r
   }
-  f8 r r4
-  f8 r r4
-  bes8 r r4
+  f r
+  f r
+  bes r
   bes8 r f r
-  bes8 f bes r
+  bes f bes r
   des r as r
   des as des r
+  
+  \repeat unfold 2 {
+    a8 f g a
+    bes2
+  }
+  
+  g8 r d r
+  g d g r
+  es' r bes r
+  es bes es r
+  
+  \repeat unfold 2 {
+    r g, a b
+    c d es r
+  }
+  \repeat unfold 2 {
+    r a, b cis
+    d e f r
+  }
+  
+  R2*4
 }
 
 glockenspiel = \relative c'' {
