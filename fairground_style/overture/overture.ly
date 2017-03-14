@@ -239,6 +239,88 @@ second_melody = \relative c'' {
   f8 g16 f f8 g16 f
   f8 g16 f f8 g16 f
   f8 g16 f e f g a
+  
+  <d, f bes>8 r <f a c> r
+  <f bes d>4 r8 a16 bes
+  c bes e, f g f cis d
+  es d d c bes8 r
+  
+  <bes d g> r <d fis a> r
+  <d g bes>4 r8 fis16( g
+  a g cis, d es d a bes)
+  c( bes a g g8) r
+  
+  R2*2
+  c8( b16 c d e f g
+  a c, c' c, c' c, c' c,)
+  
+  f8( e16 f g a bes c)
+  es d a bes c bes fis g
+  a g d es f es c g'
+  g f g f g f g f
+  g f e f g a bes c
+  es d a bes c bes fis g
+  a g d es f es c g'
+  \repeat unfold 4 {
+    g f g f g f g f
+  }
+  g f g f g f e, f
+  a g fis g bes a gis a
+  c bes a bes d c b c
+  es d cis d f es d es
+  
+  R2*14
+  \repeat volta 2 {
+    bes8 a16 bes c bes a g
+    f8 d'16 es f es d c
+    bes8 e16 f g f es d
+    c8 fis16 g a g f es
+    
+    ges,8 bes des ges
+    bes ges des ges,
+    ges4 ges
+    ges ges
+    e8 g bes des
+    e des bes g
+    e4 e
+    e e
+    
+    d4 bes8 e16 f
+    g4 f8 g16 a
+    c4 bes8 a16 bes
+    es4 d8 es16 d
+    d4 c8 b16 c
+    d4 c8 b16 c
+    g'4 f8 e16 f
+    g4 f8 es16 c
+  }
+  
+  \repeat unfold 2 {
+    bes8 a16 bes c bes a g
+    f8 <c' es> <bes d> <a c>
+  }
+  
+  \repeat unfold 4 {
+    bes8( d16 es f es d c)
+  }
+  bes'8 a bes4
+  bes8 d bes d
+  f, e f4
+  f8 bes f bes
+  d, cis d4
+  d8 f d f
+  <bes, bes'>4 <bes d f bes>8 <bes d f bes>
+  <bes d f bes>4 <bes d f bes>
+  <bes d f bes> <bes d f bes>8 <bes d f bes>
+  <bes d f bes>4 <bes d f bes>
+  <bes d f bes> r
+  <d f d'> r
+  <bes d f bes> r
+  <d f d'> r
+  <bes bes'>2~
+  <bes bes'>~
+  <bes bes'>~
+  <bes bes'>
 }
 
 melody = \relative c'' {
@@ -340,6 +422,7 @@ melody = \relative c'' {
   cis8 <g bes e g>4 <g bes e g>8
   r <g bes e g>4 <g bes e g >8
   \repeat unfold 2 { r8 <g bes e g> r <g bes e g> }
+  
   f'8 a4 g8~
   g f4 es8~
   es d4 c8~
@@ -397,6 +480,99 @@ melody = \relative c'' {
   f8 g16 f f8 g16 f
   f8 g16 f f8 g16 f
   f8 g16 f e f g a
+  
+  <d, f bes>8 r <f a c> r
+  <f bes d>4 r8 a16 bes
+  c bes e, f g f cis d
+  es d d c bes8 r
+  
+  <bes d g> r <d fis a> r
+  <d g bes>4 r8 fis16( g
+  a g cis, d es d a bes)
+  c( bes a g g8) r
+  
+  \repeat unfold 2 {
+    c( b16 c d e f g
+    a c, c' c, c' c, c' c,)
+  }
+  
+  f8( e16 f g a bes c)
+  es d a bes c bes fis g
+  a g d es f es c g'
+  g f g f g f g f
+  g f e f g a bes c
+  es d a bes c bes fis g
+  a g d es f es c g'
+  \repeat unfold 4 {
+    g f g f g f g f
+  }
+  g f g f g f e, f
+  a g fis g bes a gis a
+  c bes a bes d c b c
+  es d cis d f es d es
+  
+  f8 a4 g8~
+  g f4 es8~
+  es d4 c8~
+  c bes4 ges8~
+  ges f4 a8
+  d4 c
+  c8 bes4 d8
+  g4 f
+  f8 a4 g8~
+  g f4 es8~
+  es d4 c8~
+  c bes4 ges8~
+  ges f4 a8
+  d4 c
+  
+  \repeat volta 2 {
+    bes8 a16 bes c bes a g
+    f8 d'16 es f es d c
+    bes8 e16 f g f es d
+    c8 fis16 g a g f es
+    des8 <des ges bes>16 <des ges bes> <des ges bes>8 <des ges bes>
+    \repeat unfold 4 { <des ges bes> }
+    \repeat unfold 4 { a'16 bes bes bes }
+    
+    \repeat unfold 2 { <e, g bes des>8 <e g bes des>16 <e g bes des> <e g bes des>8 <e g bes des> }
+    \repeat unfold 4 { c'16 des des des }
+    d4 bes8 e,,16 f
+    g4 f8 g16 a
+    c4 bes8 a16 bes
+    es4 d8 es16 d
+    d4 c8 b16 c
+    d4 c8 b16 c
+    g'4 f8 e16 f
+    g4 f8 es16 c
+  }
+  
+  \repeat unfold 2 {
+    bes8 a16 bes c bes a g
+    f8 <c' es> <bes d> <a c>
+  }
+  
+  \repeat unfold 4 {
+    bes8( d16 es f es d c)
+  }
+  bes'8 a bes4
+  bes8 d bes d
+  f, e f4
+  f8 bes f bes
+  d, cis d4
+  d8 f d f
+  <bes, bes'>4 <bes d f bes>8 <bes d f bes>
+  <bes d f bes>4 <bes d f bes>
+  <bes d f bes> <bes d f bes>8 <bes d f bes>
+  <bes d f bes>4 <bes d f bes>
+  <bes d f bes> r
+  <d f d'> r
+  <bes d f bes> r
+  <d f d'> r
+  <bes d f bes>2~
+  <bes d f bes>~
+  <bes d f bes>~
+  <bes d f bes>
 }
 
 left = \relative c' {
@@ -597,6 +773,80 @@ left = \relative c' {
   <bes des f>4 <b d f>
   <f a c es>8 r r4
   R2
+  
+  <bes d f>8 r <a c es> r
+  <f bes d>4 r
+  <f bes d>8 r <bes d> r
+  r <f bes d> <f bes d> <f bes d>
+  <g bes d> r <a d fis> r
+  <g bes d>4 r
+  <g bes d>8 r <g bes d> r
+  r <g bes d> <g bes d> <g bes d>
+  
+  \repeat unfold 2 {
+    \repeat unfold 4 { <g bes c e> }
+    \repeat unfold 4 { <f a c> }
+  }
+  \repeat unfold 4 { <f a c es> }
+  <f bes d> r <f bes d> r
+  <g c es> r <g c es> r
+  r <f bes d> <f bes d> <f bes d>
+  <f a c es> r <f a c es> r
+  <f bes d f> r <f bes d f> r
+  <es g c es> r <es g c es> r
+  <f bes d> r r4
+  
+  <f bes d>2(
+  <f bes des>
+  <f bes c>
+  <f a c es>4) r
+  R2*3
+  
+  \repeat unfold 2 { <f c' es>8 <f c' es> <f c' es> <f c' es> }
+  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
+  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
+  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
+  <f c' es>8 <f c' es> <f c' es> <f c' es>
+  <f a es'> <f a es'> <f a es'> <f a es'>
+  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
+  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
+  
+  \repeat volta 2 {
+    <f bes d>8 r r4
+    <f a c es>8 r r4
+    <f bes d>8 r r4
+    <f a c es>8 r r4
+    
+    <ges bes des>8 <ges bes des>16 <ges bes des> <ges bes des>8 <ges bes des>8
+    \repeat unfold 4 { <ges bes des>8 }
+    \repeat unfold 4 { <ges bes des> r }
+    \repeat unfold 2 { <e g bes des>8 <e g bes des>16 <e g bes des> <e g bes des>8 <e g bes des> }
+    \repeat unfold 4 { <e g bes des> r }
+    \repeat unfold 4 { <f bes d>8 <f bes d>16 <f bes d> <f bes d>8 r }
+    \repeat unfold 16 { <f bes c e>16 }
+    \repeat unfold 16 { <f a c es>16 }
+  }
+  
+  \repeat unfold 2 {
+    <f bes d>8 r r4
+    r8 <a c f> <bes d> <c es>
+  }
+  <bes d f>8 r <f a c es>4(
+  \repeat unfold 3 { <bes d>8) r <f a c es>4( }
+  <bes d>8) r <f bes d> <f bes d>
+  \repeat unfold 20 { <f bes d> }
+  <f bes d>4 <f bes d>8 <f bes d>
+  <f bes d>4 <f bes d>
+  <f bes d> <f bes d>8 <f bes d>
+  <f bes d>4 <f bes d>
+  <f bes d> r
+  <f bes d f> r
+  <f bes d f> r
+  <f bes d f> r
+  <d f bes d f>2~
+  <d f bes d f>~
+  <d f bes d f>~
+  <d f bes d f>
 }
 
 pedal = \relative c {
@@ -768,6 +1018,76 @@ pedal = \relative c {
   f2
   f8 r r4
   R2
+  
+  bes8 r f r
+  bes4 r
+  bes8 r bes r
+  r bes4.
+  g8 r d r
+  g4 r
+  g8 r g r
+  r g4.
+  e2(
+  f
+  e
+  f)
+  f
+  bes8 r bes r
+  es, r es r
+  f2
+  f8 r f r
+  bes r bes r
+  es, r es r
+  f r r4
+  f2
+  f
+  f
+  f4 r
+  R2*3
+  
+  \repeat unfold 3 {
+    f4 r
+    f r
+    bes r
+    bes r
+  }
+  f r
+  f r
+  
+  \repeat volta 2 {
+    bes4 r
+    f r
+    bes r
+    f r
+    ges8 bes des ges
+    bes ges des ges,
+    ges4 ges
+    ges ges
+    e8 g bes des
+    e des bes g
+    e4 e
+    e e
+    \repeat unfold 4 { f4. r8 }
+    \repeat unfold 4 { f8 f f f }
+  }
+  \repeat unfold 2 {
+    bes4 r
+    r8 f4.
+  }
+  bes8 r f4(
+  bes8) r f4(
+  bes8) r f4(
+  bes8) r f4(
+  bes8) r bes4
+  \repeat unfold 18 { bes4 }
+  bes r
+  bes r
+  bes r
+  bes r
+  bes2~
+  bes~
+  bes~
+  bes
 }
 
 glockenspiel = \relative c'' {
