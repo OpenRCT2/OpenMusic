@@ -26,13 +26,13 @@ global_allegro = {
   \key g \minor
   \time 4/4
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 180
+  \tempo 4 = 170
 }
 
 global_allegro_two = {
   \time 2/4
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 160
+  \tempo 4 = 150
 }
 
 global_allegretto = {
@@ -317,10 +317,10 @@ second_melody = \relative c'' {
   <d f d'> r
   <bes d f bes> r
   <d f d'> r
-  <bes bes'>2~
-  <bes bes'>~
-  <bes bes'>~
-  <bes bes'>
+  bes2~
+  bes~
+  bes~
+  bes
 }
 
 melody = \relative c'' {
@@ -1100,6 +1100,128 @@ drum = \drummode {
   
   \repeat tremolo 32 sna32
   \repeat tremolo 32 sna32
+  
+  R1*38
+  
+  % Allegro
+  \repeat unfold 2 {
+    R1*3
+    <bd sna>8 \repeat unfold 7 { sna }
+    sna r sna4 sna sna
+    sna sna sna sna
+    \repeat unfold 4 { sna8 <bd sna> r4 }
+    R1
+  }
+  R1*4
+  r4 <bd sna> r2
+  R1
+  r4 <bd sna> r2
+  R1
+  r4 <bd sna> r <bd sna>
+  r4 <bd sna> <bd sna> <bd sna>
+  
+  % Allegro 2
+  <bd sna hh cymc>4 r
+  R2*11
+  \repeat unfold 10 {
+    sna8 r
+  }
+  \repeat unfold 2 {
+    \repeat unfold 8 {
+      sna8
+    }
+    <bd sna hh cymc>4 r
+    R2
+  }
+  \repeat unfold 2 {
+    r8 <bd sna> <bd sna> <bd sna>
+    <bd sna hh cymc> r r4
+  }
+  \repeat unfold 2 { r8 <bd sna>4 <bd sna>8 }
+  \repeat unfold 2 { bd8 sna bd sna }
+  <bd sna hh cymc>4 bd
+  \repeat unfold 6 { bd4 bd }
+  bd8 bd bd bd
+  \repeat unfold 6 { bd4 bd }
+  <bd sna> r
+  \repeat unfold 2 {
+    <bd sna>8 r <bd sna> r
+    <bd sna> <bd sna> <bd sna> r
+  }
+  R2*4
+  \repeat unfold 2 {
+    <bd sna>8 r <bd sna> r
+    <bd sna> <bd sna> <bd sna> r
+  }
+  R2*12
+  
+  % Allegretto
+  R4.*42
+  <bd sna hh cymc>8 r bd r
+  \repeat unfold 4 {
+    bd8 r bd r
+  }
+  \repeat unfold 2 {
+    <bd sna hh cymc>8 r bd r
+    \repeat unfold 3 {
+      bd8 r bd r
+    }
+  }
+  bd8 r4.
+  R2
+  \repeat unfold 2 {
+    <bd sna hh cymc>4 <bd sna hh cymc>
+    <bd sna hh cymc> r
+    R2*2
+  }
+  \repeat unfold 32 { tamb16 }
+  <bd sna hh cymc>4 r
+  
+  \repeat unfold 2 {
+    \repeat unfold 2 {
+      <bd sna hh cymc>4 <bd sna hh cymc>
+    }
+    <bd sna hh cymc>4 r
+    <bd sna hh cymc>16 \repeat unfold 7 { tamb16 }
+  }
+  
+  \repeat unfold 16 {
+    tamb16
+  }
+  tamb16 r r8 r4
+  
+  R2*3
+  
+  <bd sna hh cymc>4 bd
+  \repeat unfold 6 { bd4 bd }
+  bd8 bd bd bd
+  \repeat unfold 6 { bd4 bd }
+  
+  \repeat volta 2 {
+    \repeat unfold 4 { <bd sna hh cymc tamb> sna }
+    \repeat unfold 2 {
+      \repeat tremolo 16 sna16
+      \repeat unfold 4 { <bd sna hh cymc tamb>4 }
+    }
+    <bd sna hh cymc tamb>4 r
+    \repeat unfold 3 { <bd sna>4 r }
+    \repeat unfold 2 { <bd sna hh cymc tamb>4 <bd sna hh cymc tamb> }
+    \repeat unfold 2 { <bd sna hh cymc tamb>8 <bd sna hh cymc tamb> <bd sna hh cymc tamb> <bd sna hh cymc tamb> }
+  }
+  \repeat unfold 2 {
+    <bd sna hh cymc tamb>8 r r4
+    r8 <bd sna hh cymc tamb> <bd sna hh cymc tamb> <bd sna hh cymc tamb>
+  }
+  \repeat unfold 8 { <bd tamb>4 }
+  \repeat unfold 24 { <sna tamb>8 }
+  \repeat unfold 2 {
+    <bd sna hh cymc tamb>4 <bd sna hh cymc tamb>8 <bd sna hh cymc tamb>
+    <bd sna hh cymc tamb>4 <bd sna hh cymc tamb>
+  }
+  <bd tamb sna>4 r
+  \repeat unfold 3 { <bd tamb sna>4 r }
+  <bd sna hh cymc tamb>16 \repeat tremolo 7 { sna16 }
+  \repeat tremolo 24 { sna16 }
 }
 
 organPart = <<
