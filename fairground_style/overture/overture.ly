@@ -174,8 +174,8 @@ second_melody = \relative c'' {
   }
   
   g8 r a r
-  bes c bes r
-  es r f r
+  bes a g r
+  es' r f r
   g f es r
   
   \repeat unfold 2 {
@@ -420,7 +420,7 @@ melody = \relative c'' {
     \tuplet 3/2 { cis8 cis d } \tuplet 3/2 { e d cis }
   }
   cis8 <g bes e g>4 <g bes e g>8
-  r <g bes e g>4 <g bes e g >8
+  r <g bes e g>4 <g bes e g>8
   \repeat unfold 2 { r8 <g bes e g> r <g bes e g> }
   
   f'8 a4 g8~
@@ -445,7 +445,7 @@ melody = \relative c'' {
   
   R2*4
   <d, g>8 r <d fis a> r
-  <d g bes> <d fis c'> <d g bes> r
+  <d g bes> <d fis a> <d g bes,> r
   <g bes es> r <bes d f> r
   <bes es g> <bes d f> <bes es> r
   
@@ -1093,6 +1093,171 @@ pedal = \relative c {
 glockenspiel = \relative c'' {
   \global_andante
   R1*52
+  
+  \global_allegro
+  R1*3
+  d8. d16 d8 d d d d d
+  d4 r r2
+  R1
+  c8 bes r4 es8 d r4
+  g8 f r4 c'8 bes r4
+  R1*4
+  d,8. d16 d8 d d d d d
+  d4 r r2
+  R1
+  d8 a r4 f'8 d r4
+  a'8 f r4 bes8 a r4
+  
+  R1
+  gis8 gis gis gis gis r gis r
+  a a a a a r a r
+  bes bes bes bes bes r bes r
+  gis gis bes bes gis r bes r
+  a, r a' r r2
+  R1
+  r4 a r8 g f e
+  d cis d e f e d f
+  e r a4 r a
+  r a a a
+  
+  \global_allegretto_two
+  R2*8
+  a4( g8 f)
+  f4( es8 d)
+  d4( c8 bes)
+  a4( a8 g)
+  f4( e8 f)
+  g4( a8 bes)
+  c4( b8 c)
+  cis4( bis8 cis)
+  d4( cis8 d)
+  g,4 g8 bes
+  es g, bes es
+  g r bes, g
+  es g bes es
+  f,4 f8 a
+  d f, a d
+  f r a, f
+  d f a d
+  \repeat unfold 2 {
+    cis2~
+    \tuplet 3/2 { cis8 cis d } \tuplet 3/2 { e d cis }
+  }
+  cis8 g'4 g8
+  r g4 g8
+  \repeat unfold 2 { r8 g r g }
+  R2*21
+  f4. g16 f
+  f es d c bes4
+  R2*6
+  g'4. as16 g
+  g f es d c4
+  R2*2
+  a'4. bes16 a
+  a g f e d4
+  R2*4
+  
+  \global_allegretto
+  f4.
+  \repeat unfold 2 {
+    f8 g a
+    bes r bes
+    f r f
+  }
+  d4.
+  f8 fis g
+  g gis a
+  bes r bes
+  f4.
+  g~
+  g8 f es
+  d4.
+  
+  R4.*26
+  g8 f es
+  
+  \global_allegretto_two
+  d8 r r4
+  
+  R2*4
+  f,8\trill e16 f bes8 d
+  g,\trill fis16 g c8 bes
+  a\trill gis16 a g'8 f
+  es( d16 c) bes8 a16 g
+  f8\trill e16 f bes8 d
+  g,\trill fis16 g c8 bes
+  a g'16 f f8 g16 f
+  f8 g16 f f8 g16 f
+  f8 g16 f f8 g16 f
+  f8 g16 f e f g a
+  
+  bes8 r c r
+  d4 r
+  R2*2
+  g,8 r a r
+  bes4 r
+  R2*4
+  
+  c,8( b16 c d e f g
+  a c, c' c, c' c, c' c,)
+  
+  f8( e16 f g a bes c)
+  es d a bes c bes fis g
+  a g d es f es c g'
+  g f g f g f g f
+  g f e f g a bes c
+  es d a bes c bes fis g
+  a g d es f es c g'
+  \repeat unfold 4 {
+    g f g f g f g f
+  }
+  g f g f g f e, f
+  a g fis g bes a gis a
+  c bes a bes d c b c
+  es d cis d f es d es
+  
+  R2*14
+  \repeat volta 2 {
+    bes8 a16 bes c bes a g
+    f8 d'16 es f es d c
+    bes8 e16 f g f es d
+    c8 fis16 g a g f es
+    bes8 bes16 bes bes8 bes
+    bes bes bes bes
+    \repeat unfold 4 { a16 bes bes bes }
+    des8 des16 des des8 des
+    des des des des
+    \repeat unfold 4 { c16 des des des }
+    R2*8
+  }
+  
+  \repeat unfold 2 {
+    bes8 a16 bes c bes a g
+    f8 es' d c
+  }
+  
+  R2*2
+  
+  \repeat unfold 2 {
+    bes8( d16 es f es d c)
+  }
+  
+  bes'8 a bes4
+  bes8 d bes d
+  f, e f4
+  f8 bes f bes
+  d, cis d4
+  d8 f d f
+  \repeat unfold 2 {
+    bes,4 bes8 bes
+    bes4 bes
+  }
+  bes r
+  d r
+  bes r
+  d r
+  bes2
+  R2*3
 }
 
 drum = \drummode {
