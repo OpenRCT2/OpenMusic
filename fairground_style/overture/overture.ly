@@ -163,20 +163,20 @@ second_melody = \relative c'' {
   R2*4
   
   R2*15
-  bes8 r f r
-  bes f bes r
-  des r as r
-  des as des r
+  bes8 r c r
+  d c bes r
+  des r es r
+  f es des r
   
   \repeat unfold 2 {
     f4. g16 f
     f es d c bes4
   }
   
-  g8 r d r
-  g d g r
-  es' r bes r
-  es bes es r
+  g8 r a r
+  bes c bes r
+  es r f r
+  g f es r
   
   \repeat unfold 2 {
     g4. as16 g
@@ -446,15 +446,15 @@ melody = \relative c'' {
   R2*4
   <d, g>8 r <d fis a> r
   <d g bes> <d fis c'> <d g bes> r
-  <es g bes> r <d f bes> r
-  <es g bes> <d f as> <es g bes> r
+  <g bes es> r <bes d f> r
+  <bes es g> <bes d f> <bes es> r
   
   R2*12
   
   \global_allegretto
   R4.*16
   \repeat unfold 2 {
-    d'4.
+    d4.
     e8 fis e
     d fis b
     a e fis
@@ -1092,7 +1092,7 @@ pedal = \relative c {
 
 glockenspiel = \relative c'' {
   \global_andante
-  
+  R1*52
 }
 
 drum = \drummode {
@@ -1109,7 +1109,7 @@ drum = \drummode {
     <bd sna>8 \repeat unfold 7 { sna }
     sna r sna4 sna sna
     sna sna sna sna
-    \repeat unfold 4 { sna8 <bd sna> r4 }
+    \repeat unfold 4 { <bd sna>8 <bd sna> r4 }
     R1
   }
   R1*4
@@ -1174,7 +1174,7 @@ drum = \drummode {
     <bd sna hh cymc> r
     R2*2
   }
-  \repeat unfold 32 { tamb16 }
+  \repeat unfold 32 { sna16 }
   <bd sna hh cymc>4 r
   
   \repeat unfold 2 {
@@ -1182,7 +1182,7 @@ drum = \drummode {
       <bd sna hh cymc>4 <bd sna hh cymc>
     }
     <bd sna hh cymc>4 r
-    <bd sna hh cymc>16 \repeat unfold 7 { tamb16 }
+    <bd sna hh cymc>16 \repeat unfold 7 { <sna tamb>16 }
   }
   
   \repeat unfold 16 {
@@ -1203,8 +1203,8 @@ drum = \drummode {
       \repeat tremolo 16 sna16
       \repeat unfold 4 { <bd sna hh cymc tamb>4 }
     }
-    <bd sna hh cymc tamb>4 r
-    \repeat unfold 3 { <bd sna>4 r }
+    <bd sna hh cymc tamb>4 bd
+    \repeat unfold 3 { <bd sna>4 bd }
     \repeat unfold 2 { <bd sna hh cymc tamb>4 <bd sna hh cymc tamb> }
     \repeat unfold 2 { <bd sna hh cymc tamb>8 <bd sna hh cymc tamb> <bd sna hh cymc tamb> <bd sna hh cymc tamb> }
   }
@@ -1218,10 +1218,12 @@ drum = \drummode {
     <bd sna hh cymc tamb>4 <bd sna hh cymc tamb>8 <bd sna hh cymc tamb>
     <bd sna hh cymc tamb>4 <bd sna hh cymc tamb>
   }
-  <bd tamb sna>4 r
+  <bd sna hh cymc tamb>4 r
   \repeat unfold 3 { <bd tamb sna>4 r }
   <bd sna hh cymc tamb>16 \repeat tremolo 7 { sna16 }
-  \repeat tremolo 24 { sna16 }
+  \repeat tremolo 8 { sna16 }
+  \repeat tremolo 8 { sna16 }
+  \repeat tremolo 4 { sna16 } sna sna sna <bd sna hh cymc tamb>
 }
 
 organPart = <<
