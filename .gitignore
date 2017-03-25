@@ -9,3 +9,4 @@
 *.png
 *ardour*/
 rendered/
+build/
