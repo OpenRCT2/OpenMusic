@@ -5,4 +5,7 @@
 *.log
 *~
 *.directory
-ardour/
+*.mkv
+*.png
+*ardour*/
+rendered/
