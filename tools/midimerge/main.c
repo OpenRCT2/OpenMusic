@@ -11,7 +11,7 @@
 
 void fail_with_help(char* argv[])
 {
-    fprintf(stderr, "Usage: %s [-s spacing] -o output input_file(s)\n", argv[0]);
+    fprintf(stderr, "Usage: %s [-s spacing] [-v] -o output input_file(s)\n", argv[0]);
     exit(EXIT_FAILURE);
 }
 
