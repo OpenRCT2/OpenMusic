@@ -263,7 +263,11 @@ melody = \relative c'' {
       <c a' c>2 <a f' a>
       <a c a'> <g bes g'>
       <f a f'>4 c'8 c c4 c
+      \set Score.tempoHideNote = ##t
+      \tempo 4 = 117
       c8 r c4\fermata <c a' c>\fermata <bes g' bes>\fermata
+      \set Score.tempoHideNote = ##t
+      \tempo 4 = 235
     }
     {
       <e c' e>2 <d bes' d>
