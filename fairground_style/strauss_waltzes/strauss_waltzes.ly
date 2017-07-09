@@ -28,13 +28,22 @@ transposeMorgenblaetter = #(define-music-function (parser location music)
 transposeFledermaus = #(define-music-function (parser location music)
    (ly:music?)
    #{
-     \transpose cis c {
+     \transpose c es { % c es
+       #music
+     }
+   #})
+
+transposeKuenstlerleben = #(define-music-function (parser location music)
+   (ly:music?)
+   #{
+     \transpose c c { % c es
        #music
      }
    #})
 
 \include "morgenblaetter.ily"
 \include "fledermaus.ily"
+\include "kuenstlerleben.ily"
 
 
 second_melody = \relative c'' {
@@ -43,6 +52,9 @@ second_melody = \relative c'' {
   }
   \transposeFledermaus {
     \second_melody_fledermaus
+  }
+  \transposeKuenstlerleben {
+    \second_melody_kuenstlerleben
   }
 }
 
@@ -53,6 +65,10 @@ melody = \relative c'' {
   \transposeFledermaus {
     \melody_fledermaus
   }
+  \transposeKuenstlerleben {
+    \melody_kuenstlerleben
+  }
+  
 }
 
 left = \relative c' {

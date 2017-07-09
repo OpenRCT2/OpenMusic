@@ -24,7 +24,7 @@ melody_fledermaus_same = {
   gis'8 fisis gis cis bis ais
   fis fis fis4 fis
   fis8 eis fis ais gis bis,
-  cis4 r2
+  cis2.~
 }
 
 second_melody_fledermaus = \relative c'' {
@@ -46,7 +46,7 @@ second_melody_fledermaus = \relative c'' {
   <d' fis>4 r <d e>
   <e, a cis>2 r4
   
-  %\melody_fledermaus_same
+  \melody_fledermaus_same
 }
 
 
@@ -97,7 +97,7 @@ left_fledermaus = \relative c {
   gis, <eis' cis> <eis cis>
   <gis, bis dis>8 <gis bis dis> <gis bis dis>4 <gis bis dis>
   gis <dis' fis> <dis fis>
-  <cis eis> r2
+  <cis eis>4 r2
 }
 
 
