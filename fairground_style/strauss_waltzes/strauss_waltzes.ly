@@ -6,7 +6,7 @@
   dedication = "OpenRCT2-OpenMusic"
   title = "Various Waltzes by Johann Strauß II"
   arranger = "Christian Friedrich Coors"
-  subtitle = "Morgenblätter, Die Fledermaus, Rosen aus dem Süden, Wiener Blut, Donauwalzer"
+  subtitle = "Morgenblätter, Die Fledermaus, Künstlerleben, Wiener Blut, Donauwalzer"
   composer = "Johann Baptist Strauss"
   tagline = "https://www.github.com/ccoors/OpenRCT2-OpenMusic"
   copyright = "Arrangement CC-BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/"
@@ -78,6 +78,9 @@ left = \relative c' {
   \transposeFledermaus {
     \left_fledermaus
   }
+  \transposeKuenstlerleben {
+    \left_kuenstlerleben
+  }
 }
 
 pedal = \relative c, {
@@ -86,6 +89,9 @@ pedal = \relative c, {
   }
   \transposeFledermaus {
     \pedal_fledermaus
+  }
+  \transposeKuenstlerleben {
+    \pedal_kuenstlerleben
   }
 }
 

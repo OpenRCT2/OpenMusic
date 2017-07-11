@@ -3,7 +3,7 @@ global_fledermaus = {
   \key a \major
   \time 3/4
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 210
+  \tempo 4 = 200
 }
 
 melody_fledermaus_same = {
