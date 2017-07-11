@@ -31,7 +31,7 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 | css12.dat | Bella Bella Bimba | TODO |
 | css13.dat | The Blond Sailor by The Andrews Sisters | TODO |
 | css14.dat | Overture from Poet and Peasant by Franz von Suppé | Work in progress ([current state](https://cuervo.phoenix.uberspace.de/music/overture9.ogg)) |
-| css15.dat | Multiple waltzes by Johann Strauß II: 00:00 Morgenblätter / 01:10 Die Fledermaus - Overture / 01:35 Künstlerleben / 02:20 Wiener Blut / 03:05 The Blue Danube | Work in progress |
+| css15.dat | Multiple waltzes by Johann Strauß II: 00:00 Morgenblätter / 01:10 Die Fledermaus - Overture / 01:23 Künstlerleben / 02:20 Wiener Blut / 03:05 The Blue Danube | Work in progress |
 
 ### Other music styles
 
