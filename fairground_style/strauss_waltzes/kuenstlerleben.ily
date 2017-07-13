@@ -28,7 +28,7 @@ second_melody_kuenstlerleben = \relative c' {
   g r r4 b,8 c
   f r r4 f8 r
   g,2.~
-  g4 r r
+  g4 r2
   
   r2 r8 e''8
   e4 r e
