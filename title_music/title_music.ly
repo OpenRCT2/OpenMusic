@@ -713,7 +713,6 @@ drumsPart = \new DrumStaff \with {
     \tubaPart
     \drumsPart
   >>
-  
   \layout { }
 }
 

@@ -1,6 +1,9 @@
 # midimerge
 This tool allows you to merge SMF MIDI files. The files are appended to each other.
 
+## Warning
+Deprecated, not needed in the current music pipeline.
+
 ## Usage
 
     midimerge -s 10 -o out.mid *.mid
