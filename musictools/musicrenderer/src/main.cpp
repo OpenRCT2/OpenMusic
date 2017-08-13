@@ -1,15 +1,31 @@
+/**
+ * Copyright (C) 2017 Christian Friedrich Coors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
 #include <sstream>
 
-#include <fluidsynth.h>
+#include <gminstruments.h>
+#include <loguru.hpp>
 
 #include <INIReader.h>
-#include <loguru.hpp>
+#include <fluidsynth.h>
 #include <smf.h>
-
-#include <gminstruments.h>
 
 #define MIDI_MAX_TRACKS 16
 
@@ -58,7 +74,7 @@ void process_dir(const char* dir, const char* output_dir)
     }
 
     while ((in_event = smf_get_next_event(in_smf)) != NULL) {
-//         LOG_F(INFO, "Got event at %f on track %d", in_event->time_seconds, in_event->track_number);
+        //         LOG_F(INFO, "Got event at %f on track %d", in_event->time_seconds, in_event->track_number);
 
         if (smf_event_is_metadata(in_event)) {
             continue;
