@@ -18,14 +18,17 @@
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
+#include <map>
 #include <sstream>
-
-#include <gminstruments.h>
-#include <loguru.hpp>
+#include <vector>
 
 #include <INIReader.h>
 #include <fluidsynth.h>
 #include <smf.h>
+
+#include "gminstruments.h"
+#include "loguru.hpp"
+#include "synthesizers/synthesizer.h"
 
 #define MIDI_MAX_TRACKS 16
 
@@ -45,6 +48,9 @@ void process_dir(const char* dir, const char* output_dir)
 
     smf_t* in_smf;
     smf_event_t* in_event;
+
+    std::map<int, std::vector<smf_event_t*>> event_mapping;
+    std::map<int, Synthesizer*> synth_mapping;
 
     LOG_SCOPE_F(INFO, "Processing %s...", dir);
 
@@ -82,6 +88,12 @@ void process_dir(const char* dir, const char* output_dir)
 
         if (in_event->track_number >= MIDI_MAX_TRACKS) {
             LOG_F(WARNING, "Found invalid track in SMF!");
+        }
+    }
+
+    for (const std::string& section : rendersettings.Sections()) {
+        if (section.find("synth.") == 0) {
+            makeSynthesizer(rendersettings, section);
         }
     }
 
