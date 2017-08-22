@@ -15,26 +15,29 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef SYNTH_H
-#define SYNTH_H
+#include "synth_fluid.h"
 
-#include <vector>
+#include "../loguru.hpp"
 
-#include <INIReader.h>
-#include <smf.h>
+Synthesizer_Fluid::Synthesizer_Fluid(INIReader& reader, const std::string& section)
+    : Synthesizer()
+{
+    LOG_F(INFO, "Constructing FluidSynth synthesizer");
+    m_settings_soundfonts = reader.Get(section, "soundfonts", "");
+    m_settings_fluidsettings = reader.Get(section, "settings", "");
 
-/**
- * Abstract synthesizer class
- */
-class Synthesizer {
+    m_settings = new_fluid_settings();
 
-public:
-    Synthesizer();
-    ~Synthesizer();
+    m_synth = new_fluid_synth(m_settings);
+}
 
-    virtual void render(std::vector<smf_event_t*>& midi_events) = 0;
-};
+Synthesizer_Fluid::~Synthesizer_Fluid()
+{
+    LOG_F(INFO, "Destructing FluidSynth synthesizer");
+    delete_fluid_synth(m_synth);
+    delete_fluid_settings(m_settings);
+}
 
-Synthesizer* make_synthesizer(INIReader& reader, const std::string& section);
-
-#endif
+void Synthesizer_Fluid::render(std::vector<smf_event_t*>& midi_events)
+{
+}

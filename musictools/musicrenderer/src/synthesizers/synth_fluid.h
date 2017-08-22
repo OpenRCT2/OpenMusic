@@ -15,26 +15,24 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef SYNTH_H
-#define SYNTH_H
+#ifndef SYNTH_FLUID
+#define SYNTH_FLUID
 
-#include <vector>
+#include <fluidsynth.h>
 
-#include <INIReader.h>
-#include <smf.h>
+#include "synthesizer.h"
 
-/**
- * Abstract synthesizer class
- */
-class Synthesizer {
+class Synthesizer_Fluid : public Synthesizer {
+    std::string m_settings_soundfonts, m_settings_fluidsettings;
+
+    fluid_settings_t* m_settings;
+    fluid_synth_t* m_synth;
 
 public:
-    Synthesizer();
-    ~Synthesizer();
+    Synthesizer_Fluid(INIReader& reader, const std::string& section);
+    ~Synthesizer_Fluid();
 
-    virtual void render(std::vector<smf_event_t*>& midi_events) = 0;
+    void render(std::vector<smf_event_t*>& midi_events);
 };
-
-Synthesizer* make_synthesizer(INIReader& reader, const std::string& section);
 
 #endif

@@ -23,7 +23,6 @@
 #include <vector>
 
 #include <INIReader.h>
-#include <fluidsynth.h>
 #include <smf.h>
 
 #include "gminstruments.h"
@@ -93,7 +92,11 @@ void process_dir(const char* dir, const char* output_dir)
 
     for (const std::string& section : rendersettings.Sections()) {
         if (section.find("synth.") == 0) {
-            makeSynthesizer(rendersettings, section);
+            Synthesizer* synth = make_synthesizer(rendersettings, section);
+            if (synth != nullptr) {
+                LOG_F(INFO, "Deleting synth!");
+                delete synth;
+            }
         }
     }
 
