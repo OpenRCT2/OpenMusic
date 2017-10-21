@@ -36,7 +36,7 @@ second_melody_morgenblaetter = \relative c'' {
   \acciaccatura b e r d
   fis, r g
   \acciaccatura g c r b
-  a r g(
+  a r g\trill(
   fis) r g
   a r b
   c2.

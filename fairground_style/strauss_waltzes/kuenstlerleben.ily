@@ -134,16 +134,16 @@ pedal_kuenstlerleben = \relative c {
   \repeat unfold 2 { f4 r2 }
   \repeat unfold 2 { g4 r2 }
   \repeat unfold 2 { g,4 r2 }
-  \repeat unfold 2 { c4 r g' }
+  \repeat unfold 2 { c2 g'4 }
   
-  c,4 r r
-  b r r
-  a r r
-  a r r
-  e' r r
-  e r r
-  f r r
-  f r r
+  c,2 c4
+  b2 b4
+  a2 a4
+  a2 a4
+  e'2 e4
+  e2 e4
+  f2 f4
+  f4 r r
   
   \repeat unfold 2 { f4 r r }
   \repeat unfold 2 { g4 r r }
