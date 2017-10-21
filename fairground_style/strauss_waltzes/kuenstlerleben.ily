@@ -51,6 +51,26 @@ second_melody_kuenstlerleben = \relative c' {
     \\
     { g4 g g }
   >>
+
+  r2 b8 c |
+  \repeat volta 2 {
+    d2 g8( a |
+    b2) a8 g |
+    \acciaccatura fis a2 g8 fis |
+    \acciaccatura e g2 a8 e' |
+  }
+  \alternative {
+    {
+      <a, d,>2 a8 e' |
+      <a, d,>2 a8 e' |
+      <g, d b>2 g8 e' |
+      <g, d b>2 b,8 c |
+    }
+    {
+      R2.
+    }
+  }
+
 }
 
 melody_kuenstlerleben = \relative c' {
