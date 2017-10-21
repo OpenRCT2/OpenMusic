@@ -29,7 +29,7 @@ main_melody_right = \relative c' {
   \repeat volta 2 {
     <b e>8 r4 <b fis'>8 |
     <b a'> r4 <b g'>8 |
-    <b fis'> <b a'> <b g'> <d fis> |
+    <b fis'> <b a'> <b g'> <a fis'> |
     <c e>4( <c d>8) d |
     c' r4 d,8 |
     a' r4 <e g>8 |
@@ -37,7 +37,7 @@ main_melody_right = \relative c' {
     <fis ais>4( <g b>8) <b d> |
     <b e>8 r4 <b fis'>8 |
     <b a'> r4 <b g'>8 |
-    <b fis'> <b a'> <b g'> <d fis> |
+    <b fis'> <b a'> <b g'> <a fis'> |
     <a e'>4( <a d>8) g |
     <cis g'> r4 a8 |
     <d fis> r4 a8 |
