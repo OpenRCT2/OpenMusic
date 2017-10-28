@@ -41,10 +41,18 @@ transposeKuenstlerleben = #(define-music-function (parser location music)
      }
    #})
 
+transposeWienerBlut = #(define-music-function (parser location music)
+   (ly:music?)
+   #{
+     \transpose c c { % c es
+       #music
+     }
+   #})
+
 \include "morgenblaetter.ily"
 \include "fledermaus.ily"
 \include "kuenstlerleben.ily"
-
+\include "wiener_blut.ly"
 
 second_melody = \relative c'' {
   \transposeMorgenblaetter {
@@ -55,6 +63,9 @@ second_melody = \relative c'' {
   }
   \transposeKuenstlerleben {
     \second_melody_kuenstlerleben
+  }
+  \transposeWienerBlut {
+    \second_melody_wiener_blut
   }
 }
 
@@ -68,7 +79,9 @@ melody = \relative c'' {
   \transposeKuenstlerleben {
     \melody_kuenstlerleben
   }
-  
+  \transposeWienerBlut {
+    \melody_wiener_blut
+  }
 }
 
 left = \relative c' {
@@ -80,6 +93,9 @@ left = \relative c' {
   }
   \transposeKuenstlerleben {
     \left_kuenstlerleben
+  }
+  \transposeWienerBlut {
+    \left_wiener_blue
   }
 }
 
