@@ -12,6 +12,34 @@ global_kuenstlerleben_two = {
   \tempo 4 = 200
 }
 
+ending_kuenstlerleben = {
+  r2 b8 c |
+  \repeat volta 2 {
+    d2 g8( a |
+    b2) a8 g |
+    \acciaccatura fis a2 g8 fis |
+    \acciaccatura e g2 a8 e' |
+  }
+  \alternative {
+    {
+      <a, fis>2 a8 e' |
+      <a, fis>2 a8 e' |
+      <g, d>2 g8 e' |
+      <g, d>2 b,8 c |
+    }
+    {
+      <a e' g a>2 a'8 e' |
+      <a,, d g a>2 a'8 e' |
+      <<
+        { <d, a' d>8 <d a' d> <c d fis a d>4 <c d fis> }
+        \\
+        { r2 a'8 b }
+      >>
+      <b, d g>4 r2
+    }
+  }
+}
+
 second_melody_kuenstlerleben = \relative c' {
   \global_kuenstlerleben_one
   e2 r8 e'8
@@ -52,26 +80,9 @@ second_melody_kuenstlerleben = \relative c' {
     { g4 g g }
   >>
 
-  r2 b8 c |
-  \repeat volta 2 {
-    d2 g8( a |
-    b2) a8 g |
-    \acciaccatura fis a2 g8 fis |
-    \acciaccatura e g2 a8 e' |
-  }
-  \alternative {
-    {
-      <a, d,>2 a8 e' |
-      <a, d,>2 a8 e' |
-      <g, d b>2 g8 e' |
-      <g, d b>2 b,8 c |
-    }
-    {
-      R2.
-    }
-  }
-
+  \ending_kuenstlerleben
 }
+
 
 melody_kuenstlerleben = \relative c' {
   \global_kuenstlerleben_one
@@ -115,6 +126,8 @@ melody_kuenstlerleben = \relative c' {
   R2.
   g2( d8 e)
   c2.
+  
+  \relative c'' { \ending_kuenstlerleben }
 }
 
 left_kuenstlerleben = \relative c {
@@ -142,6 +155,25 @@ left_kuenstlerleben = \relative c {
   r4 <g f'> <g f'>
   <g f'>2.
   <g e'>4 <g e'> <g e'>
+  R2.
+  
+  \repeat volta 2 {
+    r4 <b, d g> <d g b> |
+    r <b d g> <d g b> |
+    r <c e a> <e a c> |
+    <e a c> r r |
+  }
+  \alternative {
+    {
+      r <fis a c> <fis a c> |
+      r <fis a c> <fis a c> |
+      r <d g b> <d g b> |
+      r <d g b> <d g b> |
+    }
+    {
+      R2.*4
+    }
+  }
   
 }
 
@@ -170,4 +202,26 @@ pedal_kuenstlerleben = \relative c {
   g,4 r r
   g2.
   c4 c c
+  R2.
+  
+  \repeat volta 2 {
+    g4 r r
+    g r r
+    c r r
+    c r r
+  }
+  \alternative {
+    {
+      d r r
+      d r r
+      g, r r
+      g r r
+    }
+    {
+      cis2.
+      d
+      d4 a d
+      g, r r
+    }
+  }
 }
