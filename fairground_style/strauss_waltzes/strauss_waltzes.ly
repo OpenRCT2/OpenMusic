@@ -109,6 +109,9 @@ pedal = \relative c, {
   \transposeKuenstlerleben {
     \pedal_kuenstlerleben
   }
+  \transposeWienerBlut {
+    \pedal_wiener_blut
+  }
 }
 
 glockenspiel = \relative c'' {
