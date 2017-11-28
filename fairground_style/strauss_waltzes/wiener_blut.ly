@@ -5,6 +5,15 @@ global_wiener_blut = {
   \tempo 4 = 200
 }
 
+wiener_blut_r_one = \relative c'' {
+  fis4.( g8) |
+  e'2.~ |
+  e4 b4.( c8) |
+  c2.~ |
+  c4 b4.( c8) |
+  \repeat unfold 2 { g2( b8 c) | }
+}
+
 second_melody_wiener_blut = \relative c'' {
   \global_wiener_blut
   d4. d8 d4~ |
@@ -19,13 +28,7 @@ second_melody_wiener_blut = \relative c'' {
   a8 r r2 |
   d,8 r r2 |
 
-  r4 fis4.( g8) |
-  e'2.~ |
-  e4 b4.( c8) |
-  c2.~ |
-  c4 b4.( c8) |
-  \repeat unfold 2 { g2( b8 c) | }
-  f,2.~ |
+  r4 \wiener_blut_r_one f2.~ |
   f4 gis4.( a8) |
   f'2.~ |
   f4 cis4.( d8) |
@@ -34,7 +37,8 @@ second_melody_wiener_blut = \relative c'' {
   c) r b4.( g8 |
   b) r a4. f8 |
   e2.~ |
-  e4 r r
+  e4 \wiener_blut_r_one f2.~ |
+  f4 r2
 }
 
 melody_wiener_blut = \relative c'' {
@@ -103,15 +107,15 @@ pedal_wiener_blut = \relative c {
 
   \repeat unfold 3 {
     c4 r2 |
-    g4 r2 |
+    g'4 r2 |
   }
-  \repeat unfold 2 { d'4 r2 }
+  \repeat unfold 2 { d4 r2 }
   \repeat unfold 3 {
     g,4 r2 |
     d'4 r2 |
   }
 
-  \repeat unfold 3 {
+  \repeat unfold 1 {
     c4 r2 |
     g4 r2 |
   }

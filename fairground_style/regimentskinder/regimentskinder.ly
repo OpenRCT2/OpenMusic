@@ -824,7 +824,7 @@ organPart = <<
       midiInstrument = "drawbar organ"
     } \second_melody
     \new Staff = "melody" \with {
-      midiInstrument = "acoustic grand"
+      midiInstrument = "church organ"
     } \melody
     \new Staff = "accompaniment" \with {
       midiInstrument = "reed organ"

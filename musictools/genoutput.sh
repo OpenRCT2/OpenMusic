@@ -13,8 +13,16 @@ cat > index.html << _EOF_
 <meta charset="utf-8">
 <title>OpenRCT2-OpenMusic nightly builds</title>
 <style>
-h1, h2, p, td {
-    font-family: Palatino, Arial, sans-serif;
+h1, h2, p, a, td, th {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+th {
+    text-align: left;
+}
+
+.hash {
+    font-family: "Fira Code", "Source Code Pro", "Fantasque Sans Mono", "Courier New", monospace;
 }
 </style>
 </head>
@@ -26,14 +34,15 @@ _EOF_
 git rev-parse HEAD >> index.html
 echo " on " >> index.html
 LC_ALL=C date --utc >> index.html
-echo "</p><hr>" >> index.html
+echo "</p><a href=\"buildlog.txt\">Build log</a><hr>" >> index.html
 
 for song in $(cat songlist.txt); do
   echo "<h2>$song</h2>" >> index.html
-  echo "<table><tr><th>File</th><th>Size</th></tr>" >> index.html
-  for file in $song.flac $song.ogg; do
+  echo "<table><tr><th>File</th><th>Size</th><th>sha256</th></tr>" >> index.html
+  for file in $song.flac $song.ogg $song.pdf; do
     filesize=$(($(wc -c <"$file") / 1000))
-    echo "<tr><td><a href=\"$file\">$file</a></td><td>$filesize KB</td></tr>" >> index.html
+    hash=$(sha256sum $file | colrm 64)
+    echo "<tr><td><a href=\"$file\" target=\"_blank\">$file</a></td><td>$filesize KB</td><td class=\"hash\">$hash</td></tr>" >> index.html
   done
   echo "</table><p>" >> index.html
   sox "$song.flac" -n stat 2> stats.tmp

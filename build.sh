@@ -13,38 +13,9 @@ get_script_dir() {
      echo "$DIR"
 }
 
-cd "$(get_script_dir)"
-rm -rfv out/
-cd musictools/midisplit
-rm -rfv build
-mkdir build
-cd build
-cmake ..
-make
-cd ../../..
 set -e
-mkdir out
-
-cd fairground_style
-
-for f in *; do
-  if [ -d "$f" ]; then
-    cd $f
-    if [ -f "$f.ly" ]; then
-      lilypond -dno-point-and-click -ddelete-intermediate-files $include --pdf $filename "$f.ly"
-      if [ -f "$f.midi" ]; then
-        ../../musictools/make_organ_song.sh "$f.midi"
-        mv out.flac "../../out/$f.flac"
-        echo $f >> ../../out/songlist.txt
-      fi
-    fi
-    cd ..
-  fi
-done
-cd ..
-
-cp musictools/genoutput.sh out/genoutput.sh
-cd out
-./genoutput.sh
-cd ..
-rm out/genoutput.sh
+cd "$(get_script_dir)"
+cp musictools/make.sh make.sh
+./make.sh 2>&1 | tee buildlog.txt
+mv buildlog.txt out/buildlog.txt
+rm make.sh
