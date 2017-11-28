@@ -93,11 +93,19 @@ void process_file(const char* file, const char* output, bool verbose, bool* keep
         }
     }
 
-    if (some_track != NULL) {
-        verbose_printf(verbose, "Adding event 5 seconds after last note, so fluidsynth doesn't cut off the sound\n");
-        out_event = smf_event_new_from_bytes(0b10110000 | some_track->track_number, 120, 0);
-        smf_track_add_event_seconds(some_track, out_event, smf_get_length_seconds(in_smf) + 5.0);
+    if (some_track == NULL) {
+        out_track[0] = smf_track_new();
+        if (out_track[0] == NULL) {
+            fprintf(stderr, "Could not create SMF track\n");
+            exit(EXIT_FAILURE);
+        }
+        some_track = out_track[0];
+        smf_add_track(out_smf, out_track[0]);
     }
+
+    verbose_printf(verbose, "Adding event 5 seconds after last note, so fluidsynth doesn't cut off the sound\n");
+    out_event = smf_event_new_from_bytes(0b10110000 | some_track->track_number, 120, 0);
+    smf_track_add_event_seconds(some_track, out_event, smf_get_length_seconds(in_smf) + 5.0);
 
     verbose_printf(verbose, "Saving file\n");
     int ret = smf_save(out_smf, output);
