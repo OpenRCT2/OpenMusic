@@ -33,7 +33,7 @@ void process_file(const char* file, const char* output, bool verbose, bool* keep
 {
     smf_t *out_smf, *in_smf;
     smf_event_t *in_event, *out_event;
-    smf_track_t* out_track[MIDI_MAX_TRACKS] = { NULL };
+    smf_track_t *out_track[MIDI_MAX_TRACKS] = { NULL }, *some_track = NULL;
     unsigned char patches[MIDI_MAX_TRACKS] = { 0 };
     int percussion_track = -1;
 
@@ -84,12 +84,19 @@ void process_file(const char* file, const char* output, bool verbose, bool* keep
                     fprintf(stderr, "Could not create SMF track\n");
                     exit(EXIT_FAILURE);
                 }
+                some_track = out_track[in_event->track_number];
                 smf_add_track(out_smf, out_track[in_event->track_number]);
             }
 
             out_event = smf_event_new_from_pointer(in_event->midi_buffer, in_event->midi_buffer_length);
             smf_track_add_event_seconds(out_track[in_event->track_number], out_event, in_event->time_seconds);
         }
+    }
+
+    if (some_track != NULL) {
+        verbose_printf(verbose, "Adding event 5 seconds after last note, so fluidsynth doesn't cut off the sound\n");
+        out_event = smf_event_new_from_bytes(0b10110000 | some_track->track_number, 120, 0);
+        smf_track_add_event_seconds(some_track, out_event, smf_get_length_seconds(in_smf) + 5.0);
     }
 
     verbose_printf(verbose, "Saving file\n");
