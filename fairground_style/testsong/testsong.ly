@@ -1,7 +1,5 @@
 \version "2.18.2"
-\include "articulate.ly"
-\include "../include.ly"
-#(define ac:normalFactor '(7 . 8))
+\include "../../include/include.ly"
 
 \header {
   dedication = "OpenRCT2-OpenMusic"
@@ -9,11 +7,6 @@
   composer = "Christian Friedrich Coors"
   tagline = "https://www.github.com/ccoors/OpenRCT2-OpenMusic"
   copyright = "Arrangement CC-BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/"
-}
-
-\paper {
-  #(set-paper-size "a4")
-  left-margin = 2\cm
 }
 
 global = {

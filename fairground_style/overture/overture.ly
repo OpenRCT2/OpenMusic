@@ -1,5 +1,5 @@
 \version "2.18.2"
-\include "articulate.ly"
+\include "../../include/include.ly"
 #(define ac:normalFactor '(15 . 16))
 
 \header {
@@ -10,11 +10,6 @@
   composer = "Franz von Suppé"
   tagline = "https://www.github.com/ccoors/OpenRCT2-OpenMusic"
   copyright = "Arrangement CC-BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/"
-}
-
-\paper {
-  #(set-paper-size "a4")
-  left-margin = 2\cm
 }
 
 global_andante = {
@@ -1396,25 +1391,25 @@ organPart = <<
     instrumentName = "Organ"
     shortInstrumentName = "Org."
   } <<
-    \new Staff = "second melody" \with {
-      midiInstrument = "drawbar organ"
-    } \second_melody
     \new Staff = "melody" \with {
-      midiInstrument = "church organ"
+      midiInstrument = \melodyInstrument
     } \melody
+    \new Staff = "second melody" \with {
+      midiInstrument = \secondMelodyInstrument
+    } \second_melody
     \new Staff = "accompaniment" \with {
-      midiInstrument = "reed organ"
+      midiInstrument = \accompanimentInstrument
     } { \clef bass \left }
+    \new Staff = "pedal" \with {
+      midiInstrument = \pedalInstrument
+    } { \clef bass \pedal }
   >>
-  \new Staff = "pedal" \with {
-    midiInstrument = "church organ"
-  } { \clef bass \pedal }
 >>
 
 glockenspielPart = \new Staff \with {
   instrumentName = "Glockenspiel"
   shortInstrumentName = "Gls."
-  midiInstrument = "vibraphone"
+  midiInstrument = \glockenspielInstrument
 } \glockenspiel
 
 drumPart = \new DrumStaff \with {
