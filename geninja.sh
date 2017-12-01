@@ -93,7 +93,7 @@ build \$RELEASEDIR/${song}.flac: normalize \$OUTDIR/${song}.wav
 build \$RELEASEDIR/${song}.ogg: render_ogg \$RELEASEDIR/${song}.flac
 build \$SONGNAMEDIR/fairground_style/${song}: write_song_name || \$RELEASEDIR/${song}.flac
 _EOF_
-  ADDEDSONGS="${ADDEDSONGS}$SONGNAMEDIR/fairground_style/$song "
+  ADDEDSONGS="${ADDEDSONGS}$SONGNAMEDIR/fairground_style/$song $RELEASEDIR/${song}.ogg "
 done
 
 for song in ${OTHER_SONGS[*]}; do
@@ -111,7 +111,7 @@ build \$RELEASEDIR/${song}.flac: normalize \$OUTDIR/${song}.wav
 build \$RELEASEDIR/${song}.ogg: render_ogg \$RELEASEDIR/${song}.flac
 build \$SONGNAMEDIR/other_styles/${song}: write_song_name || \$RELEASEDIR/${song}.flac
 _EOF_
-  ADDEDSONGS="${ADDEDSONGS}$SONGNAMEDIR/other_styles/$song "
+  ADDEDSONGS="${ADDEDSONGS}$SONGNAMEDIR/other_styles/$song $RELEASEDIR/${song}.ogg "
 done
 
 
