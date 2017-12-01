@@ -16,21 +16,23 @@ RELEASEDIR=$RELEASEDIR
 SONGNAMEDIR=$SONGNAMEDIR
 SOUNDFONTSDIR=$SOUNDFONTSDIR
 
-GENOUTPUT_DIR=musictools/genoutput
+GENINDEX_DIR=musictools/genindex
 
 SAMPLING_RATE=$SAMPLING_RATE
 NORMALIZE_GAIN=$NORMALIZE_GAIN
 
-PREPARE_PARAMS_ORGAN=-s -f 19 -t 0 -f 16 -t 0 -f 20 -t 0
-PREPARE_PARAMS_ACC=-s -f 11 -t 11 -p -m 48
+PREPARE_PARAMS_ORGAN=-s -f 19 -t 0 -f 16 -t 1 -f 20 -t 2 -f 18 -t 3 -n
+PREPARE_PARAMS_GLOCKENSPIEL=-s -f 11 -t 9 -n
+PREPARE_PARAMS_PERCUSSION=-s -p -m 48 -n
 
 SOUNDFONT_ORGAN="$SOUNDFONTSDIR/$SOUNDFONT_ORGAN"
 SOUNDFONT_GENERALUSER="$SOUNDFONTSDIR/$SOUNDFONT_GENERALUSER"
+SOUNDFONT_FLUIDR3="$SOUNDFONTSDIR/$SOUNDFONT_FLUIDR3"
 SOUNDFONT_NICEKEYS_UPRIGHT="$SOUNDFONTSDIR/$SOUNDFONT_NICEKEYS_UPRIGHT"
 
 CALF_REVERB_PLUGIN="$CALF_REVERB_PLUGIN"
 
-DEFAULT_FLUIDSYNTH_GAIN=0.4
+DEFAULT_FLUIDSYNTH_GAIN=0.25
 
 rule midi_pdf
   command = lilypond -dno-point-and-click -ddelete-intermediate-files --pdf \$\$filename \$main_file && mv \$\$(basename -s .ly \$main_file).pdf \$OUTDIR/release && mv \$\$(basename -s .ly \$main_file).midi \$OUTDIR
@@ -63,7 +65,7 @@ rule write_song_name
   command = touch \$out
 
 rule generate_index
-  command = cd \$RELEASEDIR && cp ../../\$GENOUTPUT_DIR/style.css . && ../../\$GENOUTPUT_DIR/genoutput.sh
+  command = cd \$RELEASEDIR && cp ../../\$GENINDEX_DIR/style.css . && ../../\$GENINDEX_DIR/genindex.sh
 
 rule dependency_graph
   command = ninja -t graph | dot -Tpng -Gdpi=150 -o\$out
@@ -85,13 +87,18 @@ build \$OUTDIR/${song}.midi \$RELEASEDIR/${song}.pdf: midi_pdf ${SONGFILES}
   main_file=fairground_style/${song}/${song}.ly
 build \$OUTDIR/${song}_organ.mid: midiprepare \$OUTDIR/${song}.midi || \$OUTDIR/midiprepare/midiprepare
   split_params=\$PREPARE_PARAMS_ORGAN
-build \$OUTDIR/${song}_acc.mid: midiprepare \$OUTDIR/${song}.midi || \$OUTDIR/midiprepare/midiprepare
-  split_params=\$PREPARE_PARAMS_ACC
+build \$OUTDIR/${song}_glockenspiel.mid: midiprepare \$OUTDIR/${song}.midi || \$OUTDIR/midiprepare/midiprepare
+  split_params=\$PREPARE_PARAMS_GLOCKENSPIEL
+build \$OUTDIR/${song}_percussion.mid: midiprepare \$OUTDIR/${song}.midi || \$OUTDIR/midiprepare/midiprepare
+  split_params=\$PREPARE_PARAMS_PERCUSSION
 build \$OUTDIR/${song}_organ.wav: render \$OUTDIR/${song}_organ.mid
   soundfont=\$SOUNDFONT_ORGAN
-build \$OUTDIR/${song}_acc.wav: render \$OUTDIR/${song}_acc.mid
+  DEFAULT_FLUIDSYNTH_GAIN=0.45
+build \$OUTDIR/${song}_glockenspiel.wav: render \$OUTDIR/${song}_glockenspiel.mid
+  soundfont=\$SOUNDFONT_FLUIDR3
+build \$OUTDIR/${song}_percussion.wav: render \$OUTDIR/${song}_percussion.mid
   soundfont=\$SOUNDFONT_GENERALUSER
-build \$OUTDIR/${song}.wav: combine \$OUTDIR/${song}_organ.wav \$OUTDIR/${song}_acc.wav
+build \$OUTDIR/${song}.wav: combine \$OUTDIR/${song}_organ.wav \$OUTDIR/${song}_glockenspiel.wav \$OUTDIR/${song}_percussion.wav
 build \$OUTDIR/${song}_reverb.wav: apply_lv2 \$OUTDIR/${song}.wav
   plugin=\$CALF_REVERB_PLUGIN
   plugin_options=-p decay_time:$REVERB_DECAY
@@ -132,13 +139,5 @@ done
 
 cat >> build.ninja << _EOF_
 
-build \$RELEASEDIR/index.html: generate_index $ADDEDSONGS \$GENOUTPUT_DIR/style.css \$GENOUTPUT_DIR/genoutput.sh
+build \$RELEASEDIR/index.html: generate_index $ADDEDSONGS \$GENINDEX_DIR/style.css \$GENINDEX_DIR/genindex.sh
 _EOF_
-
-
-# Maybe enable this on CI if HDD space gets too low
-
-# rule cleanup_files
-#   command = rm \$in && touch \$out
-
-# build \$OUTDIR/${song}_clean: cleanup_files \$OUTDIR/${song}.midi \$OUTDIR/${song}_organ.mid \$OUTDIR/${song}_acc.mid \$OUTDIR/${song}_organ.wav \$OUTDIR/${song}_acc.wav || \$RELEASEDIR/${song}.opus

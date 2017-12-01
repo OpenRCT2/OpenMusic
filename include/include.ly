@@ -3,7 +3,7 @@
 melodyInstrument = "church organ"
 secondMelodyInstrument = "drawbar organ"
 accompanimentInstrument = "reed organ"
-pedalInstrument = "church organ"
+pedalInstrument = "rock organ"
 glockenspielInstrument = "vibraphone"
 
 \include "articulate.ly"

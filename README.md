@@ -60,6 +60,7 @@ Currently, the build output is available at [https://cuervo.phoenix.uberspace.de
 - [opus-tools](http://opus-codec.org/downloads/)
 - Multiple SoundFonts
     - BureaFuneralChapel.sf2 (currently not available for download as it is not finished yet)
+    - FluidR3_GM.sf2
     - [GeneralUser GS v1.471.sf2](http://www.schristiancollins.com/generaluser.php)
     - [Nice-Upright-Piano-sf2-JNv1.3.sf2](https://sites.google.com/site/soundfonts4u/)
 

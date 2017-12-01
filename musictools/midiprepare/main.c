@@ -21,7 +21,7 @@ typedef struct split_options_t {
 
 void fail_with_help(char* argv[])
 {
-    fprintf(stderr, "Usage: %s [-s [-f patch_in -t patch_out]* [[-p] [-m patch_percussion]]] [-v] [-a seconds] -o output input_file\n", argv[0]);
+    fprintf(stderr, "Usage: %s [-s [-f patch_in -t patch_out]* [[-p] [-m patch_percussion]]] [-v] [-a seconds] [-n] -o output input_file\n", argv[0]);
     exit(EXIT_FAILURE);
 }
 
@@ -52,7 +52,7 @@ int find_index(const int map[], int search_for, int length)
     return -1;
 }
 
-void process_file(const char* file, const char* output, bool verbose, const split_options* split_options, double add_seconds)
+void process_file(const char* file, const char* output, bool verbose, const split_options* split_options, bool normalize, double add_seconds)
 {
     smf_t *out_smf, *in_smf;
     smf_event_t* in_event;
@@ -82,6 +82,14 @@ void process_file(const char* file, const char* output, bool verbose, const spli
         if (in_event->track_number >= MIDI_MAX_TRACKS) {
             fprintf(stderr, "File contains invalid track number (%d)!\n", in_event->track_number);
             exit(EXIT_FAILURE);
+        }
+
+        if (normalize && in_event->midi_buffer_length >= 1) {
+            if ((in_event->midi_buffer[0] >> 4) == 0b1001) {
+                if (in_event->midi_buffer_length == 3 && in_event->midi_buffer[2] != 0) {
+                    in_event->midi_buffer[2] = 0b0111111;
+                }
+            }
         }
 
         if (!split_options->active) {
@@ -187,14 +195,14 @@ int main(int argc, char* argv[])
         .from_index = 0
     };
     double add_seconds = 5.0;
-    bool verbose = false;
+    bool verbose = false, normalize = false;
 
     for (int i = 0; i < LILYPOND_MAX_PATCHES; i++) {
         split_options.map_from[i] = -1;
         split_options.map_to[i] = -1;
     }
 
-    while ((opt = getopt(argc, argv, "sf:t:pm:a:o:v")) != -1) {
+    while ((opt = getopt(argc, argv, "sf:t:pm:a:no:v")) != -1) {
         switch (opt) {
         case 's':
             split_options.active = true;
@@ -247,6 +255,9 @@ int main(int argc, char* argv[])
         case 'a':
             add_seconds = atof(optarg);
             break;
+        case 'n':
+            normalize = true;
+            break;
         case 'o':
             output = optarg;
             break;
@@ -262,7 +273,7 @@ int main(int argc, char* argv[])
         fail_with_help(argv);
     }
 
-    process_file(argv[argc - 1], output, verbose, &split_options, add_seconds);
+    process_file(argv[argc - 1], output, verbose, &split_options, normalize, add_seconds);
 
     verbose_printf(verbose, "Done\n");
     return EXIT_SUCCESS;
