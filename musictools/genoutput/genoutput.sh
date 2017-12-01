@@ -27,7 +27,7 @@ for style_file in ../songnames/*; do
     song=$(basename $song_file)
     echo "<div class=\"song\"><h3>$song</h3>" >> index.html
     echo "<table><tr><th>File</th><th>Size</th></tr>" >> index.html
-    for file in $song.flac $song.ogg $song.pdf; do
+    for file in $song.flac $song.opus $song.pdf; do
       filesize=$(($(wc -c <"$file") / 1000))
       echo "<tr><td><a href=\"$file\" target=\"_blank\">$file</a></td><td>$filesize KB</td></tr>" >> index.html
     done

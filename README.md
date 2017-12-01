@@ -49,12 +49,15 @@ Currently, the build output is available at [https://cuervo.phoenix.uberspace.de
 ### Build Dependencies
 - [BASH](http://tiswww.case.edu/php/chet/bash/bashtop.html)
 - [Ninja](https://ninja-build.org/)
+- [libsmf](https://sourceforge.net/projects/libsmf/)
 - [CMake](https://cmake.org/)
 - [GCC](https://gcc.gnu.org/)/[Clang](http://clang.llvm.org/)
 - [LilyPond](http://lilypond.org/)
 - [FluidSynth](http://www.fluidsynth.org/)
+- [Calf Studio Gear](http://calf-studio-gear.org/)
+- [lv2file](https://github.com/jeremysalwen/lv2file)
 - [SoX](http://sox.sourceforge.net/)
-- [vorbis-tools](https://www.xiph.org/downloads/) (Maybe this will change to Opus)
+- [opus-tools](http://opus-codec.org/downloads/)
 - Multiple SoundFonts
     - BureaFuneralChapel.sf2 (currently not available for download as it is not finished yet)
     - [GeneralUser GS v1.471.sf2](http://www.schristiancollins.com/generaluser.php)
