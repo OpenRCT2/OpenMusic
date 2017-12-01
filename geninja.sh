@@ -24,14 +24,14 @@ NORMALIZE_GAIN=$NORMALIZE_GAIN
 SPLIT_PARAMS_ORGAN=-k 19 -k 16 -k 20
 SPLIT_PARAMS_ACC=-k 11 -p -m 48
 
-SOUNDFONT_ORGAN=$SOUNDFONTSDIR/$SOUNDFONT_ORGAN
-SOUNDFONT_GENERALUSER=$SOUNDFONTSDIR/$SOUNDFONT_GENERALUSER
-SOUNDFONT_NICEKEYS_UPRIGHT=$SOUNDFONTSDIR/$SOUNDFONT_NICEKEYS_UPRIGHT
+SOUNDFONT_ORGAN="$SOUNDFONTSDIR/$SOUNDFONT_ORGAN"
+SOUNDFONT_GENERALUSER="$SOUNDFONTSDIR/$SOUNDFONT_GENERALUSER"
+SOUNDFONT_NICEKEYS_UPRIGHT="$SOUNDFONTSDIR/$SOUNDFONT_NICEKEYS_UPRIGHT"
 
 DEFAULT_FLUIDSYNTH_GAIN=1.0
 
 rule midi_pdf
-  command = echo "\$in" && lilypond -dno-point-and-click -ddelete-intermediate-files \$\$include --pdf \$\$filename \$main_file && mv \$\$(basename -s .ly \$main_file).pdf \$OUTDIR/release && mv \$\$(basename -s .ly \$main_file).midi \$OUTDIR
+  command = echo "\$in" && lilypond -dno-point-and-click -ddelete-intermediate-files --pdf \$\$filename \$main_file && mv \$\$(basename -s .ly \$main_file).pdf \$OUTDIR/release && mv \$\$(basename -s .ly \$main_file).midi \$OUTDIR
 
 rule cmake
   command = cmake -B\$\$(dirname \$out) -H\$in && cd \$\$(dirname \$out) && make

@@ -21,8 +21,8 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 
 | File | Piece of music | Status |
 | ---- | -------------- | ------ |
-| css4.dat | Die Regimentskinder by Julius Fučík | Work in progress ([current state](https://cuervo.phoenix.uberspace.de/music/cotr9.ogg)) |
-| css5.dat | Serenade by Jonny Heykens | Work in progress ([current state](https://cuervo.phoenix.uberspace.de/music/serenade9.ogg)) |
+| css4.dat | Die Regimentskinder by Julius Fučík | Work in progress |
+| css5.dat | Serenade by Jonny Heykens | Work in progress |
 | css6.dat | La Belle Espagnole, Op.103 by Robert Vollstedt | TODO |
 | css7.dat | Dornröschens Brautfahrt by Max Rhode | TODO |
 | css8.dat | Tales from the Vienna Woods Waltz by Johann Strauss II | TODO |
@@ -30,8 +30,8 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 | css11.dat | Der Haushamer Plattler (Traditional) 00:00 - 00:52 / ? | TODO |
 | css12.dat | Ma Bella Bimba | TODO |
 | css13.dat | The Blond Sailor by The Andrews Sisters | TODO |
-| css14.dat | Overture from Poet and Peasant by Franz von Suppé | Work in progress ([current state](https://cuervo.phoenix.uberspace.de/music/overture9.ogg)) |
-| css15.dat | Multiple waltzes by Johann Strauß II: 00:00 Morgenblätter / 01:10 Die Fledermaus - Overture / 01:23 Künstlerleben / 02:09 Wiener Blut / 03:05 The Blue Danube | Work in progress ([current state](https://cuervo.phoenix.uberspace.de/music/waltzes9.ogg)) |
+| css14.dat | Overture from Poet and Peasant by Franz von Suppé | Work in progress |
+| css15.dat | Multiple waltzes by Johann Strauß II: 00:00 Morgenblätter / 01:10 Die Fledermaus - Overture / 01:23 Künstlerleben / 02:09 Wiener Blut / 03:05 The Blue Danube | Work in progress |
 
 ### Other music styles
 
@@ -40,3 +40,35 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 | css34.dat | Ragtime style | Adapted the score from the Mutopia Project ([current state](https://cuervo.phoenix.uberspace.de/music/ragtime.ogg)) |
 
 Most of the other music styles are original compositions for the game, so they can't be recreated. The others can.
+
+## Build documentation
+The music in this repository has to be built, which works similar to the process of building software.
+
+Currently, the build output is available at [https://cuervo.phoenix.uberspace.de/openrct2-openmusic/nightly/](https://cuervo.phoenix.uberspace.de/openrct2-openmusic/nightly/).
+
+### Build Dependencies
+- [BASH](http://tiswww.case.edu/php/chet/bash/bashtop.html)
+- [Ninja](https://ninja-build.org/)
+- [CMake](https://cmake.org/)
+- [GCC](https://gcc.gnu.org/)/[Clang](http://clang.llvm.org/)
+- [LilyPond](http://lilypond.org/)
+- [FluidSynth](http://www.fluidsynth.org/)
+- [SoX](http://sox.sourceforge.net/)
+- [vorbis-tools](https://www.xiph.org/downloads/) (Maybe this will change to Opus)
+- Multiple SoundFonts
+    - BureaFuneralChapel.sf2 (currently not available for download as it is not finished yet)
+    - [GeneralUser GS v1.471.sf2](http://www.schristiancollins.com/generaluser.php)
+    - [Nice-Upright-Piano-sf2-JNv1.3.sf2](https://sites.google.com/site/soundfonts4u/)
+
+### Build
+First, generate `build.ninja` using the `geninja.sh` script:
+
+    $ ./geninja.sh
+
+Then, run `build.sh`:
+
+    $ ./build.sh
+
+This will build all required files into `out/` and the 'official' output to `out/release/`.
+
+Some build properties can be modified in `musictools/config.sh`.
