@@ -2,10 +2,6 @@
 
 set -e
 
-for song in $(cat songlist.txt); do
-  oggenc --quality 7 "$song.flac"
-done
-
 cat > index.html << _EOF_
 <!DOCTYPE html>
 <html lang="en">
@@ -34,9 +30,10 @@ _EOF_
 git rev-parse HEAD >> index.html
 echo " on " >> index.html
 LC_ALL=C date --utc >> index.html
-echo "</p><a href=\"buildlog.txt\">Build log</a><hr>" >> index.html
+echo "</p><a href=\"depgraph.png\">Dependency graph</a> &middot; <a href=\"buildlog.txt\">Build log</a><hr>" >> index.html
 
-for song in $(cat songlist.txt); do
+for song_file in ../songnames/*; do
+  song=$(basename $song_file)
   echo "<h2>$song</h2>" >> index.html
   echo "<table><tr><th>File</th><th>Size</th><th>sha256</th></tr>" >> index.html
   for file in $song.flac $song.ogg $song.pdf; do
@@ -50,7 +47,6 @@ for song in $(cat songlist.txt); do
   rm stats.tmp
   echo "</p>" >> index.html
 done
-
 
 cat >> index.html << _EOF_
 </body>

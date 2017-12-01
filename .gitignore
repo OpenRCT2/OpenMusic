@@ -12,3 +12,4 @@ rendered/
 build/
 out/
 buildlog.txt
+build.ninja

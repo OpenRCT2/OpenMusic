@@ -43,9 +43,9 @@ transposeWienerBlut = #(define-music-function (parser location music)
      }
    #})
 
-\include "morgenblaetter.ily"
-\include "fledermaus.ily"
-\include "kuenstlerleben.ily"
+\include "morgenblaetter.ly"
+\include "fledermaus.ly"
+\include "kuenstlerleben.ly"
 \include "wiener_blut.ly"
 
 
