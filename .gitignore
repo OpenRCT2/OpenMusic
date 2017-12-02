@@ -7,9 +7,12 @@
 *.directory
 *.mkv
 *.png
-*ardour*/
+*.sf2
+*.sf2.*
+.idea/
 rendered/
 build/
+cmake-build*/
 out/
 buildlog.txt
 build.ninja

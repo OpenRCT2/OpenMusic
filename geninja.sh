@@ -45,7 +45,7 @@ rule midiprepare
   command = \$OUTDIR/midiprepare/midiprepare \$split_params -v -o \$out \$in
 
 rule render
-  command = fluidsynth -nli -r \$SAMPLING_RATE -R 0 -o synth.cpu-cores=2 -T wav -F \$out -g \$DEFAULT_FLUIDSYNTH_GAIN \$soundfont \$in
+  command = fluidsynth -nli -r \$SAMPLING_RATE -R 0 -T wav -F \$out -g \$DEFAULT_FLUIDSYNTH_GAIN \$soundfont \$in
 
 rule combine
   command = sox --show-progress --combine mix \$in --comment "" \$out

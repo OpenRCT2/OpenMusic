@@ -23,7 +23,7 @@ else
 fi
 echo " on " >> index.html
 LC_ALL=C date --utc >> index.html
-echo "</p><p><a href=\"depgraph.png\">Dependency graph</a> &middot; <a href=\"buildlog.txt\">Build log</a> &middot; <a href=\"sha256.txt\">SHA256 sums</a></p><hr>" >> index.html
+echo "</p><p><a href=\"depgraph.png\">Dependency graph</a> &middot; <a href=\"buildlog.txt\">Build log</a> &middot; <a href=\"sha256.txt\">SHA256 sums</a> &middot; In case some files appear to be corrupted, a CI build/upload might be currently in progress. Try again in a few minutes.</p><hr>" >> index.html
 
 for style_file in ../songnames/*; do
   style=$(basename $style_file)

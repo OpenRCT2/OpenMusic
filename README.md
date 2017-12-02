@@ -1,8 +1,10 @@
 # OpenRCT2-OpenMusic
 This project aims to create an alternative, higher quality version of the music from RollerCoaster Tycoon 2 for use in [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2).
 
-## Chat
 [![Gitter](https://img.shields.io/badge/gitter-Lobby-red.svg?style=flat-square)](https://gitter.im/OpenRCT2-OpenMusic/Lobby)
+[![Build Status](https://travis-ci.org/ccoors/OpenRCT2-OpenMusic.svg?branch=master)](https://travis-ci.org/ccoors/OpenRCT2-OpenMusic)
+
+Current CI Artifacts: [https://cuervo.phoenix.uberspace.de/openrct2-openmusic/ci/](https://cuervo.phoenix.uberspace.de/openrct2-openmusic/ci/)
 
 ## Progress
 ### Fairground organ style
@@ -37,18 +39,17 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 
 | File | Style | Status |
 | ---- | ----- | ------ |
-| css34.dat | Ragtime style | Adapted the score from the Mutopia Project ([current state](https://cuervo.phoenix.uberspace.de/music/ragtime.ogg)) |
+| css34.dat | Ragtime style | Adapted the score from the Mutopia Project |
 
 Most of the other music styles are original compositions for the game, so they can't be recreated. The others can.
 
 ## Build documentation
 The music in this repository has to be built, which works similar to the process of building software.
 
-Currently, the build output is available at [https://cuervo.phoenix.uberspace.de/openrct2-openmusic/nightly/](https://cuervo.phoenix.uberspace.de/openrct2-openmusic/nightly/).
-
 ### Build Dependencies
-- [BASH](http://tiswww.case.edu/php/chet/bash/bashtop.html)
+- [bash](http://tiswww.case.edu/php/chet/bash/bashtop.html)
 - [Ninja](https://ninja-build.org/)
+- [Graphviz](http://graphviz.org/)
 - [libsmf](https://sourceforge.net/projects/libsmf/)
 - [CMake](https://cmake.org/)
 - [GCC](https://gcc.gnu.org/)/[Clang](http://clang.llvm.org/)
@@ -59,10 +60,7 @@ Currently, the build output is available at [https://cuervo.phoenix.uberspace.de
 - [SoX](http://sox.sourceforge.net/)
 - [opus-tools](http://opus-codec.org/downloads/)
 - Multiple SoundFonts
-    - BureaFuneralChapel.sf2 (currently not available for download as it is not finished yet)
-    - FluidR3_GM.sf2
-    - [GeneralUser GS v1.471.sf2](http://www.schristiancollins.com/generaluser.php)
-    - [Nice-Upright-Piano-sf2-JNv1.3.sf2](https://sites.google.com/site/soundfonts4u/)
+    - Get them using `getdependencies.sh`.
 
 ### Build
 First, generate `build.ninja` using the `geninja.sh` script:
