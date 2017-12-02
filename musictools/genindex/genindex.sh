@@ -15,7 +15,12 @@ cat > index.html << _EOF_
 <a href="https://github.com/ccoors/OpenRCT2-OpenMusic" target="_blank">https://github.com/ccoors/OpenRCT2-OpenMusic</a>
 <p>Built from commit
 _EOF_
-git rev-parse HEAD >> index.html
+if [ "$1" == "" ]
+then
+  echo $(git rev-parse HEAD) >> index.html
+else
+  echo $(cd $1 && git rev-parse HEAD) >> index.html
+fi
 echo " on " >> index.html
 LC_ALL=C date --utc >> index.html
 echo "</p><p><a href=\"depgraph.png\">Dependency graph</a> &middot; <a href=\"buildlog.txt\">Build log</a> &middot; <a href=\"sha256.txt\">SHA256 sums</a></p><hr>" >> index.html
@@ -27,7 +32,7 @@ for style_file in ../songnames/*; do
     song=$(basename $song_file)
     echo "<div class=\"song\"><h3>$song</h3>" >> index.html
     echo "<table><tr><th>File</th><th>Size</th></tr>" >> index.html
-    for file in $song.flac $song.opus $song.pdf; do
+    for file in $song.flac $song.opus $song.pdf $song.png; do
       filesize=$(($(wc -c <"$file") / 1000))
       echo "<tr><td><a href=\"$file\" target=\"_blank\">$file</a></td><td>$filesize KB</td></tr>" >> index.html
     done

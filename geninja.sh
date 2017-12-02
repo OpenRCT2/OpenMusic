@@ -3,7 +3,7 @@
 source musictools/config.sh
 
 ADDEDSONGS=""
-
+BASEDIR=$(pwd)
 mkdir -p $RELEASEDIR
 mkdir -p $SONGNAMEDIR/fairground_style
 mkdir -p $SONGNAMEDIR/other_styles
@@ -15,6 +15,7 @@ OUTDIR=$OUTDIR
 RELEASEDIR=$RELEASEDIR
 SONGNAMEDIR=$SONGNAMEDIR
 SOUNDFONTSDIR=$SOUNDFONTSDIR
+BASEDIR=$BASEDIR
 
 GENINDEX_DIR=musictools/genindex
 
@@ -47,16 +48,19 @@ rule render
   command = fluidsynth -nli -r \$SAMPLING_RATE -R 0 -o synth.cpu-cores=2 -T wav -F \$out -g \$DEFAULT_FLUIDSYNTH_GAIN \$soundfont \$in
 
 rule combine
-  command = sox --show-progress --combine mix \$in \$out
+  command = sox --show-progress --combine mix \$in --comment "" \$out
 
 rule convert
-  command = sox --show-progress \$in \$out
+  command = sox --show-progress \$in  --comment "" \$out
 
 rule apply_lv2
   command = lv2file -i \$in -o \$out \$plugin_options \$plugin
 
 rule normalize
-  command = sox --show-progress \$in \$out gain -n \$NORMALIZE_GAIN
+  command = sox --show-progress \$in --comment "" \$out gain -n \$NORMALIZE_GAIN
+
+rule spectrogram
+  command = sox \$in -n spectrogram -x 1920 -y 513 -z 100 -o \$out -t \$in -c OpenRCT2-OpenMusic
 
 rule render_opus
   command = opusenc \$in \$out
@@ -65,7 +69,7 @@ rule write_song_name
   command = touch \$out
 
 rule generate_index
-  command = cd \$RELEASEDIR && cp ../../\$GENINDEX_DIR/style.css . && ../../\$GENINDEX_DIR/genindex.sh
+  command = cd \$RELEASEDIR && cp \$BASEDIR/\$GENINDEX_DIR/style.css . && \$BASEDIR/\$GENINDEX_DIR/genindex.sh \$BASEDIR
 
 rule dependency_graph
   command = ninja -t graph | dot -Tpng -Gdpi=150 -o\$out
@@ -104,6 +108,7 @@ build \$OUTDIR/${song}_reverb.wav: apply_lv2 \$OUTDIR/${song}.wav
   plugin_options=-p decay_time:$REVERB_DECAY
 build \$RELEASEDIR/${song}.flac: normalize \$OUTDIR/${song}_reverb.wav
 build \$RELEASEDIR/${song}.opus: render_opus \$RELEASEDIR/${song}.flac
+build \$RELEASEDIR/${song}.png: spectrogram \$RELEASEDIR/${song}.flac
 build \$SONGNAMEDIR/fairground_style/${song}: write_song_name || \$RELEASEDIR/${song}.flac
 _EOF_
   ADDEDSONGS="${ADDEDSONGS}$SONGNAMEDIR/fairground_style/$song $RELEASEDIR/${song}.opus "
@@ -123,7 +128,7 @@ for song in ${OTHER_SONGS[*]}; do
 
 build \$OUTDIR/${song}.midi \$RELEASEDIR/${song}.pdf: midi_pdf ${SONGFILES}
   main_file=other_styles/${song}/${song}.ly
-build \$OUTDIR/${song}_postprepare.mid: midiprepare \$OUTDIR/${song}.midi
+build \$OUTDIR/${song}_postprepare.mid: midiprepare \$OUTDIR/${song}.midi || \$OUTDIR/midiprepare/midiprepare
 build \$OUTDIR/${song}.wav: render \$OUTDIR/${song}_postprepare.mid
   soundfont=\$$SOUNDFONT
 build \$OUTDIR/${song}_reverb.wav: apply_lv2 \$OUTDIR/${song}.wav
@@ -131,6 +136,7 @@ build \$OUTDIR/${song}_reverb.wav: apply_lv2 \$OUTDIR/${song}.wav
   plugin_options=-p decay_time:$REVERB_DECAY
 build \$RELEASEDIR/${song}.flac: normalize \$OUTDIR/${song}_reverb.wav
 build \$RELEASEDIR/${song}.opus: render_opus \$RELEASEDIR/${song}.flac
+build \$RELEASEDIR/${song}.png: spectrogram \$RELEASEDIR/${song}.flac
 build \$SONGNAMEDIR/other_styles/${song}: write_song_name || \$RELEASEDIR/${song}.flac
 _EOF_
   ADDEDSONGS="${ADDEDSONGS}$SONGNAMEDIR/other_styles/$song $RELEASEDIR/${song}.opus "
