@@ -17,5 +17,5 @@ export SOUNDFONT_NICEKEYS_UPRIGHT=Nice-Upright-Piano-sf2-JNv1.3.sf2
 
 export CALF_REVERB_PLUGIN="http://calf.sourceforge.net/plugins/Reverb"
 
-export ORGAN_SONGS=(testsong regimentskinder overture serenade strauss_waltzes)
+export ORGAN_SONGS=(testsong regimentskinder overture serenade strauss_waltzes la_belle_espagnole)
 export OTHER_SONGS=(ragtime)
