@@ -60,7 +60,10 @@ rule normalize
   command = sox --show-progress \$in --comment "" \$out gain -n \$NORMALIZE_GAIN
 
 rule spectrogram
-  command = sox \$in -n spectrogram -x 1920 -y 513 -z 100 -o \$out -t \$in -c OpenRCT2-OpenMusic
+  command = sox \$in -n spectrogram -x 1920 -y 513 -z 100 -o \$out -t \$\$(basename -s .flac \$in) -c OpenRCT2-OpenMusic
+
+rule copy
+  command = cp \$in \$out
 
 rule render_opus
   command = opusenc \$in \$out
@@ -106,11 +109,17 @@ build \$OUTDIR/${song}.wav: combine \$OUTDIR/${song}_organ.wav \$OUTDIR/${song}_
 build \$OUTDIR/${song}_reverb.wav: apply_lv2 \$OUTDIR/${song}.wav
   plugin=\$CALF_REVERB_PLUGIN
   plugin_options=-p decay_time:$REVERB_DECAY
-build \$RELEASEDIR/${song}.flac: normalize \$OUTDIR/${song}_reverb.wav
-build \$RELEASEDIR/${song}.opus: render_opus \$RELEASEDIR/${song}.flac
-build \$RELEASEDIR/${song}.png: spectrogram \$RELEASEDIR/${song}.flac
-build \$SONGNAMEDIR/fairground_style/${song}: write_song_name || \$RELEASEDIR/${song}.flac
+build \$OUTDIR/${song}.flac: normalize \$OUTDIR/${song}_reverb.wav
+build \$RELEASEDIR/${song}.opus: render_opus \$OUTDIR/${song}.flac
+build \$RELEASEDIR/${song}.png: spectrogram \$OUTDIR/${song}.flac
+build \$SONGNAMEDIR/fairground_style/${song}: write_song_name || \$OUTDIR/${song}.flac
 _EOF_
+  if [ "$RELEASE_FLAC" != "0" ];
+  then
+    cat >> build.ninja << _EOF_
+build \$RELEASEDIR/${song}.flac: copy \$OUTDIR/${song}.flac
+_EOF_
+  fi
   ADDEDSONGS="${ADDEDSONGS}$SONGNAMEDIR/fairground_style/$song $RELEASEDIR/${song}.opus "
 done
 
@@ -134,11 +143,17 @@ build \$OUTDIR/${song}.wav: render \$OUTDIR/${song}_postprepare.mid
 build \$OUTDIR/${song}_reverb.wav: apply_lv2 \$OUTDIR/${song}.wav
   plugin=\$CALF_REVERB_PLUGIN
   plugin_options=-p decay_time:$REVERB_DECAY
-build \$RELEASEDIR/${song}.flac: normalize \$OUTDIR/${song}_reverb.wav
-build \$RELEASEDIR/${song}.opus: render_opus \$RELEASEDIR/${song}.flac
-build \$RELEASEDIR/${song}.png: spectrogram \$RELEASEDIR/${song}.flac
-build \$SONGNAMEDIR/other_styles/${song}: write_song_name || \$RELEASEDIR/${song}.flac
+build \$OUTDIR/${song}.flac: normalize \$OUTDIR/${song}_reverb.wav
+build \$RELEASEDIR/${song}.opus: render_opus \$OUTDIR/${song}.flac
+build \$RELEASEDIR/${song}.png: spectrogram \$OUTDIR/${song}.flac
+build \$SONGNAMEDIR/other_styles/${song}: write_song_name || \$OUTDIR/${song}.flac
 _EOF_
+  if [ "$RELEASE_FLAC" != "0" ];
+  then
+    cat >> build.ninja << _EOF_
+build \$RELEASEDIR/${song}.flac: copy \$OUTDIR/${song}.flac
+_EOF_
+  fi
   ADDEDSONGS="${ADDEDSONGS}$SONGNAMEDIR/other_styles/$song $RELEASEDIR/${song}.opus "
 done
 

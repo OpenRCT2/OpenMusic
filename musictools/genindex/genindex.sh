@@ -2,6 +2,13 @@
 
 set -e
 
+if [ "$1" == "" ]
+then
+  source ../config.sh
+else
+  source $1/musictools/config.sh
+fi
+
 cat > index.html << _EOF_
 <!DOCTYPE html>
 <html lang="en">
@@ -23,24 +30,40 @@ else
 fi
 echo " on " >> index.html
 LC_ALL=C date --utc >> index.html
-echo "</p><p><a href=\"depgraph.png\">Dependency graph</a> &middot; <a href=\"buildlog.txt\">Build log</a> &middot; <a href=\"sha256.txt\">SHA256 sums</a> &middot; In case some files appear to be corrupted, a CI build/upload might be currently in progress. Try again in a few minutes.</p><hr>" >> index.html
+echo "</p><p>FLACs are currently not uploaded due to their size. This will change at some point. Until then, you can build them yourself.</p><p><a href=\"depgraph.png\">Dependency graph</a> &middot; <a href=\"buildlog.txt\">Build log</a> &middot; <a href=\"sha256.txt\">SHA256 sums</a> &middot; In case some files appear to be corrupted, a CI build/upload might be currently in progress. Try again in a few minutes.</p><hr>" >> index.html
 
 for style_file in ../songnames/*; do
   style=$(basename $style_file)
   echo "<div class=\"style\"><h2>$style</h2><div class=\"container\">" >> index.html
   for song_file in ../songnames/$style/*; do
     song=$(basename $song_file)
-    echo "<div class=\"song\"><h3>$song</h3>" >> index.html
-    echo "<table><tr><th>File</th><th>Size</th></tr>" >> index.html
-    for file in $song.flac $song.opus $song.pdf $song.png; do
+    cat >> index.html << _EOF_
+<div class="song"><h3>$song</h3>
+
+<table><tr><th>File</th><th>Size</th></tr>
+_EOF_
+    SONGFILES=($song.opus $song.pdf $song.png)
+    if [ "$RELEASE_FLAC" != "0" ]
+    then
+      SONGFILES=($song.flac $song.opus $song.pdf $song.png)
+    fi
+    for file in ${SONGFILES[*]}; do
       filesize=$(($(wc -c <"$file") / 1000))
       echo "<tr><td><a href=\"$file\" target=\"_blank\">$file</a></td><td>$filesize KB</td></tr>" >> index.html
     done
     echo "</table><p>" >> index.html
-    sox "$song.flac" -n stat 2> stats.tmp
+    sox "../$song.flac" -n stat 2> stats.tmp
     grep "Length" stats.tmp >> index.html
     rm stats.tmp
-    echo "</p></div>" >> index.html
+    cat >> index.html << _EOF_
+
+<audio controls>
+  <source src="$song.opus" type="audio/ogg">
+  <source src="$song.opus" type="audio/opus">
+  Your browser does not support the audio element.
+</audio>
+</p></div>
+_EOF_
   done
   echo "</div></div>" >> index.html
 done

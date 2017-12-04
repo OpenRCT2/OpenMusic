@@ -1,4 +1,4 @@
-export OUTDIR=out
+export OUTDIR=/mnt/ramdisk/out
 export RELEASE=release
 export SONGNAMES=songnames
 export SOUNDFONTSDIR=soundfonts
@@ -19,3 +19,5 @@ export CALF_REVERB_PLUGIN="http://calf.sourceforge.net/plugins/Reverb"
 
 export ORGAN_SONGS=(testsong regimentskinder overture serenade strauss_waltzes la_belle_espagnole)
 export OTHER_SONGS=(ragtime)
+
+export RELEASE_FLAC=0

@@ -21,10 +21,16 @@ h2 {
 
 p, a, td, th {
     font-size: 11pt;
+    margin: 0px;
 }
 
 th {
     text-align: left;
+}
+
+audio {
+    width: 100%;
+    display: block;
 }
 
 .style {

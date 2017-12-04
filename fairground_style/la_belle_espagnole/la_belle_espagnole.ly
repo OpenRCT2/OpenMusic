@@ -206,8 +206,8 @@ left = \relative c' {
   r8 <e a c>16 <e a c> \repeat unfold 7 { <e a c>8 } |
   r8 <e g b>16 <e g b> \repeat unfold 7 { <e g b>8 } |
   r8 <d fis c'>16 <d fis c'> \repeat unfold 7 { <d fis c'>8 } |
-  r8 <d g b>16 <d g b> \repeat unfold 4 { <d g b>8 } \global_andante_fermata <cis e g bes>\fermata <cis e g bes> \global_andante_tempo <cis e g bes> |
-  r8 <d g b>16 <d g b> \repeat unfold 4 { <d g b>8 } \global_andante_fermata <d fis c'>\fermata <d fis c'> \global_andante_tempo <d fis c'> |
+  r8 <d g b>16 <d g b> \repeat unfold 4 { <d g b>8 } \global_andante_fermata <cis e g bes>\fermata \global_andante_tempo <cis e g bes>  <cis e g bes> |
+  r8 <d g b>16 <d g b> \repeat unfold 4 { <d g b>8 } \global_andante_fermata <d fis c'>\fermata \global_andante_tempo <d fis c'> <d fis c'> |
   <g g,>2. <g g,>8 <fis fis,> <g g,> |
   <fis fis,>4.( <e e,>) <fis fis,>8 <e e,> <fis fis,> |
   <e e,>4.( <d d,>) <e e,>8 <d d,> <b b,> |
