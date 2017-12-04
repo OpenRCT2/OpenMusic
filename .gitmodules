@@ -1,3 +1,0 @@
-[submodule "musictools/musicrenderer/src/inih"]
-	path = musictools/musicrenderer/src/inih
-	url = https://github.com/jtilly/inih.git
