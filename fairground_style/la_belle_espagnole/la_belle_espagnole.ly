@@ -60,6 +60,24 @@ global_one_two = {
   \global_one_two_tempo
 }
 
+global_two = {
+  \key e \minor
+  \set Score.tempoHideNote = ##t
+  \tempo 4 = 180
+  \time 3/4
+}
+
+global_two_uebermuetig = {
+  \set Score.tempoHideNote = ##t
+  \tempo 4 = 200
+}
+
+global_two_stuermisch = {
+  \key d \major % Or b minor?
+  \set Score.tempoHideNote = ##t
+  \tempo 4 = 220
+}
+
 melody_one_a_tempo = \relative c''' {
   b g e |
   r fis8 g a c |
@@ -158,6 +176,73 @@ melody = \relative c'' {
   
   \global_one
   \melody_one_a_tempo
+  
+  R2.
+  \global_two
+  \relative c'' {
+    e4( d8 e fis g) |
+    \tuplet 3/2 { a d a } d,2 |
+    <g e'>8 <g e'> <g e'> r <g es'> r |
+    <f d'> r <b, d,>2\mark "Übermütig" |
+    
+    \bar "||"
+    \global_two_uebermuetig
+    <ais cis,>2 <b d,>4~ |
+    <b d> <g b e>2 |
+    <fis c' e>2 <d fis>4~ |
+    <d fis> <fis c'>2 |
+    
+    <fis b>2 <fis c'>4~ |
+    <fis c'> <c' fis>2 |
+    <b fis'> <g b>4~ |
+    <g b> <b g'>2 |
+    <c g'> <a e>4~ |
+    <a e> <c fis>2 |
+    <b fis'> <g d>4~ |
+    <g d> <g e'>2 |
+    <fis e'> <fis a>4~ |
+    <fis a> \acciaccatura b8 a( gis a ais) |
+    
+    <b g d>2.~ |
+    <b g d>4 <b d b'>2 |
+    <ais cis ais'> <b d b'>4~ |
+    <b d b'> <e g b e>2 |
+    <e fis c' e> <fis c>4~ |
+    <fis c> <c fis c'>2 |
+    <b fis' b> <c fis c'>4~ |
+    <c fis c'> <fis c' fis>2 |
+    <fis b fis'> <b g b,>4~ |
+    <b g b,> <g b g'>2 |
+    
+    <g c g'>2 <a e a,>4~ |
+    <a e a,> <fis c' fis>2 |
+    <fis b fis'> <g b, g>4~ |
+    <g b, g> <e g e'>2
+    <e fis e'> <fis d fis,>4~ |
+    <fis d fis,> <c e c'>4. <b d b'>8 |
+    <g b d g>2.~ |
+    <g b d g>4 fis'8 g gis a |
+    
+    \bar "||"
+    \global_two_stuermisch
+    b4\mark "Stürmisch" \tuplet 3/2 { a8 b a } g r |
+    \tuplet 3/2 { fis g fis } e r \tuplet 3/2 { cis d cis } |
+    b4( a8) fis' b,4~ |
+    b gis8 a d fis |
+    \repeat unfold 4 { <cis a'> } <cis a'>4 |
+    r4 g8 a cis e |
+    \repeat unfold 4 { <d fis b> } <d fis b>4 |
+    r fis8 g gis a |
+    b4 \tuplet 3/2 { a8 b a } g r |
+    
+    \tuplet 3/2 { fis g fis } e r \tuplet 3/2 { cis d cis } |
+    b4( a8) fis' b,4~ |
+    b \acciaccatura b8 a gis a b |
+    cis b a b cis d |
+    e fis gis a b cis |
+    a4 \repeat unfold 4 { <a e cis>8 } |
+    <a e cis>4 fis8 g gis a |
+  }
 }
 
 second_melody = \relative c'' {
@@ -249,9 +334,39 @@ left = \relative c' {
     { <g c e>4\fermata r2 | }
   }
   
-  
   \global_one
   \left_one_a_tempo
+  
+  R2.
+  \global_two
+  \relative c {
+    <d fis c'>2.~ |
+    <d fis c'> |
+    
+    % Move this to second melody!
+    <d g c>8 <d g c> <d g c> r <d g c> r |
+    <d a' c> r r2 |
+    
+    \global_two_uebermuetig
+    \repeat unfold 2 { r4 <d g b> <d g b> | }
+    \repeat unfold 4 { r <d fis c'> <d fis c'> | }
+    r4 <d g b> <d g b> |
+    r4 <d g> <d g> |
+    \repeat unfold 2 { r <e a c> <e a c> | }
+    \repeat unfold 2 { r <g b> <g b> | }
+    \repeat unfold 2 { r <d fis c'> <d fis c'> | }
+    
+    \repeat unfold 4 { r <d g b> <d g b> | }
+    \repeat unfold 4 { r <d fis c'> <d fis c'> | }
+    r <d g b> <d g b> |
+    r <d g> <d g> |
+    
+    \repeat unfold 2 { r <e a c> <e a c> | }
+    \repeat unfold 2 { r <g b> <g b> | }
+    \repeat unfold 2 { r <d fis c'> <d fis c'> | }
+    <g b> b, d |
+    g, r2 |
+  }
 }
 
 pedal_one_a_tempo = {
@@ -339,6 +454,46 @@ pedal = \relative c {
   
   \global_one
   \pedal_one_a_tempo
+  R2.
+  
+  \global_two
+  \relative c {
+    d2.~ |
+    d |
+    d4. r8 d r |
+    d4 r2 |
+    
+    \global_two_uebermuetig
+    g,4 r2 |
+    d4 r2 |
+    a'4 r2 |
+    d,4 r2 |
+    
+    a'4 r2 |
+    d,4 r2 |
+    g4 r2 |
+    b4 r2 |
+    \repeat unfold 2 { c4 r2 | }
+    \repeat unfold 2 { d4 r2 | }
+    a4 r2 |
+    d,4 r2 |
+    
+    \repeat unfold 2 {
+      g4 r2 |
+      d4 r2 |
+    }
+    \repeat unfold 2 {
+      a'4 r2 |
+      d,4 r2 |
+    }
+    g4 r2 |
+    b4 r2 |
+    \repeat unfold 2 { c4 r2 | }
+    \repeat unfold 2 { d4 r2 | }
+    a4 r2 |
+    d,4 r2 |
+    \repeat unfold 2 { g4 r2 | }
+  }
 }
 
 glockenspiel = \relative c'' {
