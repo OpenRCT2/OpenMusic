@@ -1,4 +1,4 @@
-export OUTDIR=/mnt/ramdisk/out
+export OUTDIR=out
 export RELEASE=release
 export SONGNAMES=songnames
 export SOUNDFONTSDIR=soundfonts
