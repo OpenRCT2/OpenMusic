@@ -18,7 +18,7 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
 
 useradd -m -G wheel -s /usr/bin/bash build
 
-sudo -u build yaourt -S --noconfirm ninja graphviz libsmf cmake lilypond fluidsynth calf sox opus-tools lv2file curl git openssh
+sudo -u build yaourt -S --noconfirm ninja ttf-dejavu graphviz libsmf cmake lilypond fluidsynth calf sox opus-tools lv2file curl git openssh
 
 cd /root/build
 ./getdependencies.sh --agree
@@ -28,8 +28,10 @@ cd /root/build
 if [ "$1" == "master" ]
 then
   echo "Uploading artifacts..."
+  mkdir -p /root/.ssh
+  echo "phoenix.uberspace.de,2001:1a50:11:0:5f:8f:ac:87,95.143.172.135 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHV8sbMwG3+68uuUFxRVPqrtYWVPu6N+9vujkriP6U15" >> /root/.ssh/known_hosts
   cd out/release
-  scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ../../sshkey -r . "cuervo@phoenix.uberspace.de:html/openrct2-openmusic/ci/"
+  scp -i ../../sshkey -r . "cuervo@phoenix.uberspace.de:html/openrct2-openmusic/ci/"
   cd ../..
 else
   echo "Not uploading artifacts due to being on branch $1"
