@@ -21,7 +21,9 @@ typedef struct split_options_t {
 
 void fail_with_help(char* argv[])
 {
-    fprintf(stderr, "Usage: %s [-s [-f patch_in -t patch_out]* [[-p] [-m patch_percussion]]] [-v] [-a seconds] [-n] -o output input_file\n", argv[0]);
+    fprintf(stderr,
+        "Usage: %s [-s [-f patch_in -t patch_out]* [[-p] [-m patch_percussion]]] [-v] [-a seconds] [-n] [-r notes] [-e factor] -o output input_file\n",
+        argv[0]);
     exit(EXIT_FAILURE);
 }
 
@@ -52,7 +54,8 @@ int find_index(const int map[], int search_for, int length)
     return -1;
 }
 
-void process_file(const char* file, const char* output, bool verbose, const split_options* split_options, bool normalize, double add_seconds)
+void process_file(const char* file, const char* output, bool verbose, const split_options* split_options,
+    bool normalize, double add_seconds, double time_factor, int transpose)
 {
     smf_t *out_smf, *in_smf;
     smf_event_t* in_event;
@@ -84,11 +87,20 @@ void process_file(const char* file, const char* output, bool verbose, const spli
             exit(EXIT_FAILURE);
         }
 
+        in_event->time_seconds *= time_factor;
+
         if (normalize && in_event->midi_buffer_length >= 1) {
             if ((in_event->midi_buffer[0] >> 4) == 0b1001) {
                 if (in_event->midi_buffer_length == 3 && in_event->midi_buffer[2] != 0) {
                     in_event->midi_buffer[2] = 0b0111111;
                 }
+            }
+        }
+
+        if (transpose != 0 && in_event->midi_buffer_length >= 2) {
+            unsigned char command = (in_event->midi_buffer[0] >> 4);
+            if (command == 0x8 || command == 0x9 || command == 0xA) {
+                in_event->midi_buffer[1] += transpose;
             }
         }
 
@@ -171,7 +183,7 @@ void process_file(const char* file, const char* output, bool verbose, const spli
     verbose_printf(verbose, "Adding event %f seconds after last note event\n", add_seconds);
     smf_track_add_event_seconds(some_track,
         smf_event_new_from_bytes(0b10110000 | some_track->track_number, 120, 0),
-        smf_get_length_seconds(in_smf) + add_seconds);
+        (smf_get_length_seconds(in_smf) * time_factor) + add_seconds);
 
     verbose_printf(verbose, "Saving file\n");
     int ret = smf_save(out_smf, output);
@@ -194,7 +206,8 @@ int main(int argc, char* argv[])
         .map_percussion = 0,
         .from_index = 0
     };
-    double add_seconds = 5.0;
+    double add_seconds = 5.0, time_factor = 1.0;
+    int transpose = 0;
     bool verbose = false, normalize = false;
 
     for (int i = 0; i < LILYPOND_MAX_PATCHES; i++) {
@@ -202,7 +215,7 @@ int main(int argc, char* argv[])
         split_options.map_to[i] = -1;
     }
 
-    while ((opt = getopt(argc, argv, "sf:t:pm:a:no:v")) != -1) {
+    while ((opt = getopt(argc, argv, "sf:t:pm:a:nr:e:o:v")) != -1) {
         switch (opt) {
         case 's':
             split_options.active = true;
@@ -258,6 +271,16 @@ int main(int argc, char* argv[])
         case 'n':
             normalize = true;
             break;
+        case 'r':
+            transpose = atoi(optarg);
+            break;
+        case 'e':
+            time_factor = atof(optarg);
+            if (time_factor <= 0.001) {
+                fprintf(stderr, "Time factor can not be less than 0.001\n");
+                exit(EXIT_FAILURE);
+            }
+            break;
         case 'o':
             output = optarg;
             break;
@@ -273,7 +296,7 @@ int main(int argc, char* argv[])
         fail_with_help(argv);
     }
 
-    process_file(argv[argc - 1], output, verbose, &split_options, normalize, add_seconds);
+    process_file(argv[argc - 1], output, verbose, &split_options, normalize, add_seconds, time_factor, transpose);
 
     verbose_printf(verbose, "Done\n");
     return EXIT_SUCCESS;

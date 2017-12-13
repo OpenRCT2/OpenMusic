@@ -16,6 +16,8 @@ This tool allows you to prepare SMF MIDI files for our build.
 - `-m patch` *map percussion* - maps the percussion to a different patch (like 48 for orchestral percussion).
 - `-n` *normalize* - Sets all velocities to 127.
 - `-a seconds` *append* - Adds a note event after the last note in the input. Defaults to 5.0 seconds.
+- `-r notes` *transpose* - Transposes the file by 'transpose' MIDI notes.
+- `-e factor` *scale time* - Scales the timebase. `-e 0.5` would mean double speed, `-e 2.0` half speed.
 - `-o file` *output* - Specifies the output file.
 - `-v` *verbose* - Enables status output.
 

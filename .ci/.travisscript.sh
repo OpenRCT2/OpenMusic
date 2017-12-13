@@ -14,7 +14,7 @@ _EOF_
 pacman -Syu --noconfirm
 pacman -S --noconfirm base base-devel shadow yaourt
 
-echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
+echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 useradd -m -G wheel -s /usr/bin/bash build
 
