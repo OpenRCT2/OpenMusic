@@ -24,7 +24,8 @@ NORMALIZE_GAIN=$NORMALIZE_GAIN
 
 PREPARE_PARAMS_ORGAN=-s -f 19 -t 0 -f 16 -t 1 -f 20 -t 2 -f 18 -t 3 -n
 PREPARE_PARAMS_GLOCKENSPIEL=-s -f 11 -t 9 -n
-PREPARE_PARAMS_PERCUSSION=-s -p -m 48 -n
+PREPARE_PARAMS_MAP_PERCUSSION=-m 48
+PREPARE_PARAMS_PERCUSSION=-s -p \$PREPARE_PARAMS_MAP_PERCUSSION -n
 
 SOUNDFONT_ORGAN="$SOUNDFONTSDIR/$SOUNDFONT_ORGAN"
 SOUNDFONT_GENERALUSER="$SOUNDFONTSDIR/$SOUNDFONT_GENERALUSER"
@@ -138,6 +139,7 @@ for song in ${OTHER_SONGS[*]}; do
 build \$OUTDIR/${song}.midi \$RELEASEDIR/${song}.pdf: midi_pdf ${SONGFILES}
   main_file=other_styles/${song}/${song}.ly
 build \$OUTDIR/${song}_postprepare.mid: midiprepare \$OUTDIR/${song}.midi || \$OUTDIR/midiprepare/midiprepare
+  split_params=\$PREPARE_PARAMS_MAP_PERCUSSION
 build \$OUTDIR/${song}.wav: render \$OUTDIR/${song}_postprepare.mid
   soundfont=\$$SOUNDFONT
 build \$OUTDIR/${song}_reverb.wav: apply_lv2 \$OUTDIR/${song}.wav

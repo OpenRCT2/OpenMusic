@@ -15,14 +15,13 @@ typedef struct split_options_t {
     int map_from[LILYPOND_MAX_PATCHES];
     int map_to[LILYPOND_MAX_PATCHES];
     bool keep_percussion;
-    unsigned char map_percussion;
     int from_index;
 } split_options;
 
 void fail_with_help(char* argv[])
 {
     fprintf(stderr,
-        "Usage: %s [-s [-f patch_in -t patch_out]* [[-p] [-m patch_percussion]]] [-v] [-a seconds] [-n] [-r notes] [-e factor] -o output input_file\n",
+        "Usage: %s [-s [-f patch_in -t patch_out]* [[-p]]] [-m patch_percussion] [-v] [-a seconds] [-n] [-r notes] [-e factor] -o output input_file\n",
         argv[0]);
     exit(EXIT_FAILURE);
 }
@@ -55,7 +54,7 @@ int find_index(const int map[], int search_for, int length)
 }
 
 void process_file(const char* file, const char* output, bool verbose, const split_options* split_options,
-    bool normalize, double add_seconds, double time_factor, int transpose)
+    unsigned char map_percussion, bool normalize, double add_seconds, double time_factor, int transpose)
 {
     smf_t *out_smf, *in_smf;
     smf_event_t* in_event;
@@ -104,6 +103,14 @@ void process_file(const char* file, const char* output, bool verbose, const spli
             }
         }
 
+        if ((in_event->midi_buffer[0] & 0xF0) == 0xC0) { // Event is patch change
+            int channel = (in_event->midi_buffer[0] & 0x0F);
+            if (channel == MIDI_PERCUSSION_CHANNEL) {
+                verbose_printf(verbose, "Identified percussion track\n");
+                in_event->midi_buffer[1] = map_percussion;
+            }
+        }
+
         if (!split_options->active) {
             if (out_track[in_event->track_number] == NULL) {
                 verbose_printf(verbose, "Creating SMF track %d\n", in_event->track_number);
@@ -127,13 +134,7 @@ void process_file(const char* file, const char* output, bool verbose, const spli
                     in_event->track_number, patch);
                 patches[in_event->track_number] = patch;
 
-                if (channel == MIDI_PERCUSSION_CHANNEL) {
-                    verbose_printf(verbose, "Identified percussion track\n");
-                    percussion_track = in_event->track_number;
-                    if (split_options->keep_percussion) {
-                        in_event->midi_buffer[1] = split_options->map_percussion;
-                    }
-                } else {
+                if (channel != MIDI_PERCUSSION_CHANNEL) {
                     int to_index = find_index(split_options->map_from, patch, split_options->from_index);
                     if (to_index == -1) {
                         continue;
@@ -151,7 +152,7 @@ void process_file(const char* file, const char* output, bool verbose, const spli
             int patch = patches[in_event->track_number];
             int to_index = find_index(split_options->map_from, patch, split_options->from_index);
 
-            bool normal_event_should_be_mapped = to_index != -1; //split_options->map_from[patches[in_event->track_number]] != -1;
+            bool normal_event_should_be_mapped = to_index != -1;
             bool percussion_event_should_be_mapped = split_options->keep_percussion && percussion_track != -1 && in_event->track_number == percussion_track;
             if (force_add || normal_event_should_be_mapped || percussion_event_should_be_mapped) {
                 if (out_track[in_event->track_number] == NULL) {
@@ -203,9 +204,9 @@ int main(int argc, char* argv[])
         .map_from = {},
         .map_to = {},
         .keep_percussion = false,
-        .map_percussion = 0,
         .from_index = 0
     };
+    unsigned char map_percussion = 0;
     double add_seconds = 5.0, time_factor = 1.0;
     int transpose = 0;
     bool verbose = false, normalize = false;
@@ -260,10 +261,7 @@ int main(int argc, char* argv[])
             split_options.keep_percussion = true;
             break;
         case 'm':
-            if (!split_options.active) {
-                fail_with_help(argv);
-            }
-            split_options.map_percussion = atoi(optarg);
+            map_percussion = atoi(optarg);
             break;
         case 'a':
             add_seconds = atof(optarg);
@@ -296,7 +294,7 @@ int main(int argc, char* argv[])
         fail_with_help(argv);
     }
 
-    process_file(argv[argc - 1], output, verbose, &split_options, normalize, add_seconds, time_factor, transpose);
+    process_file(argv[argc - 1], output, verbose, &split_options, map_percussion, normalize, add_seconds, time_factor, transpose);
 
     verbose_printf(verbose, "Done\n");
     return EXIT_SUCCESS;
