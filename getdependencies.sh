@@ -30,14 +30,6 @@ then
   curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/GeneralUser GS v1.471.sf2" -o "$SOUNDFONTSDIR/GeneralUser GS v1.471.sf2"
 
   MERGE=""
-  for suffix in aa ab ac ad ae; do
-    OUTPUT="$SOUNDFONTSDIR/Nice-Upright-Piano-sf2-JNv1.3.sf2.${suffix}"
-    curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/Nice-Upright-Piano-sf2-JNv1.3.sf2.${suffix}" -o $OUTPUT
-    MERGE="${MERGE} $OUTPUT"
-  done
-  cat $MERGE > $SOUNDFONTSDIR/Nice-Upright-Piano-sf2-JNv1.3.sf2
-
-  MERGE=""
   for suffix in aa ab ac; do
     OUTPUT="$SOUNDFONTSDIR/Organ.sf2.${suffix}"
     curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/Organ.sf2.${suffix}" -o $OUTPUT
