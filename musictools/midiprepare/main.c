@@ -107,6 +107,7 @@ void process_file(const char* file, const char* output, bool verbose, const spli
             int channel = (in_event->midi_buffer[0] & 0x0F);
             if (channel == MIDI_PERCUSSION_CHANNEL) {
                 verbose_printf(verbose, "Identified percussion track\n");
+                percussion_track = in_event->track_number;
                 in_event->midi_buffer[1] = map_percussion;
             }
         }
