@@ -42,6 +42,23 @@ global_allegretto_two = {
   \tempo 4 = 150
 }
 
+second_melody_pattern = \relative c'' {
+  f8 a4 g8~
+  g f4 es8~
+  es d4 c8~
+  c bes4 ges8~
+  ges f4 a8
+  d4 c
+  c8 bes4 d8
+  g4 f
+  f8 a4 g8~
+  g f4 es8~
+  es d4 c8~
+  c bes4 ges8~
+  ges f4 a8
+  d4 c
+}
+
 second_melody = \relative c'' {
   \global_andante
   
@@ -81,7 +98,7 @@ second_melody = \relative c'' {
   b8 ais16 b fis g gis, a fis'4. e8
   
   d4 \tuplet 3/2 { r8 <fis, a> <eis gis> } \tuplet 3/2 { <g b>8 <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <eis cis'> }
-  \tuplet 3/2 { <g e'>8 <fis d'>4 } \tuplet 3/2 { <fis d'>8 <a fis'> <g e'> } \tuplet 3/2 { <g e'> <fis d'> <a cis> } \tuplet 3/2 { <a cis> <g b> <fis a> }
+  \tuplet 3/2 { <g e'>8 <fis d'>4~ } \tuplet 3/2 { <fis d'>8 <a fis'> <g e'> } \tuplet 3/2 { <g e'> <fis d'> <a cis> } \tuplet 3/2 { <a cis> <g b> <fis a> }
   \tuplet 3/2 { <fis a>8 <e g>4\( } g'4\)~ g8.\( fis16 e8. d16\)
   d8.\( cis16 fis8. e16\) a8.\( g16~ \tuplet 3/2 { \acciaccatura a8 g8 fis e\) }
   eis4\( \tuplet 3/2 { fis8\) <fis, a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <eis cis'> }
@@ -418,20 +435,7 @@ melody = \relative c'' {
   r <g bes e g>4 <g bes e g>8
   \repeat unfold 2 { r8 <g bes e g> r <g bes e g> }
   
-  f'8 a4 g8~
-  g f4 es8~
-  es d4 c8~
-  c bes4 ges8~
-  ges f4 a8
-  d4 c
-  c8 bes4 d8
-  g4 f
-  f8 a4 g8~
-  g f4 es8~
-  es d4 c8~
-  c bes4 ges8~
-  ges f4 a8
-  d4 c
+  \second_melody_pattern
   bes8 g16 f e f g a
   <bes f d>8 r <c a f> r
   <f, bes d> <f a c> <f bes> r
@@ -506,20 +510,7 @@ melody = \relative c'' {
   c bes a bes d c b c
   es d cis d f es d es
   
-  f8 a4 g8~
-  g f4 es8~
-  es d4 c8~
-  c bes4 ges8~
-  ges f4 a8
-  d4 c
-  c8 bes4 d8
-  g4 f
-  f8 a4 g8~
-  g f4 es8~
-  es d4 c8~
-  c bes4 ges8~
-  ges f4 a8
-  d4 c
+  \second_melody_pattern
   
   \repeat volta 2 {
     bes8 a16 bes c bes a g
@@ -568,6 +559,17 @@ melody = \relative c'' {
   <bes d f bes>~
   <bes d f bes>~
   <bes d f bes>
+}
+
+left_pattern = \relative c {
+  \repeat unfold 2 { <f c' es>8 <f c' es> <f c' es> <f c' es> }
+  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
+  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
+  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
+  <f c' es>8 <f c' es> <f c' es> <f c' es>
+  <f a es'> <f a es'> <f a es'> <f a es'>
+  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
+  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
 }
 
 left = \relative c' {
@@ -682,14 +684,7 @@ left = \relative c' {
   \repeat unfold 2 {
     r8 <e g bes cis> r <e g bes cis>
   }
-  \repeat unfold 2 { <f c' es>8 <f c' es> <f c' es> <f c' es> }
-  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
-  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
-  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
-  <f c' es>8 <f c' es> <f c' es> <f c' es>
-  <f a es'> <f a es'> <f a es'> <f a es'>
-  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
-  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
+  \left_pattern
   <f bes d> r r4
   <d f bes>8 r <f a c> r
   <f bes d> <f bes es> <f bes d> r
@@ -797,14 +792,7 @@ left = \relative c' {
   <f a c es>4) r
   R2*3
   
-  \repeat unfold 2 { <f c' es>8 <f c' es> <f c' es> <f c' es> }
-  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
-  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
-  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
-  <f c' es>8 <f c' es> <f c' es> <f c' es>
-  <f a es'> <f a es'> <f a es'> <f a es'>
-  \repeat unfold 2 { <f bes d> <f bes d> <f bes d> <f bes d> }
-  \repeat unfold 2 { <f a es'> <f a es'> <f a es'> <f a es'> }
+  \left_pattern
   
   \repeat volta 2 {
     <f bes d>8 r r4
@@ -842,6 +830,17 @@ left = \relative c' {
   <d f bes d f>~
   <d f bes d f>~
   <d f bes d f>
+}
+
+pedal_pattern = \relative c, {
+  \repeat unfold 3 {
+    f4 r
+    f r
+    bes r
+    bes r
+  }
+  f r
+  f r
 }
 
 pedal = \relative c {
@@ -932,15 +931,8 @@ pedal = \relative c {
   e8 r e r
   e r e r
 
-  \repeat unfold 3 {
-    f4 r
-    f r
-    bes r
-    bes r
-  }
-  f r
-  f r
-  bes r
+  \pedal_pattern
+  bes'4 r
   bes8 r f r
   bes f bes r
   des r as r
@@ -1040,17 +1032,10 @@ pedal = \relative c {
   f4 r
   R2*3
   
-  \repeat unfold 3 {
-    f4 r
-    f r
-    bes r
-    bes r
-  }
-  f r
-  f r
+  \pedal_pattern
   
   \repeat volta 2 {
-    bes4 r
+    bes'4 r
     f r
     bes r
     f r
@@ -1255,6 +1240,14 @@ glockenspiel = \relative c'' {
   R2*3
 }
 
+drum_pattern = \drummode {
+  <bd sna hh cymc>4 bd
+  \repeat unfold 6 { bd4 bd }
+  bd8 bd bd bd
+  \repeat unfold 6 { bd4 bd }
+  <bd sna> r
+}
+
 drum = \drummode {
   R1*12
   
@@ -1299,11 +1292,7 @@ drum = \drummode {
   }
   \repeat unfold 2 { r8 <bd sna>4 <bd sna>8 }
   \repeat unfold 2 { bd8 sna bd sna }
-  <bd sna hh cymc>4 bd
-  \repeat unfold 6 { bd4 bd }
-  bd8 bd bd bd
-  \repeat unfold 6 { bd4 bd }
-  <bd sna> r
+  \drum_pattern
   \repeat unfold 2 {
     <bd sna>8 r <bd sna> r
     <bd sna> <bd sna> <bd sna> r
@@ -1352,10 +1341,7 @@ drum = \drummode {
   
   R2*3
   
-  <bd sna hh cymc>4 bd
-  \repeat unfold 6 { bd4 bd }
-  bd8 bd bd bd
-  \repeat unfold 6 { bd4 bd }
+  \drum_pattern
   
   \repeat volta 2 {
     \repeat unfold 4 { <bd sna hh cymc tamb> sna }
