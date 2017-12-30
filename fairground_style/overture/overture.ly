@@ -1245,7 +1245,6 @@ drum_pattern = \drummode {
   \repeat unfold 6 { bd4 bd }
   bd8 bd bd bd
   \repeat unfold 6 { bd4 bd }
-  <bd sna> r
 }
 
 drum = \drummode {
@@ -1293,6 +1292,7 @@ drum = \drummode {
   \repeat unfold 2 { r8 <bd sna>4 <bd sna>8 }
   \repeat unfold 2 { bd8 sna bd sna }
   \drum_pattern
+  <bd sna>4 r
   \repeat unfold 2 {
     <bd sna>8 r <bd sna> r
     <bd sna> <bd sna> <bd sna> r
@@ -1344,7 +1344,7 @@ drum = \drummode {
   \drum_pattern
   
   \repeat volta 2 {
-    \repeat unfold 4 { <bd sna hh cymc tamb> sna }
+    \repeat unfold 4 { <bd sna hh cymc tamb>4 sna }
     \repeat unfold 2 {
       \repeat tremolo 16 sna16
       \repeat unfold 4 { <bd sna hh cymc tamb>4 }
