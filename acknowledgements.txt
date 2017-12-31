@@ -1,0 +1,8 @@
+This project and the files built from it are licensed under the Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license.
+
+I would like to thank a few people for their contributions to this project:
+
+- Rudi Fiasco for his amazing K18-Upright-Piano virtual instrument (http://rudifiasco.altervista.org/)
+- Lars Palo and Graham Goode for their work on the Bureå Funeral Chapel and Bureå Church virtual organs (http://www.familjenpalo.se/vpo/download)
+- S. Christian Collins for the GeneralUser GS SoundFont (http://www.schristiancollins.com)
+- Frank Wen and Toby Smithe for the FluidR3 SoundFont

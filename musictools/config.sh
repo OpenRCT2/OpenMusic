@@ -13,7 +13,7 @@ export SONGNAMEDIR=$OUTDIR/$SONGNAMES
 export SOUNDFONT_ORGAN=Organ.sf2
 export SOUNDFONT_GENERALUSER="GeneralUser GS v1.471.sf2"
 export SOUNDFONT_FLUIDR3=FluidR3_GM.sf2
-export SOUNDFONT_NICEKEYS_UPRIGHT=Nice-Upright-Piano-sf2-JNv1.3.sf2
+export SOUNDFONT_K18=K18-Upright-Piano.sf2
 
 export CALF_REVERB_PLUGIN="http://calf.sourceforge.net/plugins/Reverb"
 

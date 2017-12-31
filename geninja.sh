@@ -30,10 +30,11 @@ PREPARE_PARAMS_PERCUSSION=-s -p \$PREPARE_PARAMS_MAP_PERCUSSION -n
 SOUNDFONT_ORGAN="$SOUNDFONTSDIR/$SOUNDFONT_ORGAN"
 SOUNDFONT_GENERALUSER="$SOUNDFONTSDIR/$SOUNDFONT_GENERALUSER"
 SOUNDFONT_FLUIDR3="$SOUNDFONTSDIR/$SOUNDFONT_FLUIDR3"
+SOUNDFONT_K18="$SOUNDFONTSDIR/$SOUNDFONT_K18"
 
 CALF_REVERB_PLUGIN="$CALF_REVERB_PLUGIN"
 
-DEFAULT_FLUIDSYNTH_GAIN=0.25
+DEFAULT_FLUIDSYNTH_GAIN=0.5
 
 rule midi_pdf
   command = lilypond -dno-point-and-click -ddelete-intermediate-files --pdf \$\$filename \$main_file && mv \$\$(basename -s .ly \$main_file).pdf \$OUTDIR/release && mv \$\$(basename -s .ly \$main_file).midi \$OUTDIR
@@ -80,6 +81,9 @@ rule dependency_graph
 build \$OUTDIR/midiprepare/midiprepare: cmake musictools/midiprepare || musictools/midiprepare/main.c
 
 build \$RELEASEDIR/depgraph.png: dependency_graph
+
+build \$RELEASEDIR/acknowledgements.txt: copy $BASEDIR/acknowledgements.txt
+build \$RELEASEDIR/copying.txt: copy $BASEDIR/COPYING
 
 _EOF_
 
@@ -131,7 +135,7 @@ for song in ${OTHER_SONGS[*]}; do
   SOUNDFONT="SOUNDFONT_GENERALUSER"
   if [ "$song" == "ragtime" ]
   then
-    SOUNDFONT="SOUNDFONT_FLUIDR3"
+    SOUNDFONT="SOUNDFONT_K18"
   fi
   cat >> build.ninja << _EOF_
 

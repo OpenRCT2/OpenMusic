@@ -36,6 +36,14 @@ then
     MERGE="${MERGE} $OUTPUT"
   done
   cat $MERGE > $SOUNDFONTSDIR/Organ.sf2
+
+  MERGE=""
+  for suffix in aa ab ac ad ae af ag; do
+    OUTPUT="$SOUNDFONTSDIR/K18-Upright-Piano.sf2.${suffix}"
+    curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/K18-Upright-Piano.sf2.${suffix}" -o $OUTPUT
+    MERGE="${MERGE} $OUTPUT"
+  done
+  cat $MERGE > $SOUNDFONTSDIR/Organ.sf2
 else
   echo "You did not agree to the license agreement."
   exit 1
