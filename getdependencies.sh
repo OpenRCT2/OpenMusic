@@ -43,7 +43,7 @@ then
     curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/K18-Upright-Piano.sf2.${suffix}" -o $OUTPUT
     MERGE="${MERGE} $OUTPUT"
   done
-  cat $MERGE > $SOUNDFONTSDIR/Organ.sf2
+  cat $MERGE > $SOUNDFONTSDIR/K18-Upright-Piano.sf2
 else
   echo "You did not agree to the license agreement."
   exit 1
