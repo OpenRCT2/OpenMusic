@@ -68,6 +68,7 @@ global_two = {
 }
 
 global_two_uebermuetig = {
+  \key e \minor
   \set Score.tempoHideNote = ##t
   \tempo 4 = 200
 }
@@ -76,6 +77,13 @@ global_two_stuermisch = {
   \key d \major % Or b minor?
   \set Score.tempoHideNote = ##t
   \tempo 4 = 220
+}
+
+global_three_intro = {
+  \key a \major % Or fis minor?
+  \set Score.tempoHideNote = ##t
+  \tempo 4 = 180
+  \time 3/4
 }
 
 melody_one_a_tempo = \relative c''' {
@@ -94,6 +102,61 @@ melody_one_a_tempo = \relative c''' {
   g fis e2 |
   fis8 e dis2 |
   e8 g dis fis e4 |
+}
+
+melody_one_stuermisch = \relative c'' {
+  \tuplet 3/2 { fis8 g fis } e r \tuplet 3/2 { cis d cis } |
+  b4( a8) fis' b,4~ |
+  b gis8 a d fis |
+  \repeat unfold 4 { <cis a'> } <cis a'>4 |
+  r4 g8 a cis e |
+  \repeat unfold 4 { <d fis b> } <d fis b>4 |
+  r fis8 g gis a |
+  b4 \tuplet 3/2 { a8 b a } g r |
+  
+  \tuplet 3/2 { fis g fis } e r \tuplet 3/2 { cis d cis } |
+  b4( a8) fis' b,4~ |
+  b \acciaccatura b8 a gis a b |
+  cis b a b cis d |
+  e fis gis a b cis |
+}
+
+melody_uebermuetig = \relative c'' {
+  <ais cis,>2 <b d,>4~ |
+  <b d,> <g b e>2 |
+  <fis c' e>2 <d fis>4~ |
+  <d fis> <fis c'>2 |
+  
+  <fis b>2 <fis c'>4~ |
+  <fis c'> <c' fis>2 |
+  <b fis'> <g b>4~ |
+  <g b> <b g'>2 |
+  <c g'> <a e>4~ |
+  <a e> <c fis>2 |
+  <b fis'> <g d>4~ |
+  <g d> <g e'>2 |
+  <fis e'> <fis a>4~ |
+  <fis a> \acciaccatura b8 a( gis a ais) |
+  
+  <b g d>2.~ |
+  <b g d>4 <b d b'>2 |
+  <ais cis ais'> <b d b'>4~ |
+  <b d b'> <e g b e>2 |
+  <e fis c' e> <fis c>4~ |
+  <fis c> <c fis c'>2 |
+  <b fis' b> <c fis c'>4~ |
+  <c fis c'> <fis c' fis>2 |
+  <fis b fis'> <b g b,>4~ |
+  <b g b,> <g b g'>2 |
+  
+  <g c g'>2 <a e a,>4~ |
+  <a e a,> <fis c' fis>2 |
+  <fis b fis'> <g b, g>4~ |
+  <g b, g> <e g e'>2
+  <e fis e'> <fis d fis,>4~ |
+  <fis d fis,> <c e c'>4. <b d b'>8 |
+  <g b d g>2.~ |
+  <g b d g>4
 }
 
 melody = \relative c'' {
@@ -187,61 +250,77 @@ melody = \relative c'' {
     
     \bar "||"
     \global_two_uebermuetig
-    <ais cis,>2 <b d,>4~ |
-    <b d> <g b e>2 |
-    <fis c' e>2 <d fis>4~ |
-    <d fis> <fis c'>2 |
-    
-    <fis b>2 <fis c'>4~ |
-    <fis c'> <c' fis>2 |
-    <b fis'> <g b>4~ |
-    <g b> <b g'>2 |
-    <c g'> <a e>4~ |
-    <a e> <c fis>2 |
-    <b fis'> <g d>4~ |
-    <g d> <g e'>2 |
-    <fis e'> <fis a>4~ |
-    <fis a> \acciaccatura b8 a( gis a ais) |
-    
-    <b g d>2.~ |
-    <b g d>4 <b d b'>2 |
-    <ais cis ais'> <b d b'>4~ |
-    <b d b'> <e g b e>2 |
-    <e fis c' e> <fis c>4~ |
-    <fis c> <c fis c'>2 |
-    <b fis' b> <c fis c'>4~ |
-    <c fis c'> <fis c' fis>2 |
-    <fis b fis'> <b g b,>4~ |
-    <b g b,> <g b g'>2 |
-    
-    <g c g'>2 <a e a,>4~ |
-    <a e a,> <fis c' fis>2 |
-    <fis b fis'> <g b, g>4~ |
-    <g b, g> <e g e'>2
-    <e fis e'> <fis d fis,>4~ |
-    <fis d fis,> <c e c'>4. <b d b'>8 |
-    <g b d g>2.~ |
-    <g b d g>4 fis'8 g gis a |
+    \melody_uebermuetig
+    fis'8 g gis a |
     
     \bar "||"
     \global_two_stuermisch
     b4\mark "Stürmisch" \tuplet 3/2 { a8 b a } g r |
-    \tuplet 3/2 { fis g fis } e r \tuplet 3/2 { cis d cis } |
-    b4( a8) fis' b,4~ |
-    b gis8 a d fis |
-    \repeat unfold 4 { <cis a'> } <cis a'>4 |
-    r4 g8 a cis e |
-    \repeat unfold 4 { <d fis b> } <d fis b>4 |
-    r fis8 g gis a |
-    b4 \tuplet 3/2 { a8 b a } g r |
-    
-    \tuplet 3/2 { fis g fis } e r \tuplet 3/2 { cis d cis } |
-    b4( a8) fis' b,4~ |
-    b \acciaccatura b8 a gis a b |
-    cis b a b cis d |
-    e fis gis a b cis |
+    \melody_one_stuermisch
     a4 \repeat unfold 4 { <a e cis>8 } |
+    
     <a e cis>4 fis8 g gis a |
+    b4 \tuplet 3/2 { a8 b a } g r |
+    \melody_one_stuermisch
+    d'4 \repeat unfold 4 { <d a fis>8 } |
+    <d a fis>4 <b, d,>2 |
+    \global_two_uebermuetig
+    \melody_uebermuetig
+    r2 |
+    \bar "||"
+    
+    \global_three_intro
+    <d a d,>4. <d a d,>8 <d a d,>4 |
+    <dis a dis,>2. |
+    <e b gis e>4 e8 gis b e |
+    e,4 e2 |
+    
+    \repeat volta 2 {
+      e2.\mark "(Cantilene) Liebeslied" |
+      fis2( cis4) |
+      cis2.( |
+      b) |
+      a4 b8( a gis a) |
+      a4( gis fis) |
+      fis2. |
+      e2( eis4) |
+      fis'2. |
+      g4( fis cis) |
+      e2. |
+      d2( cis4) |
+      cis( b ais) |
+      b( cis4. d8) |
+      dis2.( |
+      e4) e e |
+      e2. |
+      fis2( cis4) |
+      cis2. |
+      b |
+      a4 b8( a gis a) |
+      a4( gis fis) |
+      fis2. |
+      e2( eis4) |
+      fis' g8( fis eis fis) |
+      <g g'>4( <fis fis'> <cis cis'>) |
+      <e e'>4.( <d d'>8 <cis cis'>4) |
+      <b b'>( <a a'> <fis fis'>) |
+      <fis fis'>( <e e'> cis') |
+      <<
+        { cis2( b4) }
+        \\
+        { e,4( dis d) }
+      >>
+    }
+    \alternative {
+      {
+        <cis a'>2.~ |
+        <cis a'>4 e'4 e |
+      }
+      {
+        <cis, a'>2.~ |
+        <cis a'>4 \acciaccatura b'8 a gis a d |
+      }
+    }
   }
 }
 

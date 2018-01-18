@@ -40,6 +40,7 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 | File | Style | Status |
 | ---- | ----- | ------ |
 | css34.dat | Ragtime style | Adapted the score from the Mutopia Project |
+| css39.dat | Medieval style | Own arrangement of the Rondeau from the Abdelazer Suite by Henry Purcell |
 
 Most of the other music styles are original compositions for the game, so they can't be recreated. The others can.
 
