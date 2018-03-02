@@ -76,11 +76,11 @@ rule generate_index
   command = cd \$RELEASEDIR && cp \$BASEDIR/\$GENINDEX_DIR/style.css . && \$BASEDIR/\$GENINDEX_DIR/genindex.sh \$BASEDIR
 
 rule dependency_graph
-  command = ninja -t graph | dot -Tpng -Gdpi=150 -o\$out
+  command = ninja -t graph | dot -Tsvg -o\$out
 
 build \$OUTDIR/midiprepare/midiprepare: cmake musictools/midiprepare || musictools/midiprepare/main.c
 
-build \$RELEASEDIR/depgraph.png: dependency_graph
+build \$RELEASEDIR/depgraph.svg: dependency_graph
 
 build \$RELEASEDIR/acknowledgements.txt: copy $BASEDIR/acknowledgements.txt
 build \$RELEASEDIR/copying.txt: copy $BASEDIR/COPYING

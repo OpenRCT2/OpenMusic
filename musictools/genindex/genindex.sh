@@ -30,7 +30,7 @@ else
 fi
 echo " on " >> index.html
 LC_ALL=C date --utc >> index.html
-echo "</p><p>FLACs are currently not uploaded due to their size. This will change at some point. Until then, you can build them yourself.</p><p><a href=\"depgraph.png\">Dependency graph</a> &middot; <a href=\"buildlog.txt\">Build log</a> &middot; <a href=\"sha256.txt\">SHA256 sums</a> &middot; <a href=\"copying.txt\">Copying</a> &middot; <a href=\"acknowledgements.txt\">Acknowledgements</a></p><p>In case some files appear to be corrupted, a CI build/upload might be currently in progress. Try again in a few minutes.</p><hr>" >> index.html
+echo "</p><p>FLACs are currently not uploaded due to their size. This will change at some point. Until then, you can build them yourself.</p><p><a href=\"depgraph.svg\">Dependency graph</a> &middot; <a href=\"buildlog.txt\">Build log</a> &middot; <a href=\"sha256.txt\">SHA256 sums</a> &middot; <a href=\"copying.txt\">Copying</a> &middot; <a href=\"acknowledgements.txt\">Acknowledgements</a></p><p>In case some files appear to be corrupted, a CI build/upload might be currently in progress. Try again in a few minutes.</p><hr>" >> index.html
 
 for style_file in ../songnames/*; do
   style=$(basename $style_file)
