@@ -264,6 +264,7 @@ melody = \relative c'' {
     \melody_one_stuermisch
     d'4 \repeat unfold 4 { <d a fis>8 } |
     <d a fis>4 <b, d,>2 |
+    \bar "||"
     \global_two_uebermuetig
     \melody_uebermuetig
     r2 |
@@ -342,6 +343,43 @@ left_one_a_tempo = {
   r4 <e g b> <e g b> |
   r <dis fis b> <dis fis b> |
   <e g b> <b dis fis b> <e g b> |
+}
+
+left_stuermisch = {
+  <a, cis g'>2. |
+  r4 <fis' a d> <fis a d> |
+  r <a d> <a d> |
+  r <g a cis> <g a cis> |
+  r <g a cis> <g a cis> |
+  r <fis a d> <fis a d> |
+  r <fis a d> <fis a d> |
+  <e g a cis>2. |
+  <a, cis g'> |
+  r4 <fis' a d> <fis a d> |
+  r <fis a d> <fis a d> |
+  r <a cis> <a cis> |
+  r <gis b d> <gis b d> |
+}
+
+left_uebermuetig = {
+  \repeat unfold 2 { r4 <d g b> <d g b> | }
+  \repeat unfold 4 { r <d fis c'> <d fis c'> | }
+  r4 <d g b> <d g b> |
+  r4 <d g> <d g> |
+  \repeat unfold 2 { r <e a c> <e a c> | }
+  \repeat unfold 2 { r <g b> <g b> | }
+  \repeat unfold 2 { r <d fis c'> <d fis c'> | }
+  
+  \repeat unfold 4 { r <d g b> <d g b> | }
+  \repeat unfold 4 { r <d fis c'> <d fis c'> | }
+  r <d g b> <d g b> |
+  r <d g> <d g> |
+  
+  \repeat unfold 2 { r <e a c> <e a c> | }
+  \repeat unfold 2 { r <g b> <g b> | }
+  \repeat unfold 2 { r <d fis c'> <d fis c'> | }
+  <g b> b, d |
+  g, r2 |
 }
 
 left = \relative c' {
@@ -427,24 +465,64 @@ left = \relative c' {
     <d a' c> r r2 |
     
     \global_two_uebermuetig
-    \repeat unfold 2 { r4 <d g b> <d g b> | }
-    \repeat unfold 4 { r <d fis c'> <d fis c'> | }
-    r4 <d g b> <d g b> |
-    r4 <d g> <d g> |
-    \repeat unfold 2 { r <e a c> <e a c> | }
-    \repeat unfold 2 { r <g b> <g b> | }
-    \repeat unfold 2 { r <d fis c'> <d fis c'> | }
+    \left_uebermuetig
     
-    \repeat unfold 4 { r <d g b> <d g b> | }
-    \repeat unfold 4 { r <d fis c'> <d fis c'> | }
-    r <d g b> <d g b> |
-    r <d g> <d g> |
-    
-    \repeat unfold 2 { r <e a c> <e a c> | }
-    \repeat unfold 2 { r <g b> <g b> | }
-    \repeat unfold 2 { r <d fis c'> <d fis c'> | }
-    <g b> b, d |
-    g, r2 |
+    \global_two_stuermisch
+    <e' g a cis>2. |
+    \left_stuermisch
+    <a cis>4 <e e'> <cis cis'> |
+    <a a'> r2 |
+    <e' g a cis>2. |
+    \left_stuermisch
+    <d fis>4 <a a'> <fis fis'>
+    <d d'> r2 |
+    \global_two_uebermuetig
+  }
+  \relative c {
+    \left_uebermuetig
+  }
+  
+  \global_three_intro
+  <f f,>2. |
+  <f f,>4. <f f,>8 <f f,>4 |
+  <e e,>2. |
+  <e e,>4 r2 |
+  
+  \repeat volta 2 {
+    \repeat unfold 2 { r4 <e a cis> <e a cis> | }
+    \repeat unfold 2 { r <e gis d'> <e gis d'> | }
+    r <e a cis> <e a cis>
+    r <e a> <e a> |
+    r <e gis d'> <e gis d'> |
+    r <e gis d'> <gis b d> |
+    r <fis cis' e> <fis cis' e> |
+    r <fis ais e'> <fis ais e'> |
+    \repeat unfold 2 { r <fis b d> <fis b d> | }
+    r <gis d'> <gis d'> |
+    r <e gis d'> <e gis d'> |
+    r <fis a c> <fis a c> |
+    \repeat unfold 3 { r <e a cis> <e a cis> | }
+    \repeat unfold 2 { r <e gis d'> <e gis d'> | }
+    r <e a cis> <e a cis> |
+    r <e a> <e a> |
+    r <e gis d'> <e gis d'> |
+    r <e gis d'> <gis a d> |
+    r <fis cis' e> <fis cis' e> |
+    r <fis ais e'> <fis ais e'> |
+    r <fis b d> <fis b d> |
+    <dis fis a c>2.( |
+    <e a cis>4) <a cis> <a cis> |
+    e fis gis |
+  }
+  \alternative {
+    {
+      a4 e' cis |
+      a r2 |
+    }
+    {
+      a4 e' cis |
+      a r2 |
+    }
   }
 }
 
@@ -459,6 +537,54 @@ pedal_one_a_tempo = {
   a,2 r4 |
   \repeat unfold 2 { b2 r4 | }
   e4 b e |
+}
+
+pedal_uebermuetig = {
+  g,4 r2 |
+  d4 r2 |
+  a'4 r2 |
+  d,4 r2 |
+  
+  a'4 r2 |
+  d,4 r2 |
+  g4 r2 |
+  b4 r2 |
+  \repeat unfold 2 { c4 r2 | }
+  \repeat unfold 2 { d4 r2 | }
+  a4 r2 |
+  d,4 r2 |
+  
+  \repeat unfold 2 {
+    g4 r2 |
+    d4 r2 |
+  }
+  \repeat unfold 2 {
+    a'4 r2 |
+    d,4 r2 |
+  }
+  g4 r2 |
+  b4 r2 |
+  \repeat unfold 2 { c4 r2 | }
+  \repeat unfold 2 { d4 r2 | }
+  a4 r2 |
+  d,4 r2 |
+  \repeat unfold 2 { g4 r2 | }
+}
+
+pedal_stuermisch = \relative c {
+  R2.*2 |
+  d4. r |
+  fis r |
+  e r |
+  a, r |
+  d r |
+  d r |
+  e2.( |
+  a,) |
+  d4. r |
+  d r |
+  e r |
+  e r |
 }
 
 pedal = \relative c {
@@ -543,35 +669,64 @@ pedal = \relative c {
     d4 r2 |
     
     \global_two_uebermuetig
-    g,4 r2 |
-    d4 r2 |
-    a'4 r2 |
-    d,4 r2 |
+    \pedal_uebermuetig
     
-    a'4 r2 |
-    d,4 r2 |
-    g4 r2 |
-    b4 r2 |
-    \repeat unfold 2 { c4 r2 | }
-    \repeat unfold 2 { d4 r2 | }
+    \pedal_stuermisch
+    a'4 e cis |
+    a r2 |
+    \pedal_stuermisch
+    d4 a fis |
+    d r2 |
+  }
+  \pedal_uebermuetig
+  
+  \global_three_intro
+  f2. |
+  f |
+  e |
+  e4 r2 |
+  
+  \repeat volta 2 {
     a4 r2 |
-    d,4 r2 |
-    
-    \repeat unfold 2 {
-      g4 r2 |
-      d4 r2 |
-    }
-    \repeat unfold 2 {
-      a'4 r2 |
-      d,4 r2 |
-    }
-    g4 r2 |
-    b4 r2 |
-    \repeat unfold 2 { c4 r2 | }
-    \repeat unfold 2 { d4 r2 | }
+    e4 r2 |
+    gis4 r2 |
+    e4 r2 |
     a4 r2 |
-    d,4 r2 |
-    \repeat unfold 2 { g4 r2 | }
+    cis4 r2 |
+    b4 r2 |
+    e,4 r2 |
+    ais4 r2 |
+    fis4 r2 |
+    b4 r2 |
+    b4 r2 |
+    e4 r2 |
+    e,4 r2 |
+    a4 r2 |
+    a4 r2 |
+    a2.( |
+    e |
+    gis |
+    e |
+    a |
+    cis |
+    b |
+    e, |
+    ais |
+    fis |
+    b) |
+    dis2.( |
+    e4) r2 |
+    e,2. |
+  }
+  \alternative {
+    {
+      a4 e' cis |
+      a r2 |
+    }
+    {
+      a4 e' cis |
+      a r2 |
+    }
   }
 }
 
