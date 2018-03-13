@@ -19,12 +19,12 @@ global_presto = {
 
 global_andante_tempo = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 95
+  \tempo 4 = 100
 }
 
 global_andante_fermata = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 60
+  \tempo 4 = 65
 }
 
 global_andante = {
@@ -34,25 +34,25 @@ global_andante = {
 
 global_tempo_di_valse = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 220
+  \tempo 4 = 230
   \time 3/4
 }
 
 global_one = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 200
+  \tempo 4 = 210
   \time 3/4
   \key e \minor
 }
 
 global_one_two_tempo = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 200
+  \tempo 4 = 210
 }
 
 global_one_two_fermata = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 60
+  \tempo 4 = 65
 }
 
 global_one_two = {
@@ -63,14 +63,14 @@ global_one_two = {
 global_two = {
   \key e \minor
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 180
+  \tempo 4 = 190
   \time 3/4
 }
 
 global_two_uebermuetig = {
   \key e \minor
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 200
+  \tempo 4 = 210
 }
 
 global_two_stuermisch = {
@@ -82,7 +82,7 @@ global_two_stuermisch = {
 global_three_intro = {
   \key a \major % Or fis minor?
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 180
+  \tempo 4 = 190
   \time 3/4
 }
 
@@ -246,7 +246,7 @@ melody = \relative c'' {
     e4( d8 e fis g) |
     \tuplet 3/2 { a d a } d,2 |
     <g e'>8 <g e'> <g e'> r <g es'> r |
-    <f d'> r <b, d,>2\mark "Übermütig" |
+    <fis d'> r <b, d,>2\mark "Übermütig" |
     
     \bar "||"
     \global_two_uebermuetig
@@ -572,7 +572,8 @@ pedal_uebermuetig = {
 }
 
 pedal_stuermisch = \relative c {
-  R2.*2 |
+  e2.( |
+  a,) |
   d4. r |
   fis r |
   e r |
