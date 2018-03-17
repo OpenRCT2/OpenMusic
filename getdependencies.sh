@@ -30,9 +30,9 @@ then
   curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/GeneralUser GS v1.471.sf2" -o "$SOUNDFONTSDIR/GeneralUser GS v1.471.sf2"
 
   MERGE=""
-  for suffix in aa ab ac; do
+  for suffix in aa ab ac ad; do
     OUTPUT="$SOUNDFONTSDIR/OrganR2.sf2.${suffix}"
-    curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/OrganR2.sf2.${suffix}" -o $OUTPUT
+    curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/OrganR3.sf2.${suffix}" -o $OUTPUT
     MERGE="${MERGE} $OUTPUT"
   done
   cat $MERGE > $SOUNDFONTSDIR/Organ.sf2

@@ -45,7 +45,8 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 Most of the other music styles are original compositions for the game, so they can't be recreated. The others can.
 
 ## Build documentation
-The music in this repository has to be built, which works similar to the process of building software.
+The music in this repository has to be built, which works similar to the process of building software. A blog post on how OpenRCT2-OpenMusic is built can be found here:
+https://cuervo.phoenix.uberspace.de/blog/openrct2-openmusic-build-process/
 
 ### Build Dependencies
 - [bash](http://tiswww.case.edu/php/chet/bash/bashtop.html)

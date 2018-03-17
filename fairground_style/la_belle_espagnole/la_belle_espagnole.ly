@@ -19,12 +19,12 @@ global_presto = {
 
 global_andante_tempo = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 100
+  \tempo 4 = 95
 }
 
 global_andante_fermata = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 65
+  \tempo 4 = 60
 }
 
 global_andante = {
@@ -34,25 +34,25 @@ global_andante = {
 
 global_tempo_di_valse = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 230
+  \tempo 4 = 220
   \time 3/4
 }
 
 global_one = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 210
+  \tempo 4 = 200
   \time 3/4
   \key e \minor
 }
 
 global_one_two_tempo = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 210
+  \tempo 4 = 200
 }
 
 global_one_two_fermata = {
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 65
+  \tempo 4 = 60
 }
 
 global_one_two = {
@@ -63,7 +63,7 @@ global_one_two = {
 global_two = {
   \key e \minor
   \set Score.tempoHideNote = ##t
-  \tempo 4 = 190
+  \tempo 4 = 180
   \time 3/4
 }
 
