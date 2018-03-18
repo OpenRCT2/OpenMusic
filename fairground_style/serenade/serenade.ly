@@ -20,7 +20,71 @@ second_melody_intro = \relative c'' {
   R2*9
 }
 
+
 second_melody_part_one_s = \relative c' {
+  g'2~
+  g~
+  g
+  b
+  
+  d,
+  c'
+  d4 d8 c
+  b2
+  
+  g~
+  g~
+  g
+  b
+  f'
+  e
+}
+
+second_melody_part_one = \relative c'' {
+  \second_melody_part_one_s
+  e4 d
+  c c
+}
+
+second_melody_part_one_end = \relative c'' {
+  \second_melody_part_one_s
+  R2*2
+}
+
+second_melody_alt_one = \relative c'' {
+  \repeat unfold 4 {
+    d4 g,
+    g'2
+    b,4 a
+    g2
+  }
+}
+
+second_melody = \relative c'' {
+  \global
+  \second_melody_intro
+  
+  \second_melody_part_one
+  \second_melody_alt_one
+  \second_melody_part_one
+  
+  R2*48
+  
+  \second_melody_intro
+  \second_melody_part_one_end
+  g,4 e'16 d g e
+  c4 e16 c g c
+  a8 a e' e
+  c8 d e g
+  a g c d
+  e2~
+  e2
+  <e, g c>~
+  <e g c>
+}
+
+
+melody_part_one_s = \relative c' {
   e'8 g, e'4
   f8 e d4
   c8 g e' c
@@ -41,17 +105,17 @@ second_melody_part_one_s = \relative c' {
   e8 c d g,
 }
 
-second_melody_part_one = \relative c' {
-  \second_melody_part_one_s
+melody_part_one = \relative c' {
+  \melody_part_one_s
   c4 c
 }
 
-second_melody_part_one_end = \relative c' {
-  \second_melody_part_one_s
+melody_part_one_end = \relative c' {
+  \melody_part_one_s
   c4 c16 a c a
 }
 
-second_melody_alt_one = \relative c' {
+melody_alt_one = \relative c' {
   \repeat unfold 2 {
     d'8 c16 b f'8 e16 d
     e8 g, g c
@@ -69,7 +133,7 @@ second_melody_alt_one = \relative c' {
   }
 }
 
-second_melody_part_two = \relative c' {
+melody_part_two = \relative c' {
   f4 a
   c8 bes g4
   f a
@@ -89,7 +153,7 @@ second_melody_part_two = \relative c' {
   g f f4
 }
 
-second_melody_alt_two = \relative c'' {
+melody_alt_two = \relative c'' {
   a8 e' f e
   d f, g a
   a, g' f e
@@ -111,30 +175,6 @@ second_melody_alt_two = \relative c'' {
   c2
 }
 
-second_melody = \relative c'' {
-  \global
-  \second_melody_intro
-  
-  \second_melody_part_one
-  \second_melody_alt_one
-  \second_melody_part_one
-  
-  \second_melody_part_two
-  \second_melody_alt_two
-  \second_melody_part_two
-  
-  \second_melody_intro
-  \second_melody_part_one_end
-  g,4 e'16 d g e
-  c4 e16 c g c
-  a8 a e' e
-  c8 d e g
-  a g c d
-  e2~
-  e2
-  <e, g c>~
-  <e g c>
-}
 
 melody_intro = \relative c'' {
   e8 g, e' g,
@@ -148,44 +188,6 @@ melody_intro = \relative c'' {
   r
 }
 
-melody_part_one_s = \relative c' {
-  g'2~
-  g~
-  g
-  b
-  
-  d,
-  c'
-  d4 d8 c
-  b2
-  
-  g~
-  g~
-  g
-  b
-  f'
-  e
-}
-
-melody_part_one = \relative c'' {
-  \melody_part_one_s
-  e4 d
-  c c
-}
-
-melody_part_one_end = \relative c'' {
-  \melody_part_one_s
-  R2*2
-}
-
-melody_alt_one = \relative c'' {
-  \repeat unfold 4 {
-    d4 g,
-    g'2
-    b,4 a
-    g2
-  }
-}
 
 melody = \relative c'' {
   \global
@@ -195,9 +197,9 @@ melody = \relative c'' {
   \melody_alt_one
   \melody_part_one
   
-  R2*16
-  R2*16
-  R2*16
+  \melody_part_two
+  \melody_alt_two
+  \melody_part_two
   
   \melody_intro
   \melody_part_one_end

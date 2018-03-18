@@ -654,16 +654,16 @@ glockenspiel = \relative c'' {
   \repeat volta 2 {
     c'4 c8 c c4 c8 c
     c2 f,8 g a bes
-    <c f,>4 f,8 f f4 a
+    c4 f,8 f f4 a
     c1
     c4 c8 c c4 c8 c
-    c4 c8 c d4 c8 c
-    c4 bes8 a bes2~
+    c4 c8 c d4 c
+    c bes bes2~
     bes4 r r2
     
     g4 g8 g g4 g8 g
     g2 c,8 d e f
-    <g c,>4 c,8 c c4 e
+    g4 c,8 c c4 e
     g1
     g4 g8 g g4 g8 g
     g4 g8 g c2

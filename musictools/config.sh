@@ -3,7 +3,7 @@ export RELEASE=release
 export SONGNAMES=songnames
 export SOUNDFONTSDIR=soundfonts
 
-export SAMPLING_RATE=44100
+export SAMPLING_RATE=48000
 export NORMALIZE_GAIN=-1
 export REVERB_DECAY=0.5
 

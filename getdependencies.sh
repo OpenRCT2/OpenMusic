@@ -31,8 +31,8 @@ then
 
   MERGE=""
   for suffix in aa ab ac ad; do
-    OUTPUT="$SOUNDFONTSDIR/OrganR2.sf2.${suffix}"
-    curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/OrganR3.sf2.${suffix}" -o $OUTPUT
+    OUTPUT="$SOUNDFONTSDIR/OrganR4.sf2.${suffix}"
+    curl -C - -L "https://dl.bintray.com/ccoors/OpenRCT2-OpenMusic-SoundFonts/OrganR4.sf2.${suffix}" -o $OUTPUT
     MERGE="${MERGE} $OUTPUT"
   done
   cat $MERGE > $SOUNDFONTSDIR/Organ.sf2

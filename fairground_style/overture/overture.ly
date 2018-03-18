@@ -62,68 +62,46 @@ second_melody_pattern = \relative c'' {
 second_melody = \relative c'' {
   \global_andante
   
-  fis4. fis16 fis fis8 fis16 fis fis8 fis16 fis
-  fis2\( fis4\) r8 fis16 fis
-  fis4.\( fis8 a8. g16 e8. g16
-  fis2 d4\) r
+  d,4. d16 d d8 a'16 a a8 d16 d
+  d2\( a4\) r8 a16 a
+  d4.\( a8 cis8. b16 g8. b16
+  a2 fis4\) r
   
-  d4. d16 d d8 d16 d d8 fis16 fis
-  fis2 d4 fis
-  e1
-  e2. r4
+  fis4. fis16 fis fis8 b16 b b8 d16 d
+  d2 b4 d
+  cis2 \tuplet 3/2 { cis8\( d cis } \tuplet 3/2 { b8 cis b\) }
+  b2\( a4\) r
   
+  R1*4
+  <a d fis>4. <a d fis>16 <a d fis> <a d fis>8 <d fis a>16 <d fis a> <d fis a>8 <d fis a d>16 <d fis a d>
+  <d fis a d>1
+  <fis, a d fis>2 <fis a d fis>4 <g a cis e>
+  
+  <fis a d>4 r r2
+  R1
+  b1(
+  a2) r
+  a( ais
+  b gis)
+  R1*4
+  b1(
+  a2) r
+  R1*14
+  
+  bes1(
+  d)
+  R1*3
   \repeat unfold 2 {
-    <b d fis>4. <b d fis>16 <b d fis> <b d fis>4 <b d fis>
-    <a cis a'>1
+    <g, b>2( <g bes>
+    <fis a d>4.) r8 r2
   }
-  
-  r1
-  \tuplet 3/2 { d8 a' g } \tuplet 3/2 { fis e d } \tuplet 3/2 { cis b a } \tuplet 3/2 { gis a d }
-  a'2 a,
-  r4 d4~ d8.\( cis16 d8. e16\)
-  fis2\( d4 fis\)
-  g2\( d4 e\)
-  fis2 r4 \tuplet 3/2 { fis8 a g }
-  fis2\( e4\) \tuplet 3/2 { e8 g fis }
-  e2\( d4\) fis8 f
-  e8.\( a16 \tuplet 3/2 { cis8 b a } \tuplet 3/2 { gis eis fis } \tuplet 3/2 { cis d b\) }
-  a4 b'2\( a8. g16\)
-  fis2\( d8. cis16 d8. e16\)
-  fis2\( d4\) fis
-  g2\( d4 e
-  fis2\) r4 \tuplet 3/2 { fis8 a g }
-  fis2\( e4\) \tuplet 3/2 { e8 g fis }
-  e8\( d\) fis4\( fis8 e fis g\)
-  g8. fis16 \acciaccatura a8 g8. fis16 fis e cis'4.
-  b8 ais16 b fis g gis, a fis'4. e8
-  
-  d4 \tuplet 3/2 { r8 <fis, a> <eis gis> } \tuplet 3/2 { <g b>8 <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <eis cis'> }
-  \tuplet 3/2 { <g e'>8 <fis d'>4~ } \tuplet 3/2 { <fis d'>8 <a fis'> <g e'> } \tuplet 3/2 { <g e'> <fis d'> <a cis> } \tuplet 3/2 { <a cis> <g b> <fis a> }
-  \tuplet 3/2 { <fis a>8 <e g>4\( } g'4\)~ g8.\( fis16 e8. d16\)
-  d8.\( cis16 fis8. e16\) a8.\( g16~ \tuplet 3/2 { \acciaccatura a8 g8 fis e\) }
-  eis4\( \tuplet 3/2 { fis8\) <fis, a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <eis cis'> }
-  \tuplet 3/2 { <g e'>8 <fis d'>4~ } \tuplet 3/2 { <fis d'>8 <g fis'> <g e'> } \tuplet 3/2 { <g e'> <fis d'> <a cis> } \tuplet 3/2 { <a cis> <g b> <fis a> }
-  \tuplet 3/2 { <fis a>8 <e g>4 } g'~ g8. fis16 e8. d16
-  d8. cis16 fis8. e16 cis'8. b16~ \tuplet 3/2 { \acciaccatura cis8 b8 a g  }
-  
-  f2\( e8 f \tuplet 3/2 { a g f\) }
-  g4\( f e8 f \tuplet 3/2 { a g f\) }
-  <f, bes d f>4 <fis bes d fis> <g bes d g> <gis bes d gis>
-  <a d fis a>2 \tuplet 3/2 { d'8 cis b } \tuplet 3/2 { a g fis }
-  <a, cis fis>4\( <a cis e>\) b'2
-  b~ b8 a g e
-  d4 \tuplet 3/2 { r8 <fis, a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <a cis> }
-  <g~ b>2( <g~ bes d>4 <g bes e>
-  <fis a fis'>4) \tuplet 3/2 { r8 <fis a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <a cis> }
-  <g~ b>2( <g~ bes d>4 <g bes e>
-  <fis a fis'>2) \tuplet 3/2 { d8 fis a } \tuplet 3/2 { d fis a }
-  d1(
-  
-  <fis,, a d'>2) r
+  r4
+  \tuplet 3/2 { d8 fis a } \tuplet 3/2 { d fis a( } d4
+  <d, fis a d>2) r
   
   \global_allegro
   R1*3
-  <d' f bes>1~
+  <d f bes>1~
   <d f bes>8 <d d'>4 <c c'> <bes bes'> <a a'>8~
   <a a'> <g g'>4 <f f'> <es es'> d'8
   <c f,>8 <bes f> r4 <f bes es>8 <f bes d> r4
@@ -335,49 +313,72 @@ second_melody = \relative c'' {
   bes
 }
 
-melody = \relative c'' {
+melody = \relative c' {
   \global_andante
   
-  d,4. d16 d d8 a'16 a a8 d16 d
-  d2\( a4\) r8 a16 a
-  d4.\( a8 cis8. b16 g8. b16
-  a2 fis4\) r
+  fis4. fis16 fis fis8 fis16 fis fis8 fis16 fis
+  fis2\( fis4\) r8 fis16 fis
+  fis4.\( fis8 a8. g16 e8. g16
+  fis2 d4\) r
   
-  fis4. fis16 fis fis8 b16 b b8 d16 d
-  d2 b4 d
-  cis2 \tuplet 3/2 { cis8\( d cis } \tuplet 3/2 { b8 cis b\) }
-  b2\( a4\) r
+  d4. d16 d d8 d16 d d8 fis16 fis
+  fis2 d4 fis
+  e1
+  e2. r4
   
-  R1*4
-  <a d fis>4. <a d fis>16 <a d fis> <a d fis>8 <d fis a>16 <d fis a> <d fis a>8 <d fis a d>16 <d fis a d>
-  <d fis a d>1
-  <fis, a d fis>2 <fis a d fis>4 <g a cis e>
-  
-  <fis a d>4 r r2
-  R1
-  b1(
-  a2) r
-  a( ais
-  b gis)
-  R1*4
-  b1(
-  a2) r
-  R1*14
-  
-  bes1(
-  d)
-  R1*3
   \repeat unfold 2 {
-    <g, b>2( <g bes>
-    <fis a d>4.) r8 r2
+    <b' d fis>4. <b d fis>16 <b d fis> <b d fis>4 <b d fis>
+    <a cis a'>1
   }
-  r4
-  \tuplet 3/2 { d8 fis a } \tuplet 3/2 { d fis a( } d4
-  <d, fis a d>2) r
+  
+  r1
+  \tuplet 3/2 { d,8 a' g } \tuplet 3/2 { fis e d } \tuplet 3/2 { cis b a } \tuplet 3/2 { gis a d }
+  a'2 a,
+  r4 d4~ d8.\( cis16 d8. e16\)
+  fis2\( d4 fis\)
+  g2\( d4 e\)
+  fis2 r4 \tuplet 3/2 { fis8 a g }
+  fis2\( e4\) \tuplet 3/2 { e8 g fis }
+  e2\( d4\) fis8 f
+  e8.\( a16 \tuplet 3/2 { cis8 b a } \tuplet 3/2 { gis eis fis } \tuplet 3/2 { cis d b\) }
+  a4 b'2\( a8. g16\)
+  fis2\( d8. cis16 d8. e16\)
+  fis2\( d4\) fis
+  g2\( d4 e
+  fis2\) r4 \tuplet 3/2 { fis8 a g }
+  fis2\( e4\) \tuplet 3/2 { e8 g fis }
+  e8\( d\) fis4\( fis8 e fis g\)
+  g8. fis16 \acciaccatura a8 g8. fis16 fis e cis'4.
+  b8 ais16 b fis g gis, a fis'4. e8
+  
+  d4 \tuplet 3/2 { r8 <fis a> <eis gis> } \tuplet 3/2 { <g b>8 <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <eis cis'> }
+  \tuplet 3/2 { <g e'>8 <fis d'>4~ } \tuplet 3/2 { <fis d'>8 <a fis'> <g e'> } \tuplet 3/2 { <g e'> <fis d'> <a cis> } \tuplet 3/2 { <a cis> <g b> <fis a> }
+  \tuplet 3/2 { <fis a>8 <e g>4\( } g4\)~ g8.\( fis16 e8. d16\)
+  d8.\( cis16 fis8. e16\) a8.\( g16~ \tuplet 3/2 { \acciaccatura a8 g8 fis e\) }
+  eis4\( \tuplet 3/2 { fis8\) <fis a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <eis cis'> }
+  \tuplet 3/2 { <g e'>8 <fis d'>4~ } \tuplet 3/2 { <fis d'>8 <g fis'> <g e'> } \tuplet 3/2 { <g e'> <fis d'> <a cis> } \tuplet 3/2 { <a cis> <g b> <fis a> }
+  \tuplet 3/2 { <fis a>8 <e g>4 } g~ g8. fis16 e8. d16
+  d8. cis16 fis8. e16 cis'8. b16~ \tuplet 3/2 { \acciaccatura cis8 b8 a g  }
+  
+  f2\( e8 f \tuplet 3/2 { a g f\) }
+  g4\( f e8 f \tuplet 3/2 { a g f\) }
+  <f, bes d f>4 <fis bes d fis> <g bes d g> <gis bes d gis>
+  <a d fis a>2 \tuplet 3/2 { d'8 cis b } \tuplet 3/2 { a g fis }
+  <a, cis fis>4\( <a cis e>\) b'2
+  b~ b8 a g e
+  d4 \tuplet 3/2 { r8 <fis a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <a cis> }
+  <g~ b>2( <g~ bes d>4 <g bes e>
+  <fis a fis'>4) \tuplet 3/2 { r8 <fis a> <eis gis> } \tuplet 3/2 { <g b> <fis a>4~ } \tuplet 3/2 { <fis a>8 <fis d'> <a cis> }
+  <g~ b>2( <g~ bes d>4 <g bes e>
+  <fis a fis'>2) \tuplet 3/2 { d,8 fis a } \tuplet 3/2 { d fis a }
+  d1(
+  
+  <fis, a d>2) r
+  
   \global_allegro
   
   R1*3
-  <d f bes>1~
+  <d' f bes>1~
   <d f bes>8 <d d'>4 <c c'> <bes bes'> <a a'>8~
   <a a'> <g g'>4 <f f'> <es es'> d'8
   <c f,>8 <bes f> r4 <f bes es>8 <f bes d> r4
@@ -847,8 +848,8 @@ pedal = \relative c {
   \global_andante
   
   R1*12
-  d1~
-  \tuplet 3/2 { d8 a' g } \tuplet 3/2 { fis e d } \tuplet 3/2 { cis b a } \tuplet 3/2 { gis a d }
+  d,1~
+  \tuplet 3/2 { d8 a'' g } \tuplet 3/2 { fis e d } \tuplet 3/2 { cis b a } \tuplet 3/2 { gis a d }
   a'2 a,
   d,4 r d r 
   \repeat unfold 3 { d r d r }

@@ -23,7 +23,7 @@ SAMPLING_RATE=$SAMPLING_RATE
 NORMALIZE_GAIN=$NORMALIZE_GAIN
 
 PREPARE_PARAMS_ORGAN=-s -f 19 -t 0 -f 16 -t 1 -f 20 -t 2 -f 18 -t 3 -n
-PREPARE_PARAMS_GLOCKENSPIEL=-s -f 11 -t 9 -n
+PREPARE_PARAMS_GLOCKENSPIEL=-s -f 11 -t 8 -n
 PREPARE_PARAMS_MAP_PERCUSSION=-m 48
 PREPARE_PARAMS_PERCUSSION=-s -p \$PREPARE_PARAMS_MAP_PERCUSSION -n
 
@@ -107,8 +107,10 @@ build \$OUTDIR/${song}_organ.wav: render \$OUTDIR/${song}_organ.mid
   DEFAULT_FLUIDSYNTH_GAIN=0.45
 build \$OUTDIR/${song}_glockenspiel.wav: render \$OUTDIR/${song}_glockenspiel.mid
   soundfont=\$SOUNDFONT_FLUIDR3
+  DEFAULT_FLUIDSYNTH_GAIN=0.35
 build \$OUTDIR/${song}_percussion.wav: render \$OUTDIR/${song}_percussion.mid
   soundfont=\$SOUNDFONT_GENERALUSER
+  DEFAULT_FLUIDSYNTH_GAIN=0.45
 build \$OUTDIR/${song}.wav: combine \$OUTDIR/${song}_organ.wav \$OUTDIR/${song}_glockenspiel.wav \$OUTDIR/${song}_percussion.wav
 build \$OUTDIR/${song}_reverb.wav: apply_lv2 \$OUTDIR/${song}.wav
   plugin=\$CALF_REVERB_PLUGIN
