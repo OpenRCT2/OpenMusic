@@ -4,7 +4,7 @@ This project aims to create an alternative, higher quality version of the music 
 [![Gitter](https://img.shields.io/badge/gitter-Lobby-red.svg)](https://gitter.im/OpenRCT2-OpenMusic/Lobby)
 [![Build Status](https://travis-ci.org/ccoors/OpenRCT2-OpenMusic.svg?branch=master)](https://travis-ci.org/ccoors/OpenRCT2-OpenMusic)
 
-Current CI Artifacts: [https://cuervo.phoenix.uberspace.de/openrct2-openmusic/ci/](https://cuervo.phoenix.uberspace.de/openrct2-openmusic/ci/)
+Current CI Artifacts: [https://www.ccoors.de/openrct2-openmusic/ci/](https://www.ccoors.de/openrct2-openmusic/ci/)
 
 ## Progress
 ### Fairground organ style
@@ -29,7 +29,7 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 | css7.dat | Dornröschens Brautfahrt by Max Rhode | TODO |
 | css8.dat | Tales from the Vienna Woods Waltz by Johann Strauss II | TODO |
 | css9.dat | ? | TODO |
-| css11.dat | Der Haushamer Plattler (Traditional) 00:00 - 00:52 / ? | TODO |
+| css11.dat | Der Haushamer Plattler (Traditional) 00:00 - 00:52 / ? (Also seems to contain parts of Frohsinn auf den Bergen by Oscar Fetrás) | TODO |
 | css12.dat | Ma Bella Bimba | TODO |
 | css13.dat | The Blond Sailor by The Andrews Sisters | TODO |
 | css14.dat | Overture from Poet and Peasant by Franz von Suppé | Work in progress |
@@ -46,7 +46,7 @@ Most of the other music styles are original compositions for the game, so they c
 
 ## Build documentation
 The music in this repository has to be built, which works similar to the process of building software. A blog post on how OpenRCT2-OpenMusic is built can be found here:
-https://cuervo.phoenix.uberspace.de/blog/openrct2-openmusic-build-process/
+https://www.ccoors.de/blog/openrct2-openmusic-build-process/
 
 ### Build Dependencies
 - [bash](http://tiswww.case.edu/php/chet/bash/bashtop.html)
