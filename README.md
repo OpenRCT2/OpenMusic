@@ -29,7 +29,7 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 | css7.dat | Dornröschens Brautfahrt by Max Rhode | TODO |
 | css8.dat | Tales from the Vienna Woods Waltz by Johann Strauss II | TODO |
 | css9.dat | ? | TODO |
-| css11.dat | Der Haushamer Plattler (Traditional) 00:00 - 00:52 / ? (Also seems to contain parts of Frohsinn auf den Bergen by Oscar Fetrás) | TODO |
+| css11.dat | Der Haushamer Plattler (Traditional) 00:00 - 00:52 / ? (Also seems to contain parts of Frohsinn auf den Bergen by Oscar Fetrás and La valse de la forêt) | TODO |
 | css12.dat | Ma Bella Bimba | TODO |
 | css13.dat | The Blond Sailor by The Andrews Sisters | TODO |
 | css14.dat | Overture from Poet and Peasant by Franz von Suppé | Work in progress |
