@@ -4,21 +4,22 @@
 
 echo "Building OpenRCT2-OpenMusic inside Travis CI"
 
-cat >> /etc/pacman.conf << _EOF_
-[archlinuxfr]
-SigLevel = Optional TrustAll
-Server = http://repo.archlinux.fr/x86_64
-
-_EOF_
-
-pacman -Syu --noconfirm
-pacman -S --noconfirm base base-devel shadow yaourt
-
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-
 useradd -m -G wheel -s /usr/bin/bash build
 
-sudo -u build yaourt -S --noconfirm ninja ttf-dejavu graphviz libsmf cmake lilypond fluidsynth calf sox opus-tools lv2file curl git openssh
+TEMPDIR=$(mktemp -d)
+git clone "https://github.com/polygamma/aurman.git" $TEMPDIR
+cd $TEMPDIR
+chmod 777 -R .
+chown -R build .
+sudo -u build makepkg --skipinteg --install --noconfirm
+
+pacman -Syu --noconfirm
+pacman -S --noconfirm base base-devel shadow
+
+sudo -u build aurman -S --noconfirm --noedit --skip_news --skip_new_locations ninja ttf-dejavu graphviz libsmf cmake lilypond fluidsynth calf sox opus-tools lv2file curl git openssh
+
+export PATH="$PATH:/usr/bin/vendor_perl"
 
 cd /root/build
 ./getdependencies.sh --agree
