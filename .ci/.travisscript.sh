@@ -7,7 +7,7 @@ set -e
 echo "Building OpenRCT2-OpenMusic inside Travis CI"
 
 pacman -Syu --noconfirm
-pacman -S --noconfirm base base-devel shadow sudo git python python-requests python-regex python-dateutil python-feedparser pyalpm expac ninja ttf-dejavu graphviz libsmf cmake lilypond fluidsynth calf sox opus-tools curl openssh
+pacman -S --noconfirm base base-devel shadow sudo git python python-requests python-regex python-dateutil python-feedparser pyalpm expac ninja ttf-dejavu graphviz libsmf lv2 lilv cmake lilypond fluidsynth calf sox opus-tools curl openssh
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 useradd -m -G wheel -s /usr/bin/bash build
