@@ -2,9 +2,14 @@
 
 # DO NOT RUN THIS SCRIPT OUTSIDE OF TRAVIS/DOCKER!
 
+set -e
+
 echo "Building OpenRCT2-OpenMusic inside Travis CI"
 
+pacman -Syu --noconfirm
+pacman -S --noconfirm base base-devel shadow sudo
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
 useradd -m -G wheel -s /usr/bin/bash build
 
 TEMPDIR=$(mktemp -d)
@@ -13,9 +18,6 @@ cd $TEMPDIR
 chmod 777 -R .
 chown -R build .
 sudo -u build makepkg --skipinteg --install --noconfirm
-
-pacman -Syu --noconfirm
-pacman -S --noconfirm base base-devel shadow
 
 sudo -u build aurman -S --noconfirm --noedit --skip_news --skip_new_locations ninja ttf-dejavu graphviz libsmf cmake lilypond fluidsynth calf sox opus-tools lv2file curl git openssh
 
@@ -38,4 +40,4 @@ else
   echo "Not uploading artifacts due to being on branch $1"
 fi
 
-rm sshkey
+shred -u sshkey
