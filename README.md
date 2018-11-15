@@ -1,7 +1,7 @@
 # OpenRCT2-OpenMusic
 This project aims to create an alternative, higher quality version of the music from RollerCoaster Tycoon 2 for use in [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2).
 
-[![Gitter](https://img.shields.io/badge/gitter-Lobby-red.svg)](https://gitter.im/OpenRCT2-OpenMusic/Lobby)
+[![Gitter](https://img.shields.io/badge/gitter-Lobby-red.svg)](https://gitter.im/OpenRCT2/OpenMusic)
 [![Build Status](https://travis-ci.org/ccoors/OpenRCT2-OpenMusic.svg?branch=master)](https://travis-ci.org/ccoors/OpenRCT2-OpenMusic)
 
 Current CI Artifacts: [https://www.ccoors.de/openrct2-openmusic/ci/](https://www.ccoors.de/openrct2-openmusic/ci/)
