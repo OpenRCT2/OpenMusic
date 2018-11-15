@@ -3,7 +3,6 @@ sudo: required
 dist: trusty
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_65806360cfb7_key -iv $encrypted_65806360cfb7_iv -in .ci/sshkey.enc -out sshkey -d
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   - sudo apt-get update
@@ -13,4 +12,4 @@ install:
   - docker pull archlinux/base
 
 script:
-  - docker run -v $(pwd):/root/build archlinux/base /root/build/.ci/.travisscript.sh $(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
+  - docker run -v $(pwd):/root/build archlinux/base /root/build/.ci/.travisscript.sh
