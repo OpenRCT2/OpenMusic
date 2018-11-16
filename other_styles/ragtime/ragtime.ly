@@ -1,7 +1,7 @@
 \version "2.18.0"
 
 % Source: http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=275
-% Diff for the OpenRCT2-OpenMusic version:
+% Diff for the OpenRCT2/OpenMusic version:
 % - Changed speed from 66 to 100
 
 % used only to compare the output with the source edition

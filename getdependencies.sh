@@ -10,7 +10,7 @@ then
 else
   cat << _EOF_
 
-This script will download the SoundFonts required to build OpenRCT2-OpenMusic.
+This script will download the SoundFonts required to build OpenRCT2/OpenMusic.
 
 Please note that these SoundFonts do not fall under the license found in the
 COPYING file in the root directory of this repository.

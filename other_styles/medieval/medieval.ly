@@ -2,12 +2,12 @@
 \include "../../include/include.ly"
 
 \header {
-  dedication = "OpenRCT2-OpenMusic"
+  dedication = "OpenRCT2/OpenMusic"
   title = "Abdelazer Suite"
   arranger = "Christian Friedrich Coors"
   subtitle = "2. Rondeau"
   composer = "Henry Purcell"
-  tagline = "https://www.github.com/ccoors/OpenRCT2-OpenMusic"
+  tagline = "https://www.github.com/OpenRCT2/OpenMusic"
   copyright = "Arrangement CC-BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/"
 }
 

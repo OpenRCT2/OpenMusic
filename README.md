@@ -1,4 +1,4 @@
-# OpenRCT2-OpenMusic
+# OpenRCT2/OpenMusic
 This project aims to create an alternative, higher quality version of the music from RollerCoaster Tycoon 2 for use in [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2).
 
 [![Gitter](https://img.shields.io/badge/gitter-Lobby-red.svg)](https://gitter.im/OpenRCT2/OpenMusic)
@@ -43,7 +43,7 @@ The lists of the pieces of music in the game credits and [here](http://rct.wikia
 Most of the other music styles are original compositions for the game, so they can't be recreated. The others can.
 
 ## Build documentation
-The music in this repository has to be built, which works similar to the process of building software. A blog post on how OpenRCT2-OpenMusic is built can be found here:
+The music in this repository has to be built, which works similar to the process of building software. A blog post on how OpenRCT2/OpenMusic is built can be found here:
 https://www.ccoors.de/blog/openrct2-openmusic-build-process/
 
 ### Build Dependencies

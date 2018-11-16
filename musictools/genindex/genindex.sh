@@ -14,12 +14,12 @@ cat > index.html << _EOF_
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>OpenRCT2-OpenMusic CI builds</title>
+<title>OpenRCT2/OpenMusic CI builds</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<h1>OpenRCT2-OpenMusic CI builds</h1>
-<a href="https://github.com/ccoors/OpenRCT2-OpenMusic" target="_blank">https://github.com/ccoors/OpenRCT2-OpenMusic</a>
+<h1>OpenRCT2/OpenMusic CI builds</h1>
+<a href="https://github.com/OpenRCT2/OpenMusic" target="_blank">https://github.com/OpenRCT2/OpenMusic</a>
 <p>Built from commit
 _EOF_
 if [ "$1" == "" ]

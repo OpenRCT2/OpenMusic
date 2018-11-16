@@ -2,12 +2,12 @@
 \include "../../include/include.ly"
 
 \header {
-  dedication = "OpenRCT2-OpenMusic"
+  dedication = "OpenRCT2/OpenMusic"
   title = "Various Waltzes by Johann Strauß II"
   arranger = "Christian Friedrich Coors"
   subtitle = "Morgenblätter, Die Fledermaus, Künstlerleben, Wiener Blut, Donauwalzer"
   composer = "Johann Baptist Strauss"
-  tagline = "https://www.github.com/ccoors/OpenRCT2-OpenMusic"
+  tagline = "https://www.github.com/OpenRCT2/OpenMusic"
   copyright = "Arrangement CC-BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/"
 }
 

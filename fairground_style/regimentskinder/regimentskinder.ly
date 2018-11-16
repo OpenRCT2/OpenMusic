@@ -4,12 +4,12 @@
 % Based on http://imslp.org/wiki/File:PMLP278251-FUCIK_Regimentskinder_Marsch.pdf
 
 \header {
-  dedication = "OpenRCT2-OpenMusic"
+  dedication = "OpenRCT2/OpenMusic"
   title = "Children of the Regiment"
   arranger = "Christian Friedrich Coors"
   subtitle = "Die Regimentskinder"
   composer = "Julius Fučík"
-  tagline = "https://www.github.com/ccoors/OpenRCT2-OpenMusic"
+  tagline = "https://www.github.com/OpenRCT2/OpenMusic"
   copyright = "Arrangement CC-BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/"
 }
 
