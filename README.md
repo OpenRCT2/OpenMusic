@@ -1,8 +1,12 @@
 # OpenRCT2/OpenMusic
 This project aims to create an alternative, higher quality version of the music from RollerCoaster Tycoon 2 for use in [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2).
 
-[![Gitter](https://img.shields.io/badge/gitter-Lobby-red.svg)](https://gitter.im/OpenRCT2/OpenMusic)
 [![Build Status](https://api.travis-ci.org/OpenRCT2/OpenMusic.svg?branch=master)](https://travis-ci.org/OpenRCT2/OpenMusic)
+
+Project discussion takes place on Discord.
+
+- Invitation link: https://discord.gg/uNzSmAj
+- Direct link to channel: https://discordapp.com/channels/264137540670324737/694586451500859469
 
 ## Progress
 ### Fairground organ style
