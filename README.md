@@ -6,7 +6,7 @@ This project aims to create an alternative, higher quality version of the music 
 Project discussion takes place on Discord.
 
 - Invitation link: https://discord.gg/uNzSmAj
-- Direct link to channel: https://discordapp.com/channels/264137540670324737/694586451500859469
+- [![](https://img.shields.io/discord/264137540670324737?label=OpenRCT2%2Fsound-and-music)](https://discordapp.com/channels/264137540670324737/694586451500859469)
 
 ## Progress
 ### Fairground organ style
