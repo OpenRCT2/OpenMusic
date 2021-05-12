@@ -1,0 +1,21 @@
+{
+    "id": "auraspecs.music.DODGEM",
+    "authors": [
+        "Karst van Galen Last"
+    ],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "DODGEM.wav",
+                "name": "New Dodgem Theme"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "New Dodgem Theme"
+        }
+    }
+}
