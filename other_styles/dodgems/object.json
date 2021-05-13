@@ -1,21 +1,21 @@
 {
-    "id": "auraspecs.music.DODGEM",
+    "id": "auraspecs.music.dodgems",
     "authors": [
-        "Karst van Galen Last"
+        "Jalmaan"
     ],
     "version": "1.0",
     "objectType": "music",
     "properties": {
         "tracks": [
             {
-                "source": "DODGEM.wav",
-                "name": "New Dodgem Theme"
+                "source": "dodgems.flac",
+                "name": "Dodgems Beat Style"
             }
         ]
     },
     "strings": {
         "name": {
-            "en-GB": "New Dodgem Theme"
+            "en-GB": "Dodgems Beat Style"
         }
     }
 }
