@@ -1,0 +1,22 @@
+{
+    "id": "openrct2.music.galaxy",
+    "sourceGame":"official",
+    "authors": [
+        "Karst van Galen Last"
+    ],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "galaxy.WAV",
+                "name": "Jalmaan - Pandora"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Galaxy style"
+        }
+    }
+}
