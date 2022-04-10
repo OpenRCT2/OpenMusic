@@ -1,0 +1,24 @@
+Please include the following files:
+
+Please make sure you have all the rights to your samples! All original works included should be licensed under the Creative Commons licensing. (Probably under CC BY-SA)
+
+Please put each style in their own folder
+-----------------------
+For unfinished works:
+- Stems in WAV format of each instrument.
+- A "unfinished.txt" document with the following info: Full name of the creator(s), Song name (ID if unknown), Artist name (if any)
+
+
+-----------------------
+For finished works:
+
+- A WAV or FLAC file of the finished product. This can be included in the official soundtrack released beside the game.
+
+A object.json file following the format of object.json found on the main page of \replacements\
+Replace the following: 
+<style> with the name of the style.
+<Full Name> with your full name, add multiple if more people.
+<Artist Name - Song Name> with the artist name and songname seperated by a dash. 
+
+(This following is necessary until OGG or MP3 support is added to reduce filesize in the game)
+- A WAV file rendered in the following format (this can be done in Audacity): Project rate: 22050Hz, Save as WAV, Encoding: Unsigned 8-bit PCM.

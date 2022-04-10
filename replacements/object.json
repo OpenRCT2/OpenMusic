@@ -1,0 +1,22 @@
+{
+    "id": "openrct2.music.<style>",
+    "sourceGame":"official",
+    "authors": [
+        "<Full Name>"
+    ],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "<style>.WAV",
+                "name": "<Artist Name - Song Name>"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "<Style> style"
+        }
+    }
+}
