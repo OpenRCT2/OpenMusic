@@ -1,5 +1,6 @@
 {
-    "id": "auraspecs.music.dodgems",
+    "id": "openrct2.music.bumpercar",
+    "sourceGame":"official",
     "authors": [
         "Karst van Galen Last"
     ],
@@ -8,14 +9,14 @@
     "properties": {
         "tracks": [
             {
-                "source": "dodgems.flac",
-                "name": "Dodgems Beat Style"
+                "source": "bumpercar.WAV",
+                "name": "Bumpercar beat"
             }
         ]
     },
     "strings": {
         "name": {
-            "en-GB": "Dodgems Beat Style"
+            "en-GB": "Bumpercar style"
         }
     }
-}
+} 
