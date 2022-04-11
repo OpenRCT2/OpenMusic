@@ -12,7 +12,7 @@ For unfinished works:
 -----------------------
 For finished works:
 
-- A WAV or FLAC file of the finished product. This can be included in the official soundtrack released beside the game.
+- A FLAC file of the finished product. This can be included in the official soundtrack released beside the game. Put thisone in \replacements\soundtrack\
 
 A object.json file following the format of object.json found on the main page of \replacements\
 Replace the following: 
