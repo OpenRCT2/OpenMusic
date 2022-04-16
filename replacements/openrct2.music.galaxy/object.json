@@ -9,7 +9,7 @@
     "properties": {
         "tracks": [
             {
-                "source": "galaxy.WAV",
+                "source": "music/0.wav",
                 "name": "Jalmaan - Pandora"
             }
         ]
