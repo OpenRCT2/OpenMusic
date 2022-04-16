@@ -9,7 +9,7 @@
     "properties": {
         "tracks": [
             {
-                "source": "bumpercar.WAV",
+                "source": "music/0.wav",
                 "name": "Bumpercar beat"
             }
         ]
