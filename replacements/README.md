@@ -8,7 +8,7 @@ In this Document we have listed the (potential) names of styles to replace the o
 The reason we have different names than the base game RollerCoaster Tycoon 2 is so you can use both OpenRCT2's official soundtrack aswell as RCT2's official soundtrack without it getting confusing. If the game is standalone and RCT2 is not loaded in the game it will fall back onto the following styles:
 
 | RollerCoaster Tycoon 2      | OpenRCT2/OpenMusic               | Status | Signature | Merged? |
-| ----                        | --------------                   | ------ | --------- | - |
+| ----------------------      | ------------------               | ------ | --------- | ------- |
 | Gentle style                | Soft style                       |
 | Summer style                | Spring style                     |
 | Water style                 | Fountain style                   |
@@ -26,7 +26,7 @@ The reason we have different names than the base game RollerCoaster Tycoon 2 is 
 | Roman fanfare style         | Empire style                     |
 | Oriental style              | Eastern style                    |
 | Martian style               | Alien style                      |
-| Space style                 | Galaxy style                     | Finished | [karst](https://github.com/karst) | 
+| Space style                 | Galaxy style                     | Finished | [karst](https://github.com/karst) | Yes
 | Jungle drums style          | Swamp style                      |
 | Jurassic style              | Pre-history style                |
 | Egyptian style              | Arabian style                    |
