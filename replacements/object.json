@@ -9,7 +9,7 @@
     "properties": {
         "tracks": [
             {
-                "source": "<style>.WAV",
+                "source": "music/0.wav",
                 "name": "<Artist Name - Song Name>"
             }
         ]

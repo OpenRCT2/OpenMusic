@@ -28,3 +28,6 @@ Ice style                   | Frost style
 Medieval style              | Miners style
 Urban style                 | Breakdance style
 Organ style                 | Church style
+
+
+Name changes are still possible.

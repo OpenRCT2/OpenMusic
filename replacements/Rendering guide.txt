@@ -2,7 +2,9 @@ Please include the following files:
 
 Please make sure you have all the rights to your samples! All original works included should be licensed under the Creative Commons licensing. (Probably under CC BY-SA)
 
-Please put each style in their own folder
+Please put each style in their own folder.
+Folder naming format: openrct2.music.<style>
+
 -----------------------
 For unfinished works:
 - Stems in WAV format of each instrument.
@@ -12,13 +14,16 @@ For unfinished works:
 -----------------------
 For finished works:
 
-- A FLAC file of the finished product. This can be included in the official soundtrack released beside the game. Put this in \replacements\soundtrack\
+- A FLAC file of the finished product. Call this 0.flac and put it in a folder named 'music' in the "openrct2.music.<style>" folder.
 
-A object.json file following the format of object.json found on the main page of \replacements\
+A object.json file following the format of object.json found on the root of \replacements\
+
 Replace the following: 
 <style> with the name of the style.
 <Full Name> with your full name, add multiple if more people.
 <Artist Name - Song Name> with the artist name and songname seperated by a dash. 
 
-(This following is necessary until OGG or MP3 support is added to reduce filesize in the game)
-- A WAV file rendered in the following format (this can be done in Audacity): Project rate: 22050Hz, Save as WAV, Encoding: Unsigned 8-bit PCM.
+-----------------------
+For testing, please follow this guide: https://youtu.be/AavaaLHgdYk
+
+Until OGG or other format support is added to the game you can render the file as a WAV file in the following format (this can be done in Audacity): Project rate: 22050Hz, Save as WAV, Encoding: Unsigned 8-bit PCM.
