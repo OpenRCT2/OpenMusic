@@ -26,7 +26,7 @@ The reason we have different names than the base game RollerCoaster Tycoon 2 is 
 | Roman fanfare style         | Empire style                     |
 | Oriental style              | Eastern style                    |
 | Martian style               | Alien style                      |
-| Space style                 | Galaxy style                     | Finished | [karst](https://github.com/karst) | 
+| Space style                 | Galaxy style                     | Finished | [karst](https://github.com/karst) | Yes
 | Jungle drums style          | Swamp style                      |
 | Jurassic style              | Pre-history style                |
 | Egyptian style              | Arabian style                    |
