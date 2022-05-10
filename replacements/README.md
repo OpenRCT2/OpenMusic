@@ -2,6 +2,9 @@
 
 This page is the main hub for the soundtrack of OpenRCT2.
 
+Why different names, you might ask?  
+This is so people can use the original RCT soundtrack together with the OpenRCT2 soundtrack without interfering with one another. Is RCT2 not loaded in? It then loaded parks will fall back onto its OpenRCT2 equivalent.
+
 ## Status
 
 In this Document we have listed the (potential) names of styles to replace the original set with.  
