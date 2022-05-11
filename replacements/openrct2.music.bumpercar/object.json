@@ -1,0 +1,23 @@
+{
+    "id": "openrct2.music.dodgems",
+    "authors": [
+        "Karst van Galen Last"
+    ],
+    "version": "1.0",
+    "sourceGame": "official",
+    "objectType": "music",
+    "properties": {
+        "niceFactor": -1,
+        "tracks": [
+            {
+                "source": "music/0.wav",
+                "name": "Dodgems beat"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Dodgems beat style"
+        }
+    }
+} 
