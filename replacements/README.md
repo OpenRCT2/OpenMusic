@@ -67,7 +67,7 @@ Folder naming format: `openrct2.music.<style>`
 For unfinished works:
 - Stems in WAV format of each instrument.  
 - A `unfinished.txt` document with the following info: Full name of the creator(s), Song name (ID if unknown), Artist name (if any)
-- (Optional) A project file.
+- (Optional) A project file. (Please provide what DAW and what VST plugins were used to create this project file in `unfinished.txt`)
 
 
 -----------------------
