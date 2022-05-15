@@ -14,5 +14,6 @@ rendered/
 build/
 cmake-build*/
 out/
+temp/
 buildlog.txt
 build.ninja
