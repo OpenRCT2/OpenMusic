@@ -10,7 +10,7 @@
         "niceFactor": -1,
         "tracks": [
             {
-                "source": "music/0.wav",
+                "source": "music/0.flac",
                 "name": "Dodgems beat"
             }
         ]
@@ -20,4 +20,4 @@
             "en-GB": "Dodgems beat style"
         }
     }
-} 
+}
