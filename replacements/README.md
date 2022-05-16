@@ -44,7 +44,7 @@ Since the merry-go-round music is a playlist of fairground organ this might requ
 |                           | Summer style                | Spring style                     | Alternative |
 |                           | Snow style                  | Winter style                     | Alternative |
 | openrct2.music.galaxy     | Space style                 | Galaxy style                     | Alternative | Finished | [karst](https://github.com/karst) | ✔
-|                           | Techno style                | Acid style                       | Alternative |
+| openrct2.music.acid       | Techno style                | Acid style                       | Alternative | Finished | [karst](https://github.com/karst) | ✔
 |                           | Toyland style               | Joy style                        | Alternative |
 |                           | Urban style                 | Breakdance style                 | Alternative |
 |                           | Water style                 | Fountain style                   | Alternative |
