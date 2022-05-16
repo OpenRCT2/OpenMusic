@@ -64,9 +64,14 @@ Folder naming format: `openrct2.music.<style>`
 
 -----------------------
 For unfinished works:
-- Stems in WAV format of each instrument.  
-- A `unfinished.txt` document with the following info: Full name of the creator(s), Song name (ID if unknown), Artist name (if any)
-- (Optional) A project file. (Please provide what DAW and what VST plugins were used to create this project file in `unfinished.txt`)
+- A folder called `WIP`
+- Stems in WAV format of each instrument. Put these in the `WIP` folder.
+- An `object.json` file following the format of `object.json` found on the root of `\replacements\`  
+Replace the following:  
+`<style>` with the name of the style.  
+`<Full Name>` with your full name, add multiple if more people.  
+`<Artist Name - Song Name>` with the artist name and songname seperated by a dash. Name the song name ID if it doesn't have a name yet.  
+- (Optional) A project file. (Please provide what DAW and what VST plugins were used to create this project file in a text document named `unfinished.txt`)
 
 
 -----------------------
@@ -74,8 +79,7 @@ For finished works:
 
 - A FLAC file of the finished product. Call this 0.flac and put it in a folder named `music` in the `openrct2.music.<style>` folder.
 
-A object.json file following the format of `object.json` found on the root of `\replacements\`
-
+An `object.json` file following the format of `object.json` found on the root of `\replacements\`  
 Replace the following:  
 `<style>` with the name of the style.  
 `<Full Name>` with your full name, add multiple if more people.  

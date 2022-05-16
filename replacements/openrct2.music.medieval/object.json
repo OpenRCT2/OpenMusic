@@ -1,0 +1,22 @@
+{
+    "id": "openrct2.music.medieval",
+    "sourceGame":"official",
+    "authors": [
+        "<Full Name>"
+    ],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.wav",
+                "name": "<Artist Name - Song Name>"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "<Style> style"
+        }
+    }
+}

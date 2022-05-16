@@ -1,0 +1,26 @@
+{
+    "id": "openrct2.music.fairground",
+    "sourceGame":"official",
+    "authors": [
+        " "
+    ],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.wav",
+                "name": "Julius Fucíc - Die Regimentskinder"
+            },
+			{
+                "source": "music/1.wav",
+                "name": "Jonny Heykens - Serenade, op. 21"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Fairground style"
+        }
+    }
+}
