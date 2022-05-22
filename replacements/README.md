@@ -85,7 +85,7 @@ Until OGG or other format support is added to the game you can render the file a
 
 
 -----------------------
-Code for `object.json`:
+Code template for `object.json`:
 
 ```
 {
