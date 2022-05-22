@@ -56,7 +56,12 @@ async function createMusicObject(dir) {
     await mkdir('temp');
     const workDir = 'temp';
 
-    const root = await readJsonFile(path.join(dir, 'object.json'));
+    let root;
+    try {
+        root = await readJsonFile(path.join(dir, 'object.json'));
+    } catch {
+        return;
+    }
 
     console.log(`Creating ${root.id}`);
 
