@@ -60,13 +60,13 @@ Please include the following files:
 Please make sure you have all the rights to your samples! All original works included should be licensed under the Creative Commons licensing. (Probably under CC BY-SA)
 
 Please put each style in their own folder.  
-Folder naming format: `openrct2.music.<style>`
-
+Folder naming format: `openrct2.music.<style>`  
+Please update `README.md`'s Progress table with your PR!
 -----------------------
 For unfinished works:
 - A folder called `WIP`
 - Stems in WAV format of each instrument. Put these in the `WIP` folder.
-- A file called `unfinished.txt` which contains the following information: Full Name, Artist Name, Song name (ID if it has no name yet.), 
+- A file called `unfinished.txt` which contains the following information: Full Name, Artist Name, Song name (ID if it has no name yet.), Style name.
 - (Optional) A project file. (Please provide what DAW and what VST plugins were used to create this project file in `unfinished.txt`)
 
 
@@ -74,7 +74,6 @@ For unfinished works:
 For finished works:
 
 - A FLAC file of the finished product. Call this 0.flac and put it in a folder named `music` in the `openrct2.music.<style>` folder.
-
 - An `object.json` file following the format found in README.md on the root of `/replacements/`  
 
 -----------------------
