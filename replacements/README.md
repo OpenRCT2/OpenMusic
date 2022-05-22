@@ -69,7 +69,6 @@ For unfinished works:
 - A file called `unfinished.txt` which contains the following information: Full Name, Artist Name, Song name (ID if it has no name yet.), Style name.
 - (Optional) A project file. (Please provide what DAW and what VST plugins were used to create this project file in `unfinished.txt`)
 
-
 -----------------------
 For finished works:
 
@@ -81,7 +80,6 @@ For testing, please follow this guide:
 https://youtu.be/AavaaLHgdYk
 
 Until OGG or other format support is added to the game you can render the file as a WAV file in the following format (this can be done in Audacity): `Project rate: 22050Hz`, Save as `WAV`, `Encoding: Unsigned 8-bit PCM`.
-
 
 -----------------------
 Code template for `object.json`:
