@@ -66,12 +66,8 @@ Folder naming format: `openrct2.music.<style>`
 For unfinished works:
 - A folder called `WIP`
 - Stems in WAV format of each instrument. Put these in the `WIP` folder.
-- An `object.json` file following the format of `object.json` found on the root of `\replacements\`  
-Replace the following:  
-`<style>` with the name of the style.  
-`<Full Name>` with your full name, add multiple if more people.  
-`<Artist Name - Song Name>` with the artist name and songname seperated by a dash. Name the song name ID if it doesn't have a name yet.  
-- (Optional) A project file. (Please provide what DAW and what VST plugins were used to create this project file in a text document named `unfinished.txt`)
+- A file called `unfinished.txt` which contains the following information: Full Name, Artist Name, Song name (ID if it has no name yet.), 
+- (Optional) A project file. (Please provide what DAW and what VST plugins were used to create this project file in `unfinished.txt`)
 
 
 -----------------------
@@ -79,14 +75,44 @@ For finished works:
 
 - A FLAC file of the finished product. Call this 0.flac and put it in a folder named `music` in the `openrct2.music.<style>` folder.
 
-An `object.json` file following the format of `object.json` found on the root of `\replacements\`  
-Replace the following:  
-`<style>` with the name of the style.  
-`<Full Name>` with your full name, add multiple if more people.  
-`<Artist Name - Song Name>` with the artist name and songname seperated by a dash.  
+- An `object.json` file following the format found in README.md on the root of `/replacements/`  
 
 -----------------------
 For testing, please follow this guide:  
 https://youtu.be/AavaaLHgdYk
 
 Until OGG or other format support is added to the game you can render the file as a WAV file in the following format (this can be done in Audacity): `Project rate: 22050Hz`, Save as `WAV`, `Encoding: Unsigned 8-bit PCM`.
+
+
+-----------------------
+Code for `object.json`:
+
+```
+{
+    "id": "openrct2.music.<style>",
+    "sourceGame":"official",
+    "authors": [
+        "<Full Name>"
+    ],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "<Artist Name - Song Name>"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "<Style> style"
+        }
+    }
+}
+```
+
+Replace the following:  
+`<style>` with the name of the style.  
+`<Full Name>` with your full name, add multiple if more people.  
+`<Artist Name - Song Name>` with the artist name and songname seperated by a dash.  
