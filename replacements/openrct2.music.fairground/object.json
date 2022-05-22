@@ -9,11 +9,11 @@
     "properties": {
         "tracks": [
             {
-                "source": "music/0.wav",
+                "source": "music/0.flac",
                 "name": "Julius Fucíc - Die Regimentskinder"
             },
 			{
-                "source": "music/1.wav",
+                "source": "music/1.flac",
                 "name": "Jonny Heykens - Serenade, op. 21"
             }
         ]
