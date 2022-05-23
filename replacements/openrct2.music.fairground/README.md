@@ -12,8 +12,8 @@ Main discussion page: [Click](https://github.com/OpenRCT2/OpenMusic/issues/16)
 
 Listed by name, artist, if it's in RCT2 or if it's new, and then the status.
 
-| Song | Artist | Type | Status | Assigned |
-| ---- | ------ | ---- | ------ | -------- |
+| Song | Artist | Source | Status | Assigned |
+| ---- | ------ | ------ | ------ | -------- |
 | Die Regimentskinder | Julius Fucíc | RCT2
 | Serenade, op. 21 | Jonny Heykens | RCT2
 | La Belle Espagnole | Robert Vollstedt | RCT2 | | 
