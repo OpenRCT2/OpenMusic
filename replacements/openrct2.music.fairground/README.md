@@ -6,7 +6,7 @@ The songs need to fit the theme of the original.
 The plan is to collect all midi files of the songs, and then record this from an actual fairground organ.  
 This ofcourse all depends on the cost of hiring such equipment if we end up with recording this using midi or if we record an actual fairground organ. Research still has to be done.
 
-Main discussion page: `<To Be Created>`
+Main discussion page: [Click](https://github.com/OpenRCT2/OpenMusic/issues/16)
 
 ## Progress
 
