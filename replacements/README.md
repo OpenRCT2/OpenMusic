@@ -62,6 +62,7 @@ Please make sure you have all the rights to your samples! All original works inc
 Please put each style in their own folder.  
 Folder naming format: `openrct2.music.<style>`  
 Please update `README.md`'s Progress table with your PR!
+
 -----------------------
 For unfinished works:
 - A folder called `WIP`
@@ -79,7 +80,7 @@ For finished works:
 For testing, please follow this guide:  
 https://youtu.be/AavaaLHgdYk
 
-Until OGG or other format support is added to the game you can render the file as a WAV file in the following format (this can be done in Audacity): `Project rate: 22050Hz`, Save as `WAV`, `Encoding: Unsigned 8-bit PCM`.
+The guide is slightly out of date since you can now use OGG Vorbis. For testing you can render in this format to keep the file size low.
 
 -----------------------
 Code template for `object.json`:
