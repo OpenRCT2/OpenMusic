@@ -14,7 +14,41 @@ async function main() {
     for (const dir of objectDirectories) {
         await createMusicObject(path.join('replacements', dir));
     }
+    createAssetPack('openrct2.music.alternative.json');
     await rm('temp');
+}
+
+async function createAssetPack(filename) {
+    await rm('temp');
+    await mkdir('temp');
+    const workDir = 'temp';
+    const dir = './';
+
+    const root = await readJsonFile(filename);
+
+    console.log(`Creating ${root.id}`);
+    let sampleIndex = 0;
+    for (let obj of root.objects) {
+        for (let i = 0; i < obj.samples.length; i++) {
+            const sample = obj.samples[i];
+            const newFilename = `${sampleIndex}.ogg`;
+            const srcPath = path.join(dir, sample);
+            const dstPath = path.join(workDir, newFilename);
+            await encodeMusicTrack(dstPath, srcPath);
+            obj.samples[i] = newFilename;
+            sampleIndex++;
+        }
+    }
+
+    const outJsonPath = path.join(workDir, 'manifest.json');
+    await writeJsonFile(outJsonPath, root);
+
+    const parkapPath = path.join('../out', root.id + '.parkap');
+    const contents = await getContents(workDir, {
+        includeDirectories: true,
+        includeFiles: true
+    });
+    await zip(workDir, parkapPath, contents);
 }
 
 async function createMusicObject(dir) {
@@ -22,7 +56,12 @@ async function createMusicObject(dir) {
     await mkdir('temp');
     const workDir = 'temp';
 
-    const root = await readJsonFile(path.join(dir, 'object.json'));
+    let root;
+    try {
+        root = await readJsonFile(path.join(dir, 'object.json'));
+    } catch {
+        return;
+    }
 
     console.log(`Creating ${root.id}`);
 
@@ -31,17 +70,7 @@ async function createMusicObject(dir) {
         const newPath = changeExtension(track.source, '.ogg');
         const srcPath = path.join(dir, track.source);
         const dstPath = path.join(workDir, newPath);
-        ensureDirectoryExists(dstPath);
-        await startProcess(
-            'ffmpeg', [
-            '-i', srcPath,
-            '-acodec', 'libvorbis',
-            '-ar', '22050',
-            '-ac', '1',
-            '-map_metadata', '-1',
-            '-y',
-            dstPath
-        ]);
+        await encodeMusicTrack(dstPath, srcPath);
         track.source = newPath;
     }
 
@@ -54,6 +83,20 @@ async function createMusicObject(dir) {
         includeFiles: true
     });
     await zip(workDir, parkobjPath, contents);
+}
+
+async function encodeMusicTrack(dstPath, srcPath) {
+    await ensureDirectoryExists(dstPath);
+    await startProcess(
+        'ffmpeg', [
+        '-i', srcPath,
+        '-acodec', 'libvorbis',
+        '-ar', '22050',
+        '-ac', '1',
+        '-map_metadata', '-1',
+        '-y',
+        dstPath
+    ]);
 }
 
 function changeExtension(path, newExtension) {

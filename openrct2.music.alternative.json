@@ -1,0 +1,32 @@
+{
+    "id": "openrct2.music.alternative",
+    "version": "1.0",
+    "objects": [
+        {
+            "id": "rct2.music.dodgems.json",
+            "samples": [
+                "replacements/openrct2.music.bumpercar/music/0.flac"
+            ]
+        },
+        {
+            "id": "rct2.music.space.json",
+            "samples": [
+                "replacements/openrct2.music.galaxy/music/0.flac"
+            ]
+        },
+        {
+            "id": "rct2.music.techno.json",
+            "samples": [
+                "replacements/openrct2.music.acid/music/0.flac"
+            ]
+        }
+    ],
+    "strings": {
+        "name": {
+            "en-GB": "OpenRCT2 Music (Alternative)"
+        },
+        "description": {
+            "en-GB": "Open source alternative ride music tracks for OpenRCT2."
+        }
+    }
+}
