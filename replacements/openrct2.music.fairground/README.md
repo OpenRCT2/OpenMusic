@@ -1,6 +1,6 @@
 # OpenRCT2/OpenMusic/replacements/openrct2.music.fairground
 
-The following project is to replace the RCT2 fairground organ with both remastered aswell as new songs to the merry-go-round.  
+The following project is to replace the RCT2 fairground organ with both remastered as well as new songs to the merry-go-round.  
 The songs need to fit the theme of the original.  
 
 The plan is to collect all midi files of the songs, and then record this from an actual fairground organ.  
