@@ -1,16 +1,15 @@
 {
     "id": "openrct2.music.acid",
     "sourceGame": "official",
-    "authors": [
-        "Karst van Galen Last"
-    ],
+    "authors": ["Karst van Galen Last"],
     "version": "1.0",
     "objectType": "music",
     "properties": {
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Jalmaan - Airtime Junkies"
+                "name": "Airtime Junkies",
+                "composer": "Jalmaan"
             }
         ]
     },
