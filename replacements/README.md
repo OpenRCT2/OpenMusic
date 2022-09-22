@@ -10,7 +10,7 @@ This is so people can use the original RCT soundtrack together with the OpenRCT2
  
  * `rct2.music` - All the music from RCT2.
  * `openrct2.music.cover` - Cover of non-copyright music, e.g. merry-go-round, pirate theme, ragtime, organ etc.
- * `openrct2.music.alternative` - Replaces copyright music with an OpenRCT2 official music object equivalent, e.g. space -> galaxy.
+ * `openrct2.music.alternative` - Replaces copyright music with an OpenRCT2 official music object equivalent, e.g. space -> galaxy. These will also be available as their own when RollerCoaster Tycoon 2 is loaded into the game.
 
 Since the merry-go-round music is a playlist of fairground organ this might require some extra coordination in it's own folder. Please check `/replacements/openrct2.music.fairground/`'s README.md for the plan.
 
@@ -57,24 +57,26 @@ Names are not final, changes are likely!
 
 Please include the following files:
 
-Please make sure you have all the rights to your samples! All original works included should be licensed under the Creative Commons licensing. (Probably under CC BY-SA)
+All original works included in the OpenRCT2 project are licensed under the following Creative Commons licensing: [CC BY-SA](https://creativecommons.org/licenses/by-sa/3.0/).  
+Please make sure you have all the rights to your samples!
 
-Please put each style in their own folder.  
+Put each style in their own folder.  
 Folder naming format: `openrct2.music.<style>`  
-Please update `README.md`'s Progress table with your PR!
+Make sure to update the `README.md`'s Progress table with your PR!
 
 -----------------------
 For unfinished works:
 - A folder called `WIP`
-- Stems in WAV format of each instrument. Put these in the `WIP` folder.
+- Stems in WAV format of each instrument. Put these in the `WIP` folder. This way people can work on it 
 - A file called `unfinished.txt` which contains the following information: Full Name, Artist Name, Song name (ID if it has no name yet.), Style name.
 - (Optional) A project file. (Please provide what DAW and what VST plugins were used to create this project file in `unfinished.txt`)
 
 -----------------------
 For finished works:
 
-- A FLAC file of the finished product. Call this 0.flac and put it in a folder named `music` in the `openrct2.music.<style>` folder.
+- A FLAC file of the finished product. Call this `0.flac` and put it in a folder named `music` in the `openrct2.music.<style>` folder.
 - An `object.json` file following the format found in README.md on the root of `/replacements/`  
+- Make sure that the song loops perfectly so there's no noticable popping or gaps.
 
 -----------------------
 For testing, please follow this guide:  
@@ -114,3 +116,6 @@ Replace the following:
 `<style>` with the name of the style.  
 `<Full Name>` with your full name, add multiple if more people.  
 `<Artist Name - Song Name>` with the artist name and songname seperated by a dash.  
+
+
+###### OpenMusic is a project of OpenRCT2 ©2014-2022
