@@ -1,17 +1,16 @@
 {
     "id": "openrct2.music.dodgems",
-    "authors": [
-        "Karst van Galen Last"
-    ],
-    "version": "1.0",
     "sourceGame": "official",
+    "authors": ["Karst van Galen Last"],
+    "version": "1.0",
     "objectType": "music",
     "properties": {
         "niceFactor": -1,
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Dodgems beat"
+                "name": "Bumblebeat",
+				"composer": "Jalmaan"
             }
         ]
     },
