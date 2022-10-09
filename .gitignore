@@ -11,6 +11,7 @@
 *.sf2.*
 .idea/
 rendered/
+artifacts/
 build/
 cmake-build*/
 out/

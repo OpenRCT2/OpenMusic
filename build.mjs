@@ -14,8 +14,19 @@ async function main() {
     for (const dir of objectDirectories) {
         await createMusicObject(path.join('replacements', dir));
     }
-    createAssetPack('openrct2.music.alternative.json');
+    await createAssetPack('openrct2.music.alternative.json');
+    await createPackage();
     await rm('temp');
+}
+
+async function createPackage() {
+    const packageFileName = "artifacts/openmusic.zip";
+    console.log(`Creating package: ${packageFileName}`);
+    const contents = await getContents("out", {
+        includeDirectories: true,
+        includeFiles: true
+    });
+    await zip("out", path.join('..', packageFileName), contents);
 }
 
 async function createAssetPack(filename) {
@@ -43,7 +54,7 @@ async function createAssetPack(filename) {
     const outJsonPath = path.join(workDir, 'manifest.json');
     await writeJsonFile(outJsonPath, root);
 
-    const parkapPath = path.join('../out', root.id + '.parkap');
+    const parkapPath = path.join('../out/assetpack', root.id + '.parkap');
     const contents = await getContents(workDir, {
         includeDirectories: true,
         includeFiles: true
@@ -77,7 +88,7 @@ async function createMusicObject(dir) {
     const outJsonPath = path.join(workDir, 'object.json');
     await writeJsonFile(outJsonPath, root);
 
-    const parkobjPath = path.join('../out', root.id + '.parkobj');
+    const parkobjPath = path.join('../out/object/official/music', root.id + '.parkobj');
     const contents = await getContents(workDir, {
         includeDirectories: true,
         includeFiles: true
@@ -133,7 +144,8 @@ function writeJsonFile(path, data) {
 }
 
 async function zip(cwd, outputFile, paths) {
-    await rm(outputFile);
+    await ensureDirectoryExists(path.join(cwd, outputFile));
+    await rm(path.join(cwd, outputFile));
     if (platform() == 'win32') {
         await startProcess('7z', ['a', '-r', '-tzip', outputFile, ...paths], cwd);
     } else {
@@ -182,7 +194,10 @@ function mkdir(path) {
     return new Promise((resolve, reject) => {
         fs.access(path, error => {
             if (error) {
-                fs.mkdir(path, err => {
+                if (verbose) {
+                    console.log(`Creating directory ${path}`);
+                }
+                fs.mkdir(path, { recursive: true }, err => {
                     if (err) {
                         reject(err);
                     } else {
