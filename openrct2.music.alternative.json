@@ -3,19 +3,19 @@
     "version": "1.0",
     "objects": [
         {
-            "id": "rct2.music.dodgems.json",
+            "id": "rct2.music.dodgems",
             "samples": [
                 "replacements/openrct2.music.dodgems/music/0.flac"
             ]
         },
         {
-            "id": "rct2.music.space.json",
+            "id": "rct2.music.space",
             "samples": [
                 "replacements/openrct2.music.galaxy/music/0.flac"
             ]
         },
         {
-            "id": "rct2.music.techno.json",
+            "id": "rct2.music.techno",
             "samples": [
                 "replacements/openrct2.music.acid/music/0.flac"
             ]
