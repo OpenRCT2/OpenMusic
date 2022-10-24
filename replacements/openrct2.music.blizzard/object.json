@@ -1,0 +1,21 @@
+{
+    "id": "openrct2.music.blizzard",
+    "sourceGame": "official",
+    "authors": ["Karst van Galen Last", "Jan Büchner"],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "Snowbound (OpenRCT2 Edit)",
+                "composer": "Silver Aura, Jalmaan, Greyfade"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Blizzard style",
+        }
+    }
+}
