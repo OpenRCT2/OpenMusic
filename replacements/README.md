@@ -29,7 +29,7 @@ Since the merry-go-round music is a playlist of fairground organ this might requ
 |                                 | Fantasy style               | Magic style                      | Alternative |
 |                                 | Gentle style                | Soft style                       | Alternative |
 |                                 | Horror style                | Thriller style                   | Alternative |
-|                                 | Ice style                   | Frost style                      | Alternative |
+| openrct2.music.blizzard         | Ice style                   | Blizzard style                   | Alternative | Finished | [karst](https://github.com/karst) | ✔
 |                                 | Jungle drums style          | Swamp style                      | Alternative |
 |                                 | Jurassic style              | Pre-history style                | Alternative |
 | openrct2.music.extraterrestrial | Martian style               | Extraterrestrial style           | Alternative | Finished | [karst](https://github.com/karst) | ✔
@@ -49,7 +49,6 @@ Since the merry-go-round music is a playlist of fairground organ this might requ
 |                                 | Urban style                 | Breakdance style                 | Alternative |
 |                                 | Water style                 | Fountain style                   | Alternative |
 |                                 | Wild west style             | Cowboy style                     | Alternative |
-
 
 Names are not final, changes are likely!
 
