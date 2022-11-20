@@ -9,6 +9,12 @@
             ]
         },
         {
+            "id": "rct2.music.martian",
+            "samples": [
+                "replacements/openrct2.music.extraterrestrial/music/0.flac"
+            ]
+        },
+        {
             "id": "rct2.music.space",
             "samples": [
                 "replacements/openrct2.music.galaxy/music/0.flac"
