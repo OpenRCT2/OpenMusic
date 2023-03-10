@@ -10,7 +10,8 @@
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Flyxxpy - The Ancient Lands"
+                "name": "The Ancient Lands",
+                "composer": "Flyxxpy"
             }
         ]
     },
