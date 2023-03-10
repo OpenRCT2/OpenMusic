@@ -16,39 +16,39 @@ Since the merry-go-round music is a playlist of fairground organ this might requ
 
 ## Progress
 
-| Object                    | RollerCoaster Tycoon 2      | OpenRCT2/OpenMusic               | Type        | Status   | Signature | Merged? |
-| ------                    | ----------------------      | ------------------               | ----        | ------   | --------- | ------- |
-| openrct2.music.title      | Title screen                | OpenRCT2 style                   | Alternative | WIP      | [mattheasboelter](https://github.com/mattheasboelter) |
-| openrct2.music.bumpercar  | Dodgems beat style          | Dodgems beat style               | Cover       | Finished | [karst](https://github.com/karst) | ✔
-| openrct2.music.fairground | Fairground organ style      | Fairground organ style           | Cover       | [See here](https://github.com/OpenRCT2/OpenMusic/tree/master/replacements/openrct2.music.fairground) | Multiple  | 
-|                           | Organ style                 | Organ style                      | Cover       |
-|                           | Pirates style               | Pirates style                    | Cover       |
-| openrct2.music.ragtime    | Ragtime style               | Ragtime style                    | Cover       |
-|                           | Candy style                 | Sweets style                     | Alternative |
-|                           | Egyptian style              | Arabian style                    | Alternative |
-|                           | Fantasy style               | Magic style                      | Alternative |
-|                           | Gentle style                | Soft style                       | Alternative |
-|                           | Horror style                | Thriller style                   | Alternative |
-| openrct2.music.blizzard   | Ice style                   | Blizzard style                   | Alternative | Finished | [karst](https://github.com/karst) | ✔
-|                           | Jungle drums style          | Swamp style                      | Alternative |
-|                           | Jurassic style              | Pre-history style                | Alternative |
-|                           | Martian style               | Alien style                      | Alternative |
-|                           | Mechanical style            | Club style                       | Alternative |
-| openrct2.music.medieval   | Medieval style              | Miners style                     | Alternative |
-|                           | Modern style                | House style                      | Alternative |
-|                           | Oriental style              | Eastern style                    | Alternative |
-|                           | Rock style 1                | Rock style 4                     | Alternative |
-|                           | Rock style 2                | Metal style 1                    | Alternative |
-|                           | Rock style 3                | Metal style 2                    | Alternative |
-|                           | Roman fanfare style         | Empire style                     | Alternative |
-|                           | Summer style                | Spring style                     | Alternative |
-|                           | Snow style                  | Winter style                     | Alternative |
-| openrct2.music.galaxy     | Space style                 | Galaxy style                     | Alternative | Finished | [karst](https://github.com/karst) | ✔
-| openrct2.music.acid       | Techno style                | Acid style                       | Alternative | Finished | [karst](https://github.com/karst) | ✔
-|                           | Toyland style               | Joy style                        | Alternative |
-|                           | Urban style                 | Breakdance style                 | Alternative |
-|                           | Water style                 | Fountain style                   | Alternative |
-|                           | Wild west style             | Cowboy style                     | Alternative |
+| Object                     | RollerCoaster Tycoon 2      | OpenRCT2/OpenMusic               | Type        | Status   | Signature | Merged? |
+| ------                     | ----------------------      | ------------------               | ----        | ------   | --------- | ------- |
+| openrct2.music.title       | Title screen                | OpenRCT2 style                   | Alternative | WIP      | [mattheasboelter](https://github.com/mattheasboelter) |
+| openrct2.music.bumpercar   | Dodgems beat style          | Dodgems beat style               | Cover       | Finished | [karst](https://github.com/karst) | ✔
+| openrct2.music.fairground  | Fairground organ style      | Fairground organ style           | Cover       | [See here](https://github.com/OpenRCT2/OpenMusic/tree/master/replacements/openrct2.music.fairground) | Multiple  | 
+|                            | Organ style                 | Organ style                      | Cover       |
+|                            | Pirates style               | Pirates style                    | Cover       |
+| openrct2.music.ragtime     | Ragtime style               | Ragtime style                    | Cover       |
+|                            | Candy style                 | Sweets style                     | Alternative |
+|                            | Egyptian style              | Arabian style                    | Alternative |
+|                            | Fantasy style               | Magic style                      | Alternative |
+|                            | Gentle style                | Soft style                       | Alternative |
+|                            | Horror style                | Thriller style                   | Alternative |
+| openrct2.music.blizzard    | Ice style                   | Blizzard style                   | Alternative | Finished | [karst](https://github.com/karst) | ✔
+|                            | Jungle drums style          | Swamp style                      | Alternative |
+| openrct2.music.prehistoric | Jurassic style              | Prehistoric style                | Alternative | Finished | [Flyxxpy](https://github.com/Flyxxpy) | ✔
+|                            | Martian style               | Alien style                      | Alternative |
+|                            | Mechanical style            | Club style                       | Alternative |
+| openrct2.music.medieval    | Medieval style              | Miners style                     | Alternative |
+|                            | Modern style                | House style                      | Alternative |
+|                            | Oriental style              | Eastern style                    | Alternative |
+|                            | Rock style 1                | Rock style 4                     | Alternative |
+|                            | Rock style 2                | Metal style 1                    | Alternative |
+|                            | Rock style 3                | Metal style 2                    | Alternative |
+|                            | Roman fanfare style         | Empire style                     | Alternative |
+|                            | Summer style                | Spring style                     | Alternative |
+|                            | Snow style                  | Winter style                     | Alternative |
+| openrct2.music.galaxy      | Space style                 | Galaxy style                     | Alternative | Finished | [karst](https://github.com/karst) | ✔
+| openrct2.music.acid        | Techno style                | Acid style                       | Alternative | Finished | [karst](https://github.com/karst) | ✔
+|                            | Toyland style               | Joy style                        | Alternative |
+|                            | Urban style                 | Breakdance style                 | Alternative |
+|                            | Water style                 | Fountain style                   | Alternative |
+|                            | Wild west style             | Cowboy style                     | Alternative |
 
 
 Names are not final, changes are likely!
