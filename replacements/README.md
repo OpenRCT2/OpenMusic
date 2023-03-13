@@ -99,7 +99,8 @@ Code template for `object.json`:
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "<Artist Name - Song Name>"
+                "name": "<Song Name>",
+                "composer": "<Artist name>"
             }
         ]
     },
