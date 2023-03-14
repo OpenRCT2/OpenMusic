@@ -1,0 +1,21 @@
+{
+    "id": "openrct2.music.extraterrestrial",
+    "sourceGame": "official",
+    "authors": ["Karst van Galen Last"],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "Style of the Extraterrestrial",
+                "composer": "Jalmaan"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Extraterrestrial style"
+        }
+    }
+}
