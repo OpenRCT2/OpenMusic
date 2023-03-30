@@ -31,6 +31,12 @@
             "samples": [
                 "replacements/openrct2.music.blizzard/music/0.flac"
             ]
+        },
+        {
+            "id": "rct2.music.jurassic",
+            "samples": [
+                "replacements/openrct2.music.prehistoric/music/0.flac"
+            ]
         }
     ],
     "strings": {

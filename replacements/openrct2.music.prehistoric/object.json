@@ -1,0 +1,23 @@
+{
+    "id": "openrct2.music.prehistoric",
+    "sourceGame":"official",
+    "authors": [
+        "Flyxxpy"
+    ],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "The Ancient Lands",
+                "composer": "Flyxxpy"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Prehistoric style"
+        }
+    }
+}
