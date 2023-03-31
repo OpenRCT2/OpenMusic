@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Download ffmpeg, zip
-      run: sudo apt-get install -y ffmpeg zip
+      run: sudo apt-get update && sudo apt-get install -y ffmpeg zip
     - name: Create music objects
       run: node build.mjs --verbose
     - name: Upload artifacts
