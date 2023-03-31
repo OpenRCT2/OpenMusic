@@ -8,7 +8,7 @@
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Unknown",
+                "name": "Unknown"
             },
 			{
 				"source": "music/1.flac",
