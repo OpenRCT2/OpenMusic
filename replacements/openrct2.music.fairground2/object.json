@@ -1,0 +1,43 @@
+{
+    "id": "openrct2.music.fairground2",
+    "sourceGame": "official",
+    "authors": ["Karst van Galen Last", "Herman Riddering"],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "Unknown",
+            },
+			{
+				"source": "music/1.flac",
+				"name": "Unknown"
+			}
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Fairground organ style 2",
+            "ca-ES": "Estil orgue de fira 2",
+            "cs-CZ": "Tržnice 2",
+            "da-DK": "Karnevalsmusik stil 2",
+            "de-DE": "Jahrmarktsorgelstil 2",
+            "fr-FR": "Orgue champ de foire 2",
+            "hu-HU": "Vásári orgona stílus 2",
+            "it-IT": "Stile organo da fiera 2",
+            "ja-JP": "フェアグラウンドオルガン・スタイル ２番",
+            "ko-KR": "축제 오르간 스타일 2",
+            "nl-NL": "Kermisorgelstijl 2",
+            "pl-PL": "Styl organów wesołego miasteczka 2",
+            "pt-BR": "Estilo Órgão de Parque de Diversões 2",
+            "ru-RU": "Ярмарочный стиль 2",
+            "sv-SE": "Tivolitema 2",
+            "tr-TR": "Atlıkarınca tarzı 2",
+            "zh-CN": "游乐场风琴风格2",
+            "zh-TW": "遊樂場風琴風格2",
+            "eo-ZZ": "Foirejo-orgeno-stilo 2",
+            "fi-FI": "Karusellimusiikin tyylinen 2"
+        }
+    }
+}
