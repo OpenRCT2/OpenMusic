@@ -48,7 +48,8 @@
 			},
 			{
 				"source": "music/10.flac",
-				"name": "Unknown"
+				"name": "Unter dem Doppeladler",
+				"composer": "Josef Franz Wagner"
 			},
 			{
 				"source": "music/11.flac",
@@ -76,7 +77,8 @@
 			},
 			{
 				"source": "music/17.flac",
-				"name": "Colonel Bogey March"
+				"name": "Colonel Bogey March",
+				"composer": "Traditional"
 			}
         ]
     },
