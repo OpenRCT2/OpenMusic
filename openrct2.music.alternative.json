@@ -37,6 +37,12 @@
             "samples": [
                 "replacements/openrct2.music.prehistoric/music/0.flac"
             ]
+        },
+        {
+            "id": "rct2.music.ragtime",
+            "samples": [
+                "replacements/openrct2.music.ragtime/music/0.flac"
+            ]
         }
     ],
     "strings": {
