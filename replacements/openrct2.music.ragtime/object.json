@@ -9,7 +9,7 @@
             {
                 "source": "music/0.flac",
                 "name": "Searchlight Rag",
-                "composer": "Scott Jopin"
+                "composer": "Scott Joplin"
             },
             {
                 "source": "music/1.flac",
@@ -19,12 +19,12 @@
             {
                 "source": "music/2.flac",
                 "name": "Maple Leaf Rag",
-                "composer": "Scott Jopin"
+                "composer": "Scott Joplin"
             },
             {
                 "source": "music/3.flac",
                 "name": "The Entertainer",
-                "composer": "Scott Jopin"
+                "composer": "Scott Joplin"
             }
         ]
     },
