@@ -23,7 +23,7 @@ Since the merry-go-round music is a playlist of fairground organ this might requ
 | openrct2.music.fairground       | Fairground organ style      | Fairground organ style           | Cover       | [See here](https://github.com/OpenRCT2/OpenMusic/tree/master/replacements/openrct2.music.fairground) | Multiple  | 
 |                                 | Organ style                 | Organ style                      | Cover       |
 |                                 | Pirates style               | Pirates style                    | Cover       |
-| openrct2.music.ragtime          | Ragtime style               | Ragtime style                    | Cover       |
+| openrct2.music.ragtime          | Ragtime style               | Ragtime style                    | Cover       | Finished | [karst](https://github.com/karst) | ✔
 |                                 | Candy style                 | Sweets style                     | Alternative |
 |                                 | Egyptian style              | Arabian style                    | Alternative |
 |                                 | Fantasy style               | Magic style                      | Alternative |
