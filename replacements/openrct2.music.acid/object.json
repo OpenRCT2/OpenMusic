@@ -15,7 +15,8 @@
     },
     "strings": {
         "name": {
-            "en-GB": "Acid style"
+            "en-GB": "Acid style",
+            "ko-KR": "애시드 스타일"
         }
     }
 }

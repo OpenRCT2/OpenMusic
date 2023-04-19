@@ -15,7 +15,8 @@
     },
     "strings": {
         "name": {
-            "en-GB": "Blizzard style"
+            "en-GB": "Blizzard style",
+            "ko-KR": "눈보라 스타일"
         }
     }
 }

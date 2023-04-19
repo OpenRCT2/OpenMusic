@@ -15,7 +15,8 @@
     },
     "strings": {
         "name": {
-            "en-GB": "Extraterrestrial style"
+            "en-GB": "Extraterrestrial style",
+            "ko-KR": "외계 행성 스타일"
         }
     }
 }

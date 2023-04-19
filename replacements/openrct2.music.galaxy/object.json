@@ -15,7 +15,8 @@
     },
     "strings": {
         "name": {
-            "en-GB": "Galaxy style"
+            "en-GB": "Galaxy style",
+            "ko-KR": "은하 스타일"
         }
     }
 }
