@@ -16,7 +16,8 @@
     },
     "strings": {
         "name": {
-            "en-GB": "Dodgems beat style 2"
+            "en-GB": "Dodgems beat style 2",
+            "ko-KR": "범퍼카 비트 스타일 2"
         }
     }
 }

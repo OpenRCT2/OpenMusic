@@ -17,7 +17,8 @@
     },
     "strings": {
         "name": {
-            "en-GB": "Prehistoric style"
+            "en-GB": "Prehistoric style",
+            "ko-KR": "선사시대 스타일"
         }
     }
 }
