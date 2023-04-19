@@ -1,0 +1,56 @@
+{
+    "id": "openrct2.music.ragtime",
+    "sourceGame": "official",
+    "authors": ["Karst van Galen Last"],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "Searchlight Rag",
+                "composer": "Scott Joplin"
+            },
+            {
+                "source": "music/1.flac",
+                "name": "Entry of the Gladiators",
+                "composer": "Julius Fučík"
+            },
+            {
+                "source": "music/2.flac",
+                "name": "Maple Leaf Rag",
+                "composer": "Scott Joplin"
+            },
+            {
+                "source": "music/3.flac",
+                "name": "The Entertainer",
+                "composer": "Scott Joplin"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Ragtime style",
+            "ca-ES": "Estil ragtime",
+            "cs-CZ": "Ragtime",
+            "da-DK": "Ragtime stil",
+            "de-DE": "Ragtime-Stil",
+            "es-ES": "Estilo ragtime",
+            "fr-FR": "Ragtime",
+            "hu-HU": "Ragtime stílus",
+            "it-IT": "Stile ragtime",
+            "ja-JP": "ラグタイム・スタイル",
+            "ko-KR": "래그타임 스타일",
+            "nl-NL": "Ragtimestijl",
+            "pl-PL": "Styl ragtime",
+            "pt-BR": "Estilo Ragtime",
+            "ru-RU": "Стиль Регги",
+            "sv-SE": "Glade Chapplies piano",
+            "tr-TR": "Ragtime tarzı",
+            "zh-CN": "拉格泰姆风格",
+            "zh-TW": "雷格泰姆音樂風格",
+            "eo-ZZ": "Ragtimo-stilo",
+            "fi-FI": "Ragtime-tyylinen"
+        }
+    }
+}
