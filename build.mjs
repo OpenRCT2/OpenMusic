@@ -13,8 +13,10 @@ async function main() {
     });
     for (const dir of objectDirectories) {
         await createMusicObject(path.join('replacements', dir));
+        await createMusicObject(path.join('additional', dir));
     }
     await createAssetPack('openrct2.music.alternative.json');
+    await createAssetPack('openrct2.music.cover.json');
     await createPackage();
     await rm('temp');
 }
