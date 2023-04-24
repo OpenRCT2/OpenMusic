@@ -1,5 +1,5 @@
 # OpenRCT2/OpenMusic
-This project aims to create an alternative, higher quality version of the music from RollerCoaster Tycoon 2 for use in [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2).
+This project aims to create an alternative, high quality soundtrack as replacement for, and addition to RollerCoaster Tycoon 2's soundtrack for use in [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2).
 
 [![Build Status](https://api.travis-ci.org/OpenRCT2/OpenMusic.svg?branch=master)](https://travis-ci.org/OpenRCT2/OpenMusic)
 
@@ -8,73 +8,94 @@ Project discussion takes place on Discord.
 - Invitation link: https://discord.gg/uNzSmAj
 - [![](https://img.shields.io/discord/264137540670324737?label=OpenRCT2%2Fsound-and-music)](https://discordapp.com/channels/264137540670324737/694586451500859469)
 
+## Licensing
+All songs provided with OpenRCT2 are by default copyrighted under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Make sure that your song is CC BY-SA 4.0 or something less strict.  
+The following tunes are part of public domain:
+* All Ragtime styles
+* All Fairground organ styles
+* Pirate style
+
 ## Progress
-### Fairground organ style
-All of the pieces from the fairground organ style are so old that they fall under public domain.
+### Claim Thread
 
-#### Theoretical background
-A fairground organ is a musical instrument that usually plays by itself. It usually contains a small/medium sized pipe organ with a few different stops, lots of percussion (xylophone, tambourine, triangle, cymbals, multiple kinds of drums) and sometimes a Glockenspiel and/or Bells.
-The score is provided in form of [music rolls](https://en.wikipedia.org/wiki/Music_roll) or [book music](https://en.wikipedia.org/wiki/Book_music).
+Are you looking to contribute to this project? Please check out the Discussion for claiming what tunes you want to replace. Additional music is always welcome, too as long as it fits the project.  
+Discussion page: https://github.com/OpenRCT2/OpenMusic/issues/24
 
-The fairground organ is limited by its instruments. As all pieces should be in the same style and sound as if they are played by the same fairground organ, all arrangements are limited to the same instruments and the same set of organ registrations (yet to be determined).
+## PR contributions
+### Localisation
+Translations are welcome to be done at any time. You can find the names of all files under `"strings"` in the `object.json` file of each object folder. These will be located under the folders of either `alternative` or `additions`.
 
-Another limitation is the lack of dynamics. Fairground organs usually don't have a swell box, so dynamics are achieved by different registrations. Therefore the LilyPond files do not contain dynamic symbols for the organ parts.
+Please add the correct string name for your language.
+List:
+```
+en-GB: Default / English (GB)
+ar-EG: Arabic (Egypt)
+ca-ES: Catalan (Spain)
+cs-CZ: Chzech
+da-DK: Danish
+de-DE: German
+en-US: English (USA)
+eo-ZZ: Esperanto
+fi-FI: Finnish
+fr-CA: French (Canada)
+hu-HU: Hungarian
+it-IT: Italian
+ja-JP: Japanese
+ko-KR: Korean
+nb-NO: Bokmål (Norway)
+nl-NL: Dutch
+pl-PL: Polish
+pt-BR: Portugese (Brazil)
+ru-RU: Russian
+sv-SE: Swedish
+tr-TR: Turkish
+vi-VN: Vietnamese
+zh-CN: Chinese (Simplified, People's Republic of China)
+zh-TW: Chinese (Traditional, Taiwan)
+```
 
-#### Status
-The lists of the pieces of music in the game credits and [here](http://rct.wikia.com/wiki/Music) are unfortunately not 100% correct. If you know the name of the missing pieces, please let me know!
+### Music  
 
-| File | Piece of music | Status |
-| ---- | -------------- | ------ |
-| css4.dat | Die Regimentskinder by Julius Fučík | Work in progress |
-| css5.dat | Serenade by Jonny Heykens | Work in progress |
-| css6.dat | La Belle Espagnole, Op.103 by Robert Vollstedt | Work in progress |
-| css7.dat | Dornröschens Brautfahrt by Max Rhode | TODO |
-| css8.dat | Tales from the Vienna Woods Waltz by Johann Strauss II | TODO |
-| css9.dat | ? | TODO |
-| css11.dat | Der Haushamer Plattler (Traditional) 00:00 - 00:52 / ? (Also seems to contain parts of Frohsinn auf den Bergen by Oscar Fetrás and La valse de la forêt) | TODO |
-| css12.dat | Ma Bella Bimba | TODO |
-| css13.dat | The Blond Sailor by The Andrews Sisters | TODO |
-| css14.dat | Overture from Poet and Peasant by Franz von Suppé | Work in progress |
-| css15.dat | Multiple waltzes by Johann Strauß II: 00:00 Morgenblätter / 01:10 Die Fledermaus - Overture / 01:23 Künstlerleben / 02:09 Wiener Blut / 03:05 The Blue Danube | Work in progress |
+Follow the following steps to ensure everything is right:
+- Is the tune a replacement or an addition? If a replacement please claim the tune in the thread listed above.
+- If the tune is a cover or an alternative tune make sure to edit `openrct2.music.alternative.json` or `openrct2.music.cover.json` respectively. Use the other listings in that file as a base. Please check the code on [JSONlint](https://jsonlint.com/) to see if the code is valid. Beware: JSON is stingy about comma's.  
+- If the tune is an alternative or additional tune please include an `object.json` file and fill out the code template listed below.
 
-### Other music styles
+Tip: You can create custom music files on [GOES](https://goes.rctspace.com/music)
 
-| File | Style | Status |
-| ---- | ----- | ------ |
-| css34.dat | Ragtime style | Adapted the score from the Mutopia Project |
-| css39.dat | Medieval style | Own arrangement of the Rondeau from the Abdelazer Suite by Henry Purcell |
+-----------------------
+Code template for `object.json`:
 
-Most of the other music styles are original compositions for the game, so they can't be recreated. The others can.
+```
+{
+    "id": "openrct2.music.<style>",
+    "sourceGame":"official",
+    "authors": [
+        "<Full Name>"
+    ],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "<Song Name>",
+                "composer": "<Artist name>"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "<Style> style"
+        }
+    }
+}
+```
 
-## Build documentation
-The music in this repository has to be built, which works similar to the process of building software. A blog post on how OpenRCT2/OpenMusic is built can be found here:
-https://www.ccoors.de/blog/openrct2-openmusic-build-process/
+Replace the following:  
+`<style>` with the name of the style.  
+`<Full Name>` with your full name, add multiple if more people.  
+`<Artist Name - Song Name>` with the artist name and songname seperated by a dash.  
 
-### Build Dependencies
-- [bash](http://tiswww.case.edu/php/chet/bash/bashtop.html)
-- [Ninja](https://ninja-build.org/)
-- [Graphviz](http://graphviz.org/)
-- [libsmf](https://sourceforge.net/projects/libsmf/)
-- [CMake](https://cmake.org/)
-- [GCC](https://gcc.gnu.org/)/[Clang](http://clang.llvm.org/)
-- [LilyPond](http://lilypond.org/)
-- [FluidSynth](http://www.fluidsynth.org/)
-- [Calf Studio Gear](http://calf-studio-gear.org/)
-- [lv2file](https://github.com/jeremysalwen/lv2file)
-- [SoX](http://sox.sourceforge.net/)
-- [opus-tools](http://opus-codec.org/downloads/)
-- Multiple SoundFonts
-    - Get them using `getdependencies.sh`.
 
-### Build
-First, generate `build.ninja` using the `geninja.sh` script:
-
-    $ ./geninja.sh
-
-Then, run `build.sh`:
-
-    $ ./build.sh
-
-This will build all required files into `out/` and the 'official' output to `out/release/`.
-
-Some build properties can be modified in `musictools/config.sh`.
+###### OpenMusic is a project of OpenRCT2 ©2014-2023

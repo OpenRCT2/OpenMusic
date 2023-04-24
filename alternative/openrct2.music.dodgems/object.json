@@ -1,21 +1,23 @@
 {
-    "id": "openrct2.music.extraterrestrial",
+    "id": "openrct2.music.dodgems",
     "sourceGame": "official",
     "authors": ["Karst van Galen Last"],
     "version": "1.0",
     "objectType": "music",
     "properties": {
+        "niceFactor": -1,
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Style of the Extraterrestrial",
+                "name": "Bumblebeat",
                 "composer": "Jalmaan"
             }
         ]
     },
     "strings": {
         "name": {
-            "en-GB": "Extraterrestrial style"
+            "en-GB": "Dodgems beat style 2",
+            "ko-KR": "범퍼카 비트 스타일 2"
         }
     }
 }

@@ -1,5 +1,5 @@
 {
-    "id": "openrct2.music.acid",
+    "id": "openrct2.music.galaxy",
     "sourceGame": "official",
     "authors": ["Karst van Galen Last"],
     "version": "1.0",
@@ -8,14 +8,15 @@
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Airtime Junkies",
+                "name": "Pandora",
                 "composer": "Jalmaan"
             }
         ]
     },
     "strings": {
         "name": {
-            "en-GB": "Acid style"
+            "en-GB": "Galaxy style",
+            "ko-KR": "은하 스타일"
         }
     }
 }

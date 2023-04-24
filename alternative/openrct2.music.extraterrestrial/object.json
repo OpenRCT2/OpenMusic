@@ -1,5 +1,5 @@
 {
-    "id": "openrct2.music.galaxy",
+    "id": "openrct2.music.extraterrestrial",
     "sourceGame": "official",
     "authors": ["Karst van Galen Last"],
     "version": "1.0",
@@ -8,14 +8,15 @@
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Pandora",
+                "name": "Style of the Extraterrestrial",
                 "composer": "Jalmaan"
             }
         ]
     },
     "strings": {
         "name": {
-            "en-GB": "Galaxy style"
+            "en-GB": "Extraterrestrial style",
+            "ko-KR": "외계 행성 스타일"
         }
     }
 }

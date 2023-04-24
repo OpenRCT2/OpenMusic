@@ -4,13 +4,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Download ffmpeg, zip
       run: sudo apt-get update && sudo apt-get install -y ffmpeg zip
     - name: Create music objects
       run: node build.mjs --verbose
     - name: Upload artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: "OpenRCT2 OpenMusic Objects"
         path: out/**/*

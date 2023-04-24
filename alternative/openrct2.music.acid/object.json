@@ -1,22 +1,22 @@
 {
-    "id": "openrct2.music.dodgems",
+    "id": "openrct2.music.acid",
     "sourceGame": "official",
     "authors": ["Karst van Galen Last"],
     "version": "1.0",
     "objectType": "music",
     "properties": {
-        "niceFactor": -1,
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Bumblebeat",
+                "name": "Airtime Junkies",
                 "composer": "Jalmaan"
             }
         ]
     },
     "strings": {
         "name": {
-            "en-GB": "Dodgems beat style 2"
+            "en-GB": "Acid style",
+            "ko-KR": "애시드 스타일"
         }
     }
 }

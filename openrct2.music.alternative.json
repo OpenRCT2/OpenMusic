@@ -1,41 +1,41 @@
 {
     "id": "openrct2.music.alternative",
-    "version": "1.0",
+    "version": "1.1",
     "objects": [
         {
             "id": "rct2.music.dodgems",
             "samples": [
-                "replacements/openrct2.music.dodgems/music/0.flac"
+                "alternative/openrct2.music.dodgems/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.martian",
             "samples": [
-                "replacements/openrct2.music.extraterrestrial/music/0.flac"
+                "alternative/openrct2.music.extraterrestrial/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.space",
             "samples": [
-                "replacements/openrct2.music.galaxy/music/0.flac"
+                "alternative/openrct2.music.galaxy/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.techno",
             "samples": [
-                "replacements/openrct2.music.acid/music/0.flac"
+                "alternative/openrct2.music.acid/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.ice",
             "samples": [
-                "replacements/openrct2.music.blizzard/music/0.flac"
+                "alternative/openrct2.music.blizzard/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.jurassic",
             "samples": [
-                "replacements/openrct2.music.prehistoric/music/0.flac"
+                "alternative/openrct2.music.prehistoric/music/0.flac"
             ]
         }
     ],
