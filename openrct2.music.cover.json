@@ -12,7 +12,8 @@
     ],
     "strings": {
         "name": {
-            "en-GB": "OpenRCT2 Music (Cover)"
+            "en-GB": "OpenRCT2 Music (Cover)",
+            "pt-BR": "Músicas do OpenRCT2 (Cover)"
         },
         "description": {
             "en-GB": "Covers of public domain ride music for OpenRCT2.",
