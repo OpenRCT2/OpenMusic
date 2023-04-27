@@ -50,7 +50,9 @@
         "description": {
             "en-GB": "Open source alternative ride music for OpenRCT2.",
             "nl-NL": "Open source alternative attractiemuziek voor OpenRCT2.",
-            "eo-ZZ": "Malfermitkodaj alternativaj rajdo-kantoj por OpenRCT2."
+            "eo-ZZ": "Malfermitkodaj alternativaj rajdo-kantoj por OpenRCT2.",
+            "ko-KR": "OpenRCT2를 위한 오픈 소스 대체 놀이기구 음악 트랙",
+            "pt-BR": "Faixas de código aberto alternativas de músicas de atração para o OpenRCT2"
         }
     }
 }
