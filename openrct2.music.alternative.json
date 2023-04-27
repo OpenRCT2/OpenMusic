@@ -44,7 +44,8 @@
             "en-GB": "OpenRCT2 Music (Alternative)",
             "nl-NL": "OpenRCT2 Muziek (Alternatief)",
             "eo-ZZ": "Muziko de OpenRCT2 (Alternativa)",
-            "ko-KR": "OpenRCT2 음악 (대체)"
+            "ko-KR": "OpenRCT2 음악 (대체)",
+            "pt-BR": "Músicas do OpenRCT2 (Alternativas)"
         },
         "description": {
             "en-GB": "Open source alternative ride music for OpenRCT2.",
