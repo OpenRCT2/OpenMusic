@@ -45,14 +45,16 @@
             "nl-NL": "OpenRCT2 Muziek (Alternatief)",
             "eo-ZZ": "Muziko de OpenRCT2 (Alternativa)",
             "ko-KR": "OpenRCT2 음악 (대체)",
-            "pt-BR": "Músicas do OpenRCT2 (Alternativas)"
+            "pt-BR": "Músicas do OpenRCT2 (Alternativas)",
+            "ca-ES": "Música de l’OpenRCT2 (alternativa)"
         },
         "description": {
             "en-GB": "Open source alternative ride music for OpenRCT2.",
             "nl-NL": "Open source alternative attractiemuziek voor OpenRCT2.",
             "eo-ZZ": "Malfermitkodaj alternativaj rajdo-kantoj por OpenRCT2.",
             "ko-KR": "OpenRCT2를 위한 오픈 소스 대체 놀이기구 음악 트랙",
-            "pt-BR": "Faixas de código aberto alternativas de músicas de atração para o OpenRCT2"
+            "pt-BR": "Faixas de código aberto alternativas de músicas de atração para o OpenRCT2",
+            "ca-ES": "Peces musicals alternatives de codi obert per a les atraccions de l’OpenRCT2."
         }
     }
 }
