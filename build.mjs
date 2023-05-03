@@ -8,15 +8,13 @@ const verbose = process.argv.indexOf('--verbose') != -1;
 
 async function main() {
     await mkdir('out');
-    const objectDirectories = await getContents('replacements', {
+    const objectDirectories = await getContents('alternative', {
         includeDirectories: true
     });
     for (const dir of objectDirectories) {
-        await createMusicObject(path.join('replacements', dir));
-        await createMusicObject(path.join('additional', dir));
+        await createMusicObject(path.join('alternative', dir));
     }
     await createAssetPack('openrct2.music.alternative.json');
-    await createAssetPack('openrct2.music.cover.json');
     await createPackage();
     await rm('temp');
 }

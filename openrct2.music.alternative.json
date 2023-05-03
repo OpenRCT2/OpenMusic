@@ -1,41 +1,41 @@
 {
     "id": "openrct2.music.alternative",
-    "version": "1.0",
+    "version": "1.1",
     "objects": [
         {
             "id": "rct2.music.dodgems",
             "samples": [
-                "replacements/openrct2.music.dodgems/music/0.flac"
+                "alternative/openrct2.music.dodgems/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.martian",
             "samples": [
-                "replacements/openrct2.music.extraterrestrial/music/0.flac"
+                "alternative/openrct2.music.extraterrestrial/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.space",
             "samples": [
-                "replacements/openrct2.music.galaxy/music/0.flac"
+                "alternative/openrct2.music.galaxy/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.techno",
             "samples": [
-                "replacements/openrct2.music.acid/music/0.flac"
+                "alternative/openrct2.music.acid/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.ice",
             "samples": [
-                "replacements/openrct2.music.blizzard/music/0.flac"
+                "alternative/openrct2.music.blizzard/music/0.flac"
             ]
         },
         {
             "id": "rct2.music.jurassic",
             "samples": [
-                "replacements/openrct2.music.prehistoric/music/0.flac"
+                "alternative/openrct2.music.prehistoric/music/0.flac"
             ]
         },
         {
@@ -47,10 +47,20 @@
     ],
     "strings": {
         "name": {
-            "en-GB": "OpenRCT2 Music (Alternative)"
+            "en-GB": "OpenRCT2 Music (Alternative)",
+            "nl-NL": "OpenRCT2 Muziek (Alternatief)",
+            "eo-ZZ": "Muziko de OpenRCT2 (Alternativa)",
+            "ko-KR": "OpenRCT2 음악 (대체)",
+            "pt-BR": "Músicas do OpenRCT2 (Alternativas)",
+            "ca-ES": "Música de l’OpenRCT2 (alternativa)"
         },
         "description": {
-            "en-GB": "Open source alternative ride music tracks for OpenRCT2."
+            "en-GB": "Open source alternative ride music for OpenRCT2.",
+            "nl-NL": "Open source alternative attractiemuziek voor OpenRCT2.",
+            "eo-ZZ": "Malfermitkodaj alternativaj rajdo-kantoj por OpenRCT2.",
+            "ko-KR": "OpenRCT2를 위한 오픈 소스 대체 놀이기구 음악 트랙",
+            "pt-BR": "Faixas de código aberto alternativas de músicas de atração para o OpenRCT2",
+            "ca-ES": "Peces musicals alternatives de codi obert per a les atraccions de l’OpenRCT2."
         }
     }
 }
