@@ -8,22 +8,22 @@
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Searchlight Rag",
-                "composer": "Scott Joplin"
+                "name": "Dill Pickles Rag",
+                "composer": "Charles L. Johnson"
             },
             {
                 "source": "music/1.flac",
-                "name": "Entry of the Gladiators",
-                "composer": "Julius Fučík"
-            },
-            {
-                "source": "music/2.flac",
-                "name": "Maple Leaf Rag",
+                "name": "Something Doing Rag",
                 "composer": "Scott Joplin"
             },
             {
+                "source": "music/2.flac",
+                "name": "New Era Rag",
+                "composer": "James Scott"
+            },
+            {
                 "source": "music/3.flac",
-                "name": "The Entertainer",
+                "name": "Peacherine Rag",
                 "composer": "Scott Joplin"
             }
         ]
