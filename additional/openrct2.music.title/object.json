@@ -1,0 +1,20 @@
+{
+    "id": "openrct2.audio.title",
+    "authors": [
+        "Allister Brimble"
+    ],
+    "version": "1.0",
+    "sourceGame": [
+        "official"
+    ],
+    "objectType": "audio",
+    "samples": [
+        "title.flac"
+    ],
+    "strings": {
+        "name": {
+            "en-GB": "Main theme for OpenRCT2.",
+            "nl-NL": "Titelscherm muziek van OpenRCT2."
+        }
+    }
+}
