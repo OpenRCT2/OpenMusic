@@ -1,0 +1,20 @@
+{
+    "id": "openrct2.music.cover",
+    "version": "1.0",
+    "objects": [
+        {
+            "id": "rct2.music.ragtime",
+            "samples": [
+                "cover/ragtime/searchlight_rag.flac"
+            ]
+        }
+    ],
+    "strings": {
+        "name": {
+            "en-GB": "OpenRCT2 Music (Cover)"
+        },
+        "description": {
+            "en-GB": "Covers of public domain ride music for OpenRCT2."
+        }
+    }
+}

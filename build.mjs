@@ -8,13 +8,10 @@ const verbose = process.argv.indexOf('--verbose') != -1;
 
 async function main() {
     await mkdir('out');
-    const objectDirectories = await getContents('alternative', {
-        includeDirectories: true
-    });
-    for (const dir of objectDirectories) {
-        await createMusicObject(path.join('alternative', dir));
-    }
+    await createObjects('alternative');
+    await createObjects('additional');
     await createAssetPack('openrct2.music.alternative.json');
+    await createAssetPack('openrct2.music.cover.json');
     await createPackage();
     await rm('temp');
 }
@@ -27,6 +24,15 @@ async function createPackage() {
         includeFiles: true
     });
     await zip("out", path.join('..', packageFileName), contents);
+}
+
+async function createObjects(root) {
+    const objectDirectories = await getContents(root, {
+        includeDirectories: true
+    });
+    for (const dir of objectDirectories) {
+        await createMusicObject(path.join(root, dir));
+    }
 }
 
 async function createAssetPack(filename) {

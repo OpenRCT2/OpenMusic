@@ -1,0 +1,56 @@
+{
+    "id": "openrct2.music.ragtime2",
+    "sourceGame": "official",
+    "authors": ["Karst van Galen Last"],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "Dill Pickles Rag",
+                "composer": "Charles L. Johnson"
+            },
+            {
+                "source": "music/1.flac",
+                "name": "Something Doing Rag",
+                "composer": "Scott Joplin"
+            },
+            {
+                "source": "music/2.flac",
+                "name": "New Era Rag",
+                "composer": "James Scott"
+            },
+            {
+                "source": "music/3.flac",
+                "name": "Peacherine Rag",
+                "composer": "Scott Joplin"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Ragtime style 2",
+            "ca-ES": "Estil ragtime 2",
+            "cs-CZ": "Ragtime 2",
+            "da-DK": "Ragtime stil 2",
+            "de-DE": "Ragtime-Stil 2",
+            "es-ES": "Estilo ragtime 2",
+            "fr-FR": "Ragtime 2",
+            "hu-HU": "Ragtime stílus 2",
+            "it-IT": "Stile ragtime 2",
+            "ja-JP": "ラグタイム・スタイル ２番",
+            "ko-KR": "래그타임 스타일 2",
+            "nl-NL": "Ragtimestijl 2",
+            "pl-PL": "Styl ragtime 2",
+            "pt-BR": "Estilo Ragtime 2",
+            "ru-RU": "Стиль Регги 2",
+            "sv-SE": "Glade Chapplies piano 2",
+            "tr-TR": "Ragtime tarzı 2",
+            "zh-CN": "拉格泰姆风格2",
+            "zh-TW": "雷格泰姆音樂風格2",
+            "eo-ZZ": "Ragtimo-stilo 2",
+            "fi-FI": "Ragtime-tyylinen 2"
+        }
+    }
+}
