@@ -16,7 +16,12 @@
     "strings": {
         "name": {
             "en-GB": "Galaxy style",
-            "ko-KR": "은하 스타일"
+            "nl-NL": "Melkwegstijl",
+            "eo-ZZ": "Galaksia stilo",
+            "ko-KR": "은하 스타일",
+            "pt-BR": "Estilo galáxia",
+            "ca-ES": "Estil galàxia",
+            "de-DE": "Galaxie-Stil"
         }
     }
 }

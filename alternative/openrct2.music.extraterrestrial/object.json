@@ -16,7 +16,12 @@
     "strings": {
         "name": {
             "en-GB": "Extraterrestrial style",
-            "ko-KR": "외계 행성 스타일"
+            "nl-NL": "Buitenaardse stijl",
+            "eo-ZZ": "Ekstertera stilo",
+            "ko-KR": "외계 행성 스타일",
+            "pt-BR": "Estilo extraterrestre",
+            "ca-ES": "Estil extraterrestre",
+            "de-DE": "Außerirdischer Stil"
         }
     }
 }
