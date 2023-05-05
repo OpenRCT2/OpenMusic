@@ -7,6 +7,13 @@
             "samples": [
                 "cover/ragtime/searchlight_rag.flac"
             ]
+        },
+        {
+        	"id": "rct2.music.fairground",
+            "samples": [
+                "cover/openrct2.music.fairground/das_alpenhorn.flac",
+                "cover/openrct2.music.fairground/slavonic_dance.flac"
+            ]
         }
     ],
     "strings": {
