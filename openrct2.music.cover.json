@@ -11,19 +11,11 @@
         {
         	"id": "rct2.music.fairground",
             "samples": [
-                "",
-                "",
-                "",
-                "",
-                "",
+                "$[0..4]",
                 "cover/rct2.music.fairground/slavonic_dance.flac",
-                "",
+                "$[0..0]",
                 "cover/rct2.music.fairground/das_alpenhorn.flac",
-                "",
-                "",
-                "",
-                "",
-                ""
+                "$[0..4]"
             ]
         }
     ],
