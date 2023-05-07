@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
 import { spawn } from 'child_process';
+import fs from 'fs';
 import { platform } from 'os';
+import path from 'path';
 
 const verbose = process.argv.indexOf('--verbose') != -1;
 
@@ -48,12 +48,14 @@ async function createAssetPack(filename) {
     for (let obj of root.objects) {
         for (let i = 0; i < obj.samples.length; i++) {
             const sample = obj.samples[i];
-            const newFilename = `${sampleIndex}.ogg`;
-            const srcPath = path.join(dir, sample);
-            const dstPath = path.join(workDir, newFilename);
-            await encodeMusicTrack(dstPath, srcPath);
-            obj.samples[i] = newFilename;
-            sampleIndex++;
+            if (sample != "" && !sample.startsWith('$')) {
+                const newFilename = `${sampleIndex}.ogg`;
+                const srcPath = path.join(dir, sample);
+                const dstPath = path.join(workDir, newFilename);
+                await encodeMusicTrack(dstPath, srcPath);
+                obj.samples[i] = newFilename;
+                sampleIndex++;
+            }
         }
     }
 
