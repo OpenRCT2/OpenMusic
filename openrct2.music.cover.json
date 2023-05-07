@@ -5,14 +5,17 @@
         {
             "id": "rct2.music.ragtime",
             "samples": [
-                "cover/ragtime/searchlight_rag.flac"
+                "cover/rct2.music.ragtime/searchlight_rag.flac"
             ]
         },
         {
         	"id": "rct2.music.fairground",
             "samples": [
-                "cover/openrct2.music.fairground/das_alpenhorn.flac",
-                "cover/openrct2.music.fairground/slavonic_dance.flac"
+                "$[0..4]",
+                "cover/rct2.music.fairground/slavonic_dance.flac",
+                "$[0..0]",
+                "cover/rct2.music.fairground/das_alpenhorn.flac",
+                "$[0..4]"
             ]
         }
     ],
