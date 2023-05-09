@@ -2,7 +2,7 @@
     "id": "openrct2.music.galaxy",
     "sourceGame": "official",
     "authors": ["Karst van Galen Last"],
-    "version": "1.0",
+    "version": "1.1",
     "objectType": "music",
     "properties": {
         "niceFactor": 1,
