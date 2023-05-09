@@ -2,9 +2,13 @@
     "id": "openrct2.music.fairground2",
     "sourceGame": "official",
     "authors": ["Karst van Galen Last", "Herman Riddering"],
-    "version": "1.0",
+    "version": "1.1",
     "objectType": "music",
     "properties": {
+        "rideTypes": [
+            "merry_go_round"
+        ],
+        "niceFactor": 1,
         "tracks": [
             {
                 "source": "music/0.flac",
@@ -80,6 +84,10 @@
                 "source": "music/17.flac",
                 "name": "Colonel Bogey March",
                 "composer": "Traditional"
+			},
+			{
+                "source": "music/16.flac",
+                "name": "Unknown"
 			}
         ]
     },
