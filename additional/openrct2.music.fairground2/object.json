@@ -16,7 +16,8 @@
             },
 			{
                 "source": "music/1.flac",
-                "name": "Unknown"
+                "name": "Granada",
+                "composer": "Agustín Lara"
 			},
 			{
                 "source": "music/2.flac",
@@ -24,11 +25,13 @@
 			},
 			{
                 "source": "music/3.flac",
-                "name": "Unknown"
+                "name": "El Capitan",
+                "composer": "John Philip Sousa"
 			},
 			{
                 "source": "music/4.flac",
-                "name": "Unknown"
+                "name": "Mussinan Marsch",
+                "composer": "Carl Karl Ludwig von Mussinan"
 			},
 			{
                 "source": "music/5.flac",
@@ -37,7 +40,8 @@
 			},
 			{
                 "source": "music/6.flac",
-                "name": "Unknown"
+                "name": "Die Schönbrunner",
+                "composer": "Joseph Lanner"
 			},
 			{
                 "source": "music/7.flac",
