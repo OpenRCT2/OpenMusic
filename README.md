@@ -36,6 +36,7 @@ da-DK: Danish
 de-DE: German
 en-US: English (USA)
 eo-ZZ: Esperanto
+es-ES: Spanish (Spain)
 fi-FI: Finnish
 fr-CA: French (Canada)
 hu-HU: Hungarian
