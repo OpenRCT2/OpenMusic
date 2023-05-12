@@ -30,7 +30,7 @@ List:
 ```
 en-GB: Default / English (GB)
 ar-EG: Arabic (Egypt)
-ca-ES: Catalan
+ca-ES: Catalan (Spain)
 cs-CZ: Chzech
 da-DK: Danish
 de-DE: German
