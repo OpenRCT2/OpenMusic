@@ -83,14 +83,25 @@ async function createMusicObject(dir) {
     }
 
     console.log(`Creating ${root.id}`);
-
-    const tracks = root.properties.tracks;
-    for (const track of tracks) {
-        const newPath = changeExtension(track.source, '.ogg');
-        const srcPath = path.join(dir, track.source);
-        const dstPath = path.join(workDir, newPath);
-        await encodeMusicTrack(dstPath, srcPath);
-        track.source = newPath;
+    if (root.objectType === 'audio') {
+        const samples = root.samples;
+        for (let i = 0; i < samples.length; i++) {
+            const sample = samples[i];
+            const newPath = changeExtension(sample, '.ogg');
+            const srcPath = path.join(dir, sample);
+            const dstPath = path.join(workDir, newPath);
+            await encodeMusicTrack(dstPath, srcPath);
+            samples[i] = newPath;
+        }
+    } else {
+        const tracks = root.properties.tracks;
+        for (const track of tracks) {
+            const newPath = changeExtension(track.source, '.ogg');
+            const srcPath = path.join(dir, track.source);
+            const dstPath = path.join(workDir, newPath);
+            await encodeMusicTrack(dstPath, srcPath);
+            track.source = newPath;
+        }
     }
 
     const outJsonPath = path.join(workDir, 'object.json');
