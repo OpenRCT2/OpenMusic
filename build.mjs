@@ -83,15 +83,25 @@ async function createMusicObject(dir) {
     }
 
     console.log(`Creating ${root.id}`);
-    if objectType = music {
-	
-    const tracks = root.properties.tracks;
-    for (const track of tracks) {
-        const newPath = changeExtension(track.source, '.ogg');
-        const srcPath = path.join(dir, track.source);
-        const dstPath = path.join(workDir, newPath);
-        await encodeMusicTrack(dstPath, srcPath);
-        track.source = newPath;
+    if (root.objectType === 'audio') {
+        const samples = root.samples;
+        for (let i = 0; i < samples.length; i++) {
+            const sample = samples[i];
+            const newPath = changeExtension(sample, '.ogg');
+            const srcPath = path.join(dir, sample);
+            const dstPath = path.join(workDir, newPath);
+            await encodeMusicTrack(dstPath, srcPath);
+            samples[i] = newPath;
+        }
+    } else {
+        const tracks = root.properties.tracks;
+        for (const track of tracks) {
+            const newPath = changeExtension(track.source, '.ogg');
+            const srcPath = path.join(dir, track.source);
+            const dstPath = path.join(workDir, newPath);
+            await encodeMusicTrack(dstPath, srcPath);
+            track.source = newPath;
+        }
     }
 
     const outJsonPath = path.join(workDir, 'object.json');
@@ -103,31 +113,7 @@ async function createMusicObject(dir) {
         includeFiles: true
     });
     await zip(workDir, parkobjPath, contents);
-	
-	}
-	else if objectType = audio {
-	    const samples = root.samples;
-    for (let i = 0; i < samples.length; i++) {
-        const newPath = changeExtension(samples[i], '.wav');
-        const srcPath = path.join(dir, samples[i]);
-        const dstPath = path.join(workDir, newPath);
-        await encodeSample(dstPath, srcPath);
-        samples[i] = newPath;
-    }
-
-    const outJsonPath = path.join(workDir, 'object.json');
-    await writeJsonFile(outJsonPath, root);
-
-    const parkobjPath = path.join('../out/object/official/audio', root.id + '.parkobj');
-    const contents = await getContents(workDir, {
-        includeDirectories: true,
-        includeFiles: true
-	}
-	else {
-	return
-	}
 }
-
 
 async function encodeMusicTrack(dstPath, srcPath) {
     await ensureDirectoryExists(dstPath);
