@@ -104,6 +104,33 @@ async function createMusicObject(dir) {
     await zip(workDir, parkobjPath, contents);
 }
 
+async function createObject(dir) {
+    const workDir = 'temp';
+    await rmmkdir(workDir);
+
+    const root = await readJsonFile(path.join(dir, 'object.json'));
+    console.log(`Creating ${root.id}`);
+
+    const samples = root.samples;
+    for (let i = 0; i < samples.length; i++) {
+        const newPath = changeExtension(samples[i], '.wav');
+        const srcPath = path.join(dir, samples[i]);
+        const dstPath = path.join(workDir, newPath);
+        await encodeSample(dstPath, srcPath);
+        samples[i] = newPath;
+    }
+
+    const outJsonPath = path.join(workDir, 'object.json');
+    await writeJsonFile(outJsonPath, root);
+
+    const parkobjPath = path.join('../out/object/official/audio', root.id + '.parkobj');
+    const contents = await getContents(workDir, {
+        includeDirectories: true,
+        includeFiles: true
+    });
+    await zip(workDir, parkobjPath, contents);
+}
+
 async function encodeMusicTrack(dstPath, srcPath) {
     await ensureDirectoryExists(dstPath);
     await startProcess(
