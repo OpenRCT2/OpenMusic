@@ -39,6 +39,7 @@ eo-ZZ: Esperanto
 es-ES: Spanish (Spain)
 fi-FI: Finnish
 fr-CA: French (Canada)
+fr-FR: French
 hu-HU: Hungarian
 it-IT: Italian
 ja-JP: Japanese
