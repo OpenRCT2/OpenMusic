@@ -12,7 +12,8 @@
         "tracks": [
             {
                 "source": "music/0.flac",
-                "name": "Unknown"
+                "name": "Im Salzkammergut",
+                "composer": "Robert Stolz"
             },
 			{
                 "source": "music/1.flac",
@@ -21,7 +22,8 @@
 			},
 			{
                 "source": "music/2.flac",
-                "name": "Unknown"
+                "name": "Prinz Heinrich Marsch",
+                "composer": "Richard Eilenberg"
 			},
 			{
                 "source": "music/3.flac",
@@ -45,7 +47,8 @@
 			},
 			{
                 "source": "music/7.flac",
-                "name": "Unknown"
+                "name": "Deutschland's Ruhm Marsch",
+                "composer": "Martin Schröder"
 			},
 			{
                 "source": "music/8.flac",
@@ -54,7 +57,8 @@
 			},
 			{
                 "source": "music/9.flac",
-                "name": "Unknown"
+                "name": "One Day at A Time",
+                "composer": "Traditional"
 			},
 			{
                 "source": "music/10.flac",
@@ -63,32 +67,38 @@
 			},
 			{
                 "source": "music/11.flac",
-                "name": "Unknown"
+                "name": "Schlager Potpourri",
+                "composer": "Nico Dostal"
 			},
 			{
                 "source": "music/12.flac",
-                "name": "Unknown"
+                "name": "Schlager Potpourri",
+                "composer": "Nico Dostal"
 			},
 			{
                 "source": "music/13.flac",
-                "name": "Unknown"
+                "name": "Très Jolie Waltz",
+                "composer": "Emile Waldteufel"
 			},
 			{
                 "source": "music/14.flac",
-                "name": "Unknown"
+                "name": "Unter Waffengefahrten",
+                "composer": "Carl Teike"
 			},
 			{
                 "source": "music/15.flac",
-                "name": "Unknown"
+                "name": "Sunflower",
+                "composer": "Traditional"
 			},
 			{
                 "source": "music/16.flac",
-                "name": "Unknown"
+                "name": "Unter der Friedenssonne",
+                "composer": "Franz von Blon"
 			},
 			{
                 "source": "music/17.flac",
                 "name": "Colonel Bogey March",
-                "composer": "Traditional"
+                "composer": "Frederick Joseph Ricketts"
 			}
         ]
     },
