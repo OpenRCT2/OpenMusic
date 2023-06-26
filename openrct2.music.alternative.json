@@ -21,6 +21,12 @@
             ]
         },
         {
+            "id": "rct2.music.fantasy",
+            "samples": [
+                "alternative/openrct2.music.mystic/music/0.flac"
+            ]
+        },
+        {
             "id": "rct2.music.techno",
             "samples": [
                 "alternative/openrct2.music.acid/music/0.flac"
