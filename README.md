@@ -99,5 +99,20 @@ Replace the following:
 `<Full Name>` with your full name, add multiple if more people.  
 `<Artist Name - Song Name>` with the artist name and songname seperated by a dash.  
 
+### Creating a new OpenMusic release
+
+The following is documentation for people that have the rights when updating.
+Make sure to follow the following checklist
+
+- [ ] Update `CMakeLists.txt`: `OPENMSX_VERSION` & `OPENMSX_SHA1` (Tip: SHA1 can easily be optained when 7zip is installed).
+- [ ] Update `openrct2.proj`: `OpenMSXUrl` & `OpenMSXSha1`.
+
+ With new additions also update the following:
+      
+- [ ] Update `distribution/changelog.txt`.
+- [ ] Add song id to `src/openrct2/object/DefaultObjects.cpp` (Can be found under `const std::string_view DefaultSelectedObjects[]`).
+- [ ] Update `extern const std::string_view DefaultSelectedObjects[`number`];` in `src/openrct2/object/DefaultObjects.h`.
+- [ ] Add song id to `src/openrct2/rct12/RCT12.cpp` (Can be found under `static constexpr std::string_view _musicStyles[]`).
+
 
 ###### OpenMusic is a project of OpenRCT2 ©2014-2023
