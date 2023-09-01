@@ -1,0 +1,22 @@
+{
+    "id": "openrct2.music.mystic",
+    "sourceGame": "official",
+    "authors": ["Skyshard"],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "Mystic Winds",
+                "composer": "Skyshard"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Mystic style",
+            "nl-NL": "Mystiekstijl"
+        }
+    }
+}
