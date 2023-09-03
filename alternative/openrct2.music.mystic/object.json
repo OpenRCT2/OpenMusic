@@ -16,7 +16,8 @@
     "strings": {
         "name": {
             "en-GB": "Mystic style",
-            "nl-NL": "Mystiekstijl"
+            "nl-NL": "Mystiekstijl",
+            "pt-BR": "Estilo Místico"
         }
     }
 }
