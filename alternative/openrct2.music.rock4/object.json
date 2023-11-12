@@ -1,0 +1,41 @@
+{
+    "id": "openrct2.music.rock4",
+    "sourceGame": "official",
+    "authors": ["Blackend Blue"],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "Rush",
+                "composer": "Blackend Blue"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Rock style 4",
+            "ca-ES": "Estil rock 4",
+            "cs-CZ": "Rock 4",
+            "da-DK": "Rock stil 4",
+            "de-DE": "Rock-Stil 4",
+            "es-ES": "Estilo rock 4",
+            "fi-FI": "Rokkityylinen 4",
+            "fr-FR": "Rock 4",
+            "hu-HU": "Rock stílus 4",
+            "it-IT": "Stile rock 4",
+            "ja-JP": "ロック・スタイル ４番",
+            "ko-KR": "록 스타일 4",
+            "nl-NL": "Rockstijl 4",
+            "pl-PL": "Styl rockowy 4",
+            "pt-BR": "Estilo Rock 4",
+            "ru-RU": "Рок 4",
+            "sv-SE": "Rocktema 4",
+            "tr-TR": "Rock tarzı 4",
+            "zh-CN": "摇滚风格4",
+            "zh-TW": "搖滾風格4",
+            "eo-ZZ": "Rokmuzika stilo 4"
+        }
+    }
+}
