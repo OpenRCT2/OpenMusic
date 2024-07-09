@@ -1,0 +1,22 @@
+{
+    "id": "openrct2.music.progressive",
+    "sourceGame": "official",
+    "authors": ["Andrew Sinclair"],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "tracks": [
+            {
+                "source": "music/0.flac",
+                "name": "Sonar",
+                "composer": "Approaching Nirvana"
+            }
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Progressive style",
+            "nl-NL": "Progressiefstijl"
+        }
+    }
+}

@@ -49,6 +49,12 @@
             "samples": [
                 "alternative/openrct2.music.rock4/music/0.flac"
             ]
+        },
+        {
+            "id": "rct2.music.modern",
+            "samples": [
+                "alternative/openrct2.music.progressive/music/0.flac"
+            ]
         }
     ],
     "strings": {
