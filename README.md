@@ -31,7 +31,7 @@ List:
 en-GB: Default / English (GB)
 ar-EG: Arabic (Egypt)
 ca-ES: Catalan (Spain)
-cs-CZ: Chzech
+cs-CZ: Czech
 da-DK: Danish
 de-DE: German
 en-US: English (USA)
