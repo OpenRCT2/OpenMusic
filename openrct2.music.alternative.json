@@ -67,7 +67,8 @@
             "ca-ES": "Música de l’OpenRCT2 (Alternativa)",
             "es-ES": "Música de OpenRCT2 (Alternativa)",
             "de-DE": "OpenRCT2-Musik (Alternative)",
-            "hu-HU": "OpenRCT2 zene (alternatív)"
+            "hu-HU": "OpenRCT2 zene (alternatív)",
+            "cs-CZ": "Hudba OpenRCT2 (alternativní)"           
         },
         "description": {
             "en-GB": "Open source alternative ride music for OpenRCT2.",
@@ -78,7 +79,8 @@
             "ca-ES": "Peces musicals alternatives de codi obert per a les atraccions de l’OpenRCT2.",
             "es-ES": "Música alternativa de código abierto para las atracciones de OpenRCT2.",
             "de-DE": "Alternative Open-Source-Fahrgeschäftsmusik für OpenRCT2.",
-            "hu-HU": "Nyílt forráskódú alternatív játékzene az OpenRCT2-höz."
+            "hu-HU": "Nyílt forráskódú alternatív játékzene az OpenRCT2-höz.",
+            "cs-CZ": "Open source alternativa hudby pro atrakce v OpenRCT2."
         }
     }
 }
