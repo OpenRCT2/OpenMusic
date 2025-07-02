@@ -24,14 +24,16 @@
             "en-GB": "OpenRCT2 Music (Cover)",
             "nl-NL": "OpenRCT2-muziek (covers)",
             "hu-HU": "OpenRCT2 zene (feldolgozás)",
-            "ca-ES": "Música de l’OpenRCT2 (versionada)"
+            "ca-ES": "Música de l’OpenRCT2 (versionada)",
+            "cs-CZ": "Hudba OpenRCT2 (coververze)"
         },
         "description": {
             "en-GB": "Covers of public domain ride music for OpenRCT2.",
             "pt-BR": "Covers de músicas de atração de domínio público para o OpenRCT2.",
             "nl-NL": "Covers van muziek uit het publiek domein voor attracties in OpenRCT2.",
             "en-GB": "Közkincs játékzene-feldolgozások az OpenRCT2-höz.",
-            "ca-ES": "Versions de música d’atraccions de domini públic per a l’OpenRCT2"
+            "ca-ES": "Versions de música d’atraccions de domini públic per a l’OpenRCT2",
+            "cs-CZ": "Coververze public domain hudby pro atrakce v OpenRCT2."
         }
     }
 }
