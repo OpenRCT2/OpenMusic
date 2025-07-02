@@ -16,7 +16,8 @@
     "strings": {
         "name": {
             "en-GB": "Progressive style",
-            "nl-NL": "Progressiefstijl"
+            "nl-NL": "Progressiefstijl",
+            "cs-CZ": "Progresivní"
         }
     }
 }
