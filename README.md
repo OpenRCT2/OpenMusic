@@ -104,8 +104,8 @@ Replace the following:
 The following is documentation for people that have the rights when updating.
 Make sure to follow the following checklist
 
-- [ ] Update `CMakeLists.txt`: `OPENMSX_VERSION` & `OPENMSX_SHA1` (Tip: SHA1 can easily be optained when 7zip is installed).
-- [ ] Update `openrct2.proj`: `OpenMSXUrl` & `OpenMSXSha1`.
+- [ ] Update `CMakeLists.txt`: `OPENMSX_VERSION` & `OPENMSX_SHA1` (Tip: SHA256 can easily be optained when 7zip is installed. GitHub also provides SHA256 for all produced artifacts).
+- [ ] Update `openrct2.proj`: `OpenMSXUrl` & `OpenMSXSha256`.
 
  With new additions also update the following:
       
