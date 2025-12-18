@@ -1,0 +1,91 @@
+{
+    "id": "openrct2.music.fairground3",
+    "sourceGame": "official",
+    "authors": ["Karst van Galen Last", "Herman Riddering"],
+    "version": "1.0",
+    "objectType": "music",
+    "properties": {
+        "rideTypes": [
+            "merry_go_round"
+        ],
+        "niceFactor": 1,
+        "tracks": [
+            {
+                "source": "music/FOS3 - 01.flac"
+            },
+			{
+                "source": "music/FOS3 - 02.flac"
+			},
+			{
+                "source": "music/FOS3 - 03.flac"
+			},
+			{
+                "source": "music/FOS3 - 04.flac"
+			},
+			{
+                "source": "music/FOS3 - 05.flac"
+			},
+			{
+                "source": "music/FOS3 - 06.flac"
+			},
+			{
+                "source": "music/FOS3 - 07.flac"
+			},
+			{
+                "source": "music/FOS3 - 08.flac"
+			},
+			{
+                "source": "music/FOS3 - 09.flac"
+			},
+			{
+                "source": "music/FOS3 - 10.flac"
+			},
+			{
+                "source": "music/FOS3 - 11.flac"
+			},
+			{
+                "source": "music/FOS3 - 12.flac"
+			},
+			{
+                "source": "music/FOS3 - 13.flac"
+			},
+			{
+                "source": "music/FOS3 - 14.flac"
+			},
+			{
+                "source": "music/FOS3 - 15.flac"
+			},
+			{
+                "source": "music/FOS3 - 16.flac"
+			},
+			{
+                "source": "music/FOS3 - 17.flac"
+			}
+        ]
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Fairground organ style 3",
+            "ca-ES": "Estil orgue de fira 3",
+            "cs-CZ": "Tržnice 3",
+            "da-DK": "Karnevalsmusik stil 3",
+            "de-DE": "Jahrmarktsorgelstil 3",
+            "es-ES": "Estilo órgano de feria 3",
+            "fr-FR": "Orgue champ de foire 3",
+            "hu-HU": "Vásári orgona stílus 3",
+            "it-IT": "Stile organo da fiera 3",
+            "ja-JP": "フェアグラウンドオルガン・スタイル ３番",
+            "ko-KR": "축제 오르간 스타일 3",
+            "nl-NL": "Kermisorgelstijl 3",
+            "pl-PL": "Styl organów wesołego miasteczka 3",
+            "pt-BR": "Estilo Órgão de Parque de Diversões 3",
+            "ru-RU": "Ярмарочный стиль 3",
+            "sv-SE": "Tivolitema 3",
+            "tr-TR": "Atlıkarınca tarzı 3",
+            "zh-CN": "游乐场风琴风格3",
+            "zh-TW": "遊樂場風琴風格3",
+            "eo-ZZ": "Foirejo-orgeno-stilo 3",
+            "fi-FI": "Karusellimusiikin tyylinen 3"
+        }
+    }
+}
