@@ -47,7 +47,7 @@ ko-KR: Korean
 nb-NO: Bokmål (Norway)
 nl-NL: Dutch
 pl-PL: Polish
-pt-BR: Portugese (Brazil)
+pt-BR: Portuguese (Brazil)
 ru-RU: Russian
 sv-SE: Swedish
 tr-TR: Turkish
@@ -97,14 +97,14 @@ Code template for `object.json`:
 Replace the following:  
 `<style>` with the name of the style.  
 `<Full Name>` with your full name, add multiple if more people.  
-`<Artist Name - Song Name>` with the artist name and songname seperated by a dash.  
+`<Artist Name - Song Name>` with the artist name and songname separated by a dash.  
 
 ### Creating a new OpenMusic release
 
 The following is documentation for people that have the rights when updating.
 Make sure to follow the following checklist
 
-- [ ] Update `CMakeLists.txt`: `OPENMSX_VERSION` & `OPENMSX_SHA1` (Tip: SHA256 can easily be optained when 7zip is installed. GitHub also provides SHA256 for all produced artifacts).
+- [ ] Update `CMakeLists.txt`: `OPENMSX_VERSION` & `OPENMSX_SHA1` (Tip: SHA256 can easily be obtained when 7zip is installed. GitHub also provides SHA256 for all produced artifacts).
 - [ ] Update `openrct2.proj`: `OpenMSXUrl` & `OpenMSXSha256`.
 
  With new additions also update the following:
